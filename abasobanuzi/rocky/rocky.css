@@ -1,0 +1,859 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(29, 30, 30);
+    /* overflow: ; */
+}
+/* -----------------navbar-------------------- */
+.nav-bar {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* backdrop-filter: blur(.2rem); */
+    /* backdro/p-filter: blur(.7rem);  akantu kubwenge on navbar  */
+
+    /* border-bottom: 1px solid red; */
+    /* padding-left: 10rem; */
+   /* background: ; */
+    color: #fff;
+    .logo{
+        span{
+            color: red;
+        }
+    }
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.links {
+    display: flex;
+    gap: 30px;
+    padding-left: 60px;
+
+    
+}
+
+.links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+   
+}
+.links a:hover {
+    color: orange; /* Change to your preferred hover color */
+    border-bottom: 2px solid #f1c40f; /* Adds an underline effect on hover */
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(yellow,green);
+}
+
+/* -----------------home images--------------- */
+.slider::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari, and newer Edge */
+}
+  .slider {
+    /* position: relative; */
+    /* overflow: hidden; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    /* height: 100vh; */
+    /* margin-top: 93px; */
+    height: calc(100vh - 60px);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, "ＭＳ Ｐゴシック", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.item {
+    position: relative;
+    min-width: 100%;
+    height: 100vh;
+    padding-bottom: 2rem;
+}
+/* video{
+    width: 100vw;
+    height: 100%;
+} */
+
+ .item img {
+    width: 100%;
+    height: 100vh;
+ 
+    object-fit: cover;
+} 
+
+/* Overlay for text and buttons */
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    /* overflow: none; */
+    /* z-index: 1; */
+}
+
+.overlay h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.overlay .action, .overlay .secondary {
+    padding: 10px 20px;
+    margin: 10px 10px 0 0;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.overlay .action {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.overlay .secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 20px;
+    border: 1px black solid;
+    font-weight: 600;
+}
+.overlay .secondary:hover {
+    background: white;
+    color: black;
+    border: none;
+
+}
+
+.overlay .action:hover, .overlay .secondary:hover {
+    opacity: 0.8;
+}
+
+
+/* Navigation buttons */
+.buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+button {
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* -----------------------the ribbon---------------- */
+.ribbon{
+    position: absolute;
+    /* border: 2px solid black; */
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+}
+.ribbon span{
+    position: absolute;
+    color: white;
+    text-align: center;
+    padding-right: 3rem;
+    background-color: #0056b3;
+    width: 200px;
+    height: 20px;
+    transform: rotate(-45deg);
+    top: 0;
+    left: -3rem;
+}
+/* -------------------name and date of movie---------- */
+#movieName{
+    padding: 10px 0 0 15px;
+    color: 
+    rgb(249, 250, 251);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 600;
+   }
+   #realsedDate{
+    padding: 4px 0 0 15px;
+    color: rgb(115, 115, 115);
+    font-weight: 400;
+    font-size: 12px;
+   }
+
+  /* ---------------about------------ */
+  .new-released{
+    display: flex;
+    margin-top: 12rem;
+    height:40rem;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+
+    scrollbar-color: rgb(29, 30, 30) rgb(29, 30, 30);
+        /* remove scroll make them the same but change  scollball-color try to use black */
+              
+        button{
+            background:transparent;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            right: 0;
+            display: flex;
+            color: #4CAF50;
+           
+        }
+        .left{
+            margin-top: -2rem;
+            margin-right: 5rem;
+            right: 0;
+            border: none;
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: .3s;
+            
+        }
+            .left:hover,
+            .right:hover{
+                font-size: 2.5rem;
+                border: 2px solid #4CAF50;
+            }
+            .right{
+                
+                right: 0;
+                margin-top: -2rem;
+                margin-right: 2rem;
+                border: none;
+                font-weight: 900;
+                font-size: 1.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                   
+        }
+        
+       
+        h1{
+            color: azure;
+            position: absolute;
+            bottom: -12rem;
+            padding-left: 2rem;
+            font-weight: 900;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline;
+            text-decoration-color: #4CAF50 ;
+            text-underline-offset: 1.2rem;
+            text-decoration-thickness: .3rem;
+        }
+    img{
+        width: 15rem;
+        height: 20rem;
+        
+    }
+    /* .movie .img i{
+        transform: translateY(-220px);
+        opacity: 0%;
+        transition: opacity 0.5s;
+        
+    } */
+    /* .movie  img:hover i{
+        opacity: 1;
+        cursor: pointer;
+    } */
+
+  .movie{
+    background: rgb(64, 64, 64);
+    height: 25rem;
+    margin: .5rem;
+    border-radius: 7px;
+    transition: transform .5s;
+    position: relative;
+    
+
+    
+}
+.movie:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.movie:hover i{
+    opacity: 100%;
+}
+  
+}
+.fa-play{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers icon */
+    font-size: 2rem; /* Adjust icon size */
+    color: white; /* Icon color */
+    background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent background */
+    text-align: center;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    opacity: 0;
+
+}
+  /* -------------second------------- */
+  .second-slides{
+    display: flex;
+    margin-top: 1rem;
+    height:40rem;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(29, 30, 30) rgb(29, 30, 30);
+    /* remove scroll make them the same but change  scollball-color try to use black */
+    button{
+        background:transparent;
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        right: 0;
+        display: flex;
+        color: #4CAF50;
+       
+    }
+    .left{
+        margin-top: -2rem;
+        margin-right: 5rem;
+        right: 0;
+        border: none;
+        font-weight: 900;
+        font-size: 1.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: .3s;
+        
+    }
+        .left:hover,
+        .right:hover{
+            font-size: 2.5rem;
+            border: 2px solid #4CAF50;
+        }
+        .right{
+            
+            right: 0;
+            margin-top: -2rem;
+            margin-right: 2rem;
+            border: none;
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+               
+    }
+
+    img{
+        width: 15rem;
+        height: 20rem;
+    }
+    .image2{
+        background: rgb(64, 64, 64);
+        height: 25rem;
+        margin: .5rem;
+        border-radius: 7px;
+        transition: transform 0.5s;
+        position: relative;
+        
+    }
+    .image2:hover{
+        transform: scale(1.1);
+    }
+    .image2:hover .fa-play{
+        opacity: 1;
+    }
+  }
+  .action1{
+    color: azure;
+    /* position: absolute; */
+    margin-top: -5rem;
+    padding-left: 2rem;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #4CAF50 ;
+    text-underline-offset: 1.2rem;
+    text-decoration-thickness: .3rem;
+}
+  /* -------------third------------ */
+  .third-slides{
+    display: flex;
+    margin-top: 1rem;
+    height:40rem;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color:rgb(29, 30, 30) rgb(29, 30, 30);
+        /* remove scroll make them the same but change  scollball-color try to use black */
+        button{
+            background:transparent;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            right: 0;
+            display: flex;
+            color: #4CAF50;
+           
+        }
+        .left{
+            margin-top: -2rem;
+            margin-right: 5rem;
+            right: 0;
+            border: none;
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: .3s;
+            
+        }
+            .left:hover,
+            .right:hover{
+                font-size: 2.5rem;
+                border: 2px solid #4CAF50;
+            }
+            .right{
+                
+                right: 0;
+                margin-top: -2rem;
+                margin-right: 2rem;
+                border: none;
+                font-weight: 900;
+                font-size: 1.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                   
+        }
+      
+    img{
+        width: 15rem;
+        height: 20rem;
+    }
+    .image3{
+        background: rgb(64, 64, 64);
+        height: 25rem;
+        margin: .5rem;
+        border-radius: 7px;
+        transition: transform 0.5s;
+
+    }
+    .image3:hover{
+        transform: scale(1.1);
+    }
+    .image3:hover .fa-play{
+        opacity: 1;
+    }
+  }
+  .horrow{
+    color: azure;
+    /* position: absolute; */
+    margin-top: -5rem;
+    padding-left: 2rem;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #4CAF50 ;
+    text-underline-offset: 1.2rem;
+    text-decoration-thickness: .3rem;
+}
+  /* ---------------fourth------------- */
+  .fourth-slides{
+    display: flex;
+    margin-top: 1rem;
+    height:40rem;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color:rgb(29, 30, 30) rgb(29, 30, 30);
+        /* remove scroll make them the same but change  scollball-color try to use black */
+        button{
+            background:transparent;
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            right: 0;
+            display: flex;
+            color: #4CAF50;
+           
+        }
+        .left{
+            margin-top: -2rem;
+            margin-right: 5rem;
+            right: 0;
+            border: none;
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: .3s;
+            
+        }
+            .left:hover,
+            .right:hover{
+                font-size: 2.5rem;
+                border: 2px solid #4CAF50;
+            }
+            .right{
+                
+                right: 0;
+                margin-top: -2rem;
+                margin-right: 2rem;
+                border: none;
+                font-weight: 900;
+                font-size: 1.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                
+                   
+        }
+        
+    img{
+        width: 15rem;
+        height: 20rem;
+    }
+    .image4{
+        background: rgb(64, 64, 64);
+        height: 25rem;
+        margin: .5rem;
+        border-radius: 7px;
+        transition: transform 0.5s;
+    }
+    .image4:hover{
+        transform: scale(1.1);
+    }
+    .image4:hover .fa-play{
+        opacity: 1;
+    }
+  }
+  .dram1{
+    color: azure;
+    /* position: absolute; */
+    margin-top: -5rem;
+    padding-left: 2rem;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: underline;
+    text-decoration-color: #4CAF50 ;
+    text-underline-offset: 1.2rem;
+    text-decoration-thickness: .3rem;
+}
+  /* ------------fith------------ */
+  .fith-slides{
+    display: flex;
+    margin-top: 1rem;
+    height: 40rem;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(29, 30, 30) rgb(29, 30, 30);
+        /* remove scroll make them the same but change  scollball-color try to use black */
+        scroll-behavior: smooth;
+       
+        button{
+            /* background: green; */
+            background: transparent;
+            color: chartreuse;
+            display: flex;
+            width: 2rem;
+            height: 2rem;
+            
+            position: absolute;
+         
+            border: 2px solid #4CAF50;
+            
+        }
+        .left{
+            margin-top: -2rem;
+            margin-right: 5rem;
+            right: 0;
+            border: none;
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transition: .3s;
+           
+        }
+        .left:hover,
+        .right:hover{
+            font-size: 2.5rem;
+            border: 2px solid #4CAF50;
+        }
+        .right{
+            background:transparent;
+            right: 0;
+            margin-top: -2rem;
+            margin-right: 2rem;
+            border: none;
+            font-weight: 900;
+            font-size: 1.8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+            
+        }
+        h1{
+            color: azure;
+            position: absolute;
+            margin-top: -5rem;
+            padding-left: 2rem;
+            font-weight: 900;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-decoration: underline;
+            text-decoration-color: #4CAF50 ;
+            text-underline-offset: 1.2rem;
+            text-decoration-thickness: .3rem;
+           
+        }
+    img{
+        width: 15rem;
+        height: 20rem;
+        /* transition: transform 0.5s;
+        z-index: 2; */
+        
+    }
+   
+    .image5:hover{
+        transform: scale(1.1);
+    }
+    .image5:hover .fa-play{
+        opacity: 1;
+    }
+    .image5{
+        background: rgb(64, 64, 64);
+        height: 25rem;
+        margin: .5rem;
+        border-radius: 7px;
+        transition: transform 0.5s;
+    }
+  }
+  /* -----------------footer---------- */
+  /* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+  }
+  .footer-section h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color:#0056b3;
+  }
+  
+  .footer-section p, 
+  .footer-section a {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ecf0f1;
+    text-decoration: none;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+/* Social Icons Styling */
+.social-icons {
+    margin-top: 15px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 30px;
+    color: #81969b;
+    transition: color 0.3s ease;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  
+  .newsletter input[type="email"] {
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  input:focus{
+    outline: none;
+    caret-color: #0056b3 ;
+  }
+  
+  .newsletter button {
+    padding: 8px 20px;
+    background-color:#0A66C2;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .newsletter button:hover {
+    background-color: #0056b3;
+  }
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-bottom a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  .social-icons a:hover{
+    /* color: chartreuse; */
+    transform: translateY(-20px);
+}
+
+.fa-facebook:hover{
+    color: #1877F2;
+}
+.fa-instagram:hover{
+    background: linear-gradient(45deg, #833AB4, #FD1D1D, #F77737);
+    background-clip: text;
+    color: transparent;
+
+}
+ .fa-whatsapp:hover{
+    background-color: #25D366;
+    background-clip: text;
+    color: transparent;
+/* color: white; */
+
+}
+.fa-twitter:hover{
+    background-color: #1DA1F2;
+    background-clip: text;
+     color: transparent;
+
+}
+.fa-linkedin:hover{
+    background-color: #0A66C2;
+    background-clip: text;
+    color: transparent;
+
+}

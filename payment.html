@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pricing</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+        <!-- Navbar -->
+        <nav class="nav-bar" id="nav">
+            <div class="logo">
+                <h2><span>B</span>lAcK <span>D</span>oLlAr</h2>
+            </div>
+            <div class="links">
+                <a href="movie.html" >Home</a>
+               <a href="subscrption.html">Subscription</a>
+                <a href="#">Watchlist</a>
+                <a href="contact.html">Contact Us</a>
+                <a title="home" href="account.html">Account</a>
+            </div>
+    
+        </nav><br><br><br><br><br><br><br>
+<!-- ------------------------------body-------------------         -->
+<section id="payment" class="payment">
+  <div class="payment-container">
+    <center>
+    <h2>Choose Your Payment Method</h2>
+    <p>Select a secure and convenient option to subscribe and access our movies.</p>
+    
+      <div class="payment-options">
+        <!-- MTN Mobile Money -->
+        <div class="payment-method" id="mtn" onclick="openmtn()">
+          <div class="heading">
+
+            <input type="radio" name="" id="">
+            <p>Pay instantly with MTN Mobile Money.</p>
+            <img src="images/payment/download_mtn-removebg-preview.png" alt="MTN Mobile Money">
+          </div>
+
+          <div class="inputs" style="display: none;" id="mtninputs">
+
+            <h3>MTN Mobile Money</h3><br>
+            <form method="post" onclick="event.preventDefault();" class="mtn-form"  >
+
+              <label for="names">Sender's Names</label><br>
+              <input type="text" id="names" class="names" name="names" placeholder="Enter senders name" required><br><br>
+              <label for="phone number">phone number</label><br>
+              <input type="number" name="phone number" id="phone number" placeholder="Please Enter Your Number" required><br><br>
+              <button class="pay-now" type="submit">Pay with MTN</button>
+            </form>
+             
+          </div>
+        </div><br><br>
+  
+        <!-- Airtel Money -->
+        <div class="payment-method" id="airtel" onclick="openairtel()">
+          
+          <div class="heading">
+            <input type="radio" name="" id="">
+            <p>Quick and secure payment via Airtel Money.</p>
+            <img src="images/payment/download_airtel-removebg-preview.png">
+          </div>
+
+            <div class="inputs" style="display: none;" id="Airtelinputs">
+              
+                          <h3>Airtel Mobile Money</h3><br>
+                          <form action="" method="post" onclick="event.preventDefault();" class="airtel-form"  >
+              
+                            <label for="names">Sender's Names</label><br>
+                            <input type="text" id="names" class="names" name="names" placeholder="Enter senders name" required><br><br>
+                            <label for="phone number">phone number</label><br>
+                            <input type="number" name="phone number" id="phone number" placeholder="Please Enter Your Number" required><br><br>
+                            <button class="pay-now" type="submit" style="background-color: red; color: white;">Pay with Airtel</button>
+                          </form>
+          </div>
+             
+        </div><br><br><br>
+  
+        <!-- PayPal -->
+        <div class="payment-method" id="paypal" onclick="openpaypal()">
+          <div class="heading">
+              <input type="radio" name="" id="">
+              <p>Use your PayPal account for seamless payments.</p>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/PayPal_logo.svg/512px-PayPal_logo.svg.png" alt="PayPal">
+            </div>
+
+          <div class="inputs" style="display: none;" id="paypalinputs">
+
+            <h3>Pay Pal</h3><br>
+            <form action="" method="post" onclick="event.preventDefault();" class="mtn-form"  >
+
+              <label for="names">Sender's Names</label><br>
+              <input type="text" id="names" class="names" name="names" placeholder="Enter senders name" required><br><br>
+              <label for="email">Your email</label><br>
+              <input type="email" name="email" id="email" placeholder="Please Enter Your Email" required><br><br>
+              <button class="pay-now" type="submit" style="background:rgb(68, 156, 220) ;">Pay with Paypal</button>
+            </form>
+             
+          </div>
+        </div><br><br><br>
+  
+        <!-- Bank Transfer -->
+        <div class="payment-method" id="bank" onclick="openbank()">
+        <div class="heading">
+          <input type="radio" name="" id="">
+          <p>Transfer directly from your bank account.</p>
+          <img src="images/payment/bk.png" alt="Bank Transfer">
+        </div>
+
+          <div class="inputs" style="display: none;" id="bankinputs">
+
+            <h3>Pay with Bank </h3><br>
+            <h5>Bank of Kigali : 123 456 789</h5><br>
+            <h5>equit bank : 123 456 789</h5><br>
+            <h5>Cogebank : 123 456 789</h5><br>
+            <h5>I&M bank : 123 456 789</h5><br>
+            <form action="" method="post" onclick="event.preventDefault();" class="bank-form"  >
+
+              <label for="names">Sender's Names</label><br>
+              <input type="text" id="names" class="names" name="names" placeholder="Enter senders name" required><br><br>
+              <label for="number">Sender's Acc number</label><br>
+              <input type="number" name="number" id=" Accnumber" placeholder="Please Enter Your Acc Number" required><br><br>
+              <label for="screenshoot">Secreenshoot</label><br>
+              <input type="file" name="screenshoot" id="screenshootInput" required><br><br>
+              <button class="pay-now" type="submit" style="background:rgb(20, 83, 165) ;">Pay with Bank</button>
+            </form>
+             
+          </div>
+        </div><br><br><br>
+
+                <!-- crypto curency -->
+                <div class="payment-method" id="crypto" onclick="opencrypto()">
+                 <div class="heading">
+                  <input type="radio" name="" id="">
+                  <p>Transfer directly from your crypto wallet.</p>
+                  <img src="images/payment/download-removebg-preview.png" alt="Bank Transfer">
+                 </div>
+
+
+                  <div class="inputs" style="display: none;" id="cryptoinputs">
+
+                    <h3>Pay with Crypto </h3><br>
+                    <h5>pay on USDT Wallet: 123 XXX XXX XXX</h5><br>
+                    <form method="post" onclick="event.preventDefault();" class="mtn-form"  >
+        
+                      <label for="names">Sender's Names</label><br>
+                      <input type="text" id="names" class="names" name="names" placeholder="Enter senders name" required><br><br>
+                      <label for="screenshot">Screenshot</label><br>
+                      <input type="file" name="screenshot" id="screenshot"required><br><br>
+                      
+                      <button class="pay-now" type="submit" style="background:rgb(171, 99, 24) ;">Pay with Crypto</button>
+                    </form>
+                     
+                  </div>
+                </div><br><br><br>
+  
+        <!-- Visa -->
+        <div class="payment-method" id="visa" onclick="openvisa()">
+
+          
+          <div class="heading">
+            <input type="radio" name="" id="">
+            <p>Pay securely using your Visa credit or debit card.</p>
+            <img src="images/payment/download mastercard.png" alt="Visa">
+            <img src="/images/payment/visa-removebg-preview.png" alt="">
+          </div>
+          <div class="VisacardInputs">
+
+            <div class="CardInputs">
+
+        
+          <div class="inputs" style="display: none;" id="visainputs">
+            <div class="inputHolders">
+              <div class="titles">
+
+                <h3>Card number</h3><br>
+                <p>Enter the 16 digit  card number on the card</p>
+                <input type="number" id="cardOwnerNumber"><br><br><br>
+              </div>
+              <div class="labelInputsholders">
+                <div class="inputsLabel">
+                  
+                  <h3>Card Name Holder</h3>
+                  <p>Enter Name Card holder on the card</p><br> 
+                  
+                  <h3>CVV Number</h3>
+                  <p>Enter the 3 or 4 digits number on the card</p> <br>
+                  
+                  <h3>Expiry Date </h3>
+                  <p>Enter the expiration date </p>
+                </div>
+                <div class="inputs">
+                  <form method="post">
+                    
+                    <input type="text" id="cardOwnerName"><br>
+                    <input type="number" id="cardCvvNumber"><br>
+                    <input type="date" id="cardExpiryDate"><br>
+                    
+                  </form>
+                  
+                </div>
+              </div>
+             
+          </div>
+            
+        </div>
+      </div>
+      
+      <div class="CardDetails" style="display: none;">
+        
+        
+        
+        <div class="card"><br>
+          <div class="title">
+            <h4>Debit</h4>
+             <div class="logos">
+            <img src="images/payment/2-removebg-preview.png">
+            <img src="images/payment/bk2-removebg-preview.png" class="logoTwo">
+             </div>
+          </div><br>
+          <div class="codes">
+            
+            <img src="images/payment/chip-removebg-preview.png" alt="">
+            <img src="images/payment/istockphoto-1185464424-612x612-removebg-preview.png" class="wifiLogo">
+          </div>
+          <div class="number">
+            
+            <h3 id="cardNumber">123 456 789</h3>
+            <p id="cardCvv">123</p>
+          </div>
+          
+          <div class="date">
+            
+            <p id="cardValiddate">23/4</p>
+          </div>
+          
+          <div class="visaLogoName">
+            <h3 id="cardOwner">SEMANA SHEMA Parfait</h3>
+            <img src="images/payment/download-removebg-preview1.png" alt="">
+          </div>
+          
+          <div class="name">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button style="display: none;" id="payButton">Pay</button>
+    </div><br><br><br>
+    
+    <!-- Redeem Code -->
+    <div class="payment-method" id="redeemcode" onclick="openredeem()">
+      <div class="heading">
+        <input type="radio" name="" id="">
+          <p>Activate your subscription using a unique code.</p>
+          <img src="images/payment/imagess-removebg-preview (1).png" alt="Redeem Code">
+         </div>
+
+
+          <div class="inputs" style="display: none;" id="codeinputs">
+
+            <h3>Redeem Code</h3><br>
+            <form action="" method="post" onclick="event.preventDefault();" class="mtn-form"  >
+
+              <label for="names">Code</label><br>
+              <input type="text" id="names" class="names" name="names" placeholder="Enter The code" required><br><br>
+
+              <button class="pay-now" type="submit">Claim code</button>
+            </form>
+             
+          </div>
+        </div>
+
+      </div>
+    </center>
+    </div>
+  </section>
+ <!-- ----------------------footer----------------------        -->
+ <footer style="background-color: #1c1c1c; color: #ffffff; padding: 20px 0; font-family: Arial, sans-serif;" id="footer">
+  <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;">
+    <!-- Section 1: Company Info -->
+    <div style="flex: 1; min-width: 200px; margin: 10px;">
+      <h3 style="font-size: 18px; margin-bottom: 10px;">About Us</h3>
+      <p style="font-size: 14px; line-height: 1.6;">
+        We provide secure, fast, and reliable payment solutions for businesses and individuals in Rwanda and beyond.
+      </p>
+
+    </div>
+
+    <!-- Section 2: Payment Methods -->
+    <div style="flex: 1; min-width: 200px; margin: 10px;">
+      <h3 style="font-size: 18px; margin-bottom: 10px;">Accepted Payment Methods</h3>
+      <img src="images/payment/download mastercard.png" alt="Visa" style="width: 50px; margin-right: 5px;">
+      <img src="images/payment/visa-removebg-preview.png" alt="MasterCard" style="width: 50px; margin-right: 5px;">
+      <img src="images/payment/download_mtn-removebg-preview.png" alt="MTN Mobile Money" style="width: 50px; margin-right: 5px;">
+      <img src="images/payment/bk.png" alt="Airtel Money" style="width: 50px;">
+    </div>
+
+    <!-- Section 3: Links -->
+    <div style="flex: 1; min-width: 200px; margin: 10px;">
+      <h3 style="font-size: 18px; margin-bottom: 10px;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0; font-size: 14px; line-height: 2;">
+        <li><a href="/privacy-policy" style="color: #ffffff; text-decoration: none;">Privacy Policy</a></li>
+        <li><a href="/terms-of-service" style="color: #ffffff; text-decoration: none;">Terms of Service</a></li>
+        <li><a href="/contact.html" style="color: #ffffff; text-decoration: none;">Contact Us</a></li>
+        <li><a href="/faq" style="color: #ffffff; text-decoration: none;">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 4: Social Media -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>Email: support@blackdollarmovies.com</p>
+      <p>Phone: +250 72 224 5279</p>
+      <p>Address: Kigali, Rwanda</p>
+      <div class="footer-socials">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.youtube.com" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+        
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 BlAcK DoLlAr Movies. All Rights Reserved.</p>
+    <p>Powered by <a href="https://hustelbase.rw">Hustel Base Rwanda</a></p>
+  </div>
+</footer>
+<script src="payment.js"></script>
+        </body>
+        </html>

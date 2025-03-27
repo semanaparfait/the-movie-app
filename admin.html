@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="admin/admin.css">
+    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
+</head>
+<body>
+  <div class="AllContainer" style="display: flex;">
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+          <ul><br><br>
+            <li><a href="#account"><i class="fa-solid fa-user"></i> Account</a></li><br>
+            <li><a href="#dashboard"><i class="fas fa-chart-pie"></i> Dashboard</a></li><br>
+            <li><a href="#movies"><i class="fas fa-film"></i> Movies</a></li><br>
+            <li><a href="upload.html"><i class="fa-solid fa-upload"></i> Upload</a></li><br>
+            <li><a href="#users"><i class="fas fa-users"></i> Users</a></li><br>
+            <li><a href="#subscriptions"><i class="fas fa-wallet"></i> Subscriptions</a></li><br>
+            <li><a href="#settings"><i class="fas fa-cogs"></i> Settings</a></li><br>
+            <li><a href="#help"><i class="fa-solid fa-question"></i>Help</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <!-- -------dashboard--------------- -->
+       <div class="dashboardContainer" style="display: none;">
+       <div class="dashboardContainer">
+      <main class="main-content" id="dashboard">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section">
+          <h1>Welcome on Dashboard</h1><br><br>
+          <div class="dashboard-cards">
+            <div class="card">
+              <h3>Total Movies</h3>
+              <p>120</p>
+            </div>
+            <div class="card">
+              <h3>Total Users</h3>
+              <p>1,245</p>
+            </div>
+            <div class="card">
+              <h3>Revenue</h3>
+              <p>$5,120</p>
+            </div>
+          </div>
+        </section>
+        </main><br>
+        
+        <div class="recent-activity">
+            <div class="title">
+                <h1>Recent Activities</h1>
+            </div>
+                <div class="recent-movie">
+                    <img src="/images/sankara/fith/Plumbing and Money_  What is your bathroom telling you_.jpeg" alt="">
+                </div>
+                <div class="recent-movie">
+                    <img src="/images/sankara/fith/money loves me _ subliminal affirmations to accumulate wealth.jpeg" alt="">
+                </div>
+                <div class="recent-movie">
+                    <img src="/images/sankara/fith/These 10 Countries Offer the Highest Interest Rates in 2024.jpeg" alt="">
+                </div>
+               </div>
+              </div>
+            </div>
+               <!-- -------------------upload--------- -->
+<center>
+  <div class="dashboardUploader" style=" margin-left: 20rem;" >
+    <h1>UPLOAD YOUR MOVIES</h1><br><br><br>
+   <form  method="post" id="uploadForm" action="../movies/movie.html">
+    <label for="moviename">Enter Movie Nmae</label><br><br>
+    <input type="text" placeholder="Enter Movie name" id="name" required><br><br><br>
+      <label for="genre">The movie-genres / ribbon</label><br><br>
+    <select name="genre" id="genre" required>
+      <option value="action">Action</option>
+      <option value="adventure">Adventure</option>
+      <option value="comedy">Comedy</option>
+      <option value="drama">Drama</option>
+      <option value="horror">Horror</option>
+      <option value="sci-fi">Sci-Fi</option>
+      <option value="fantasy">Fantasy</option>
+      <option value="thriller">Thriller</option>
+      <option value="romance">Romance</option>
+      <option value="animation">Animation</option>
+      <option value="documentary">Documentary</option>
+      <option value="crime">Crime</option>
+      <option value="mystery">Mystery</option>
+      <option value="family">Family</option>
+      <option value="war">War</option>
+      <option value="history">History</option>
+      <option value="music">Music</option>
+      <option value="sport">Sport</option>
+      <option value="western">Western</option>
+      <option value="biography">Biography</option>
+      <option value="musical">Musical</option>
+      <option value="superhero">Superhero</option>
+  </select><br><br><br>
+
+    <label for="movies">The movie photo</label><br><br>
+    <input type="file" required id="file"><br><br><br><br>
+    <button type="submit">Upload</button>
+   </form>
+  </div>
+</center>
+    </div>
+              
+
+<script src="admin/admin.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,436 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    /* padding: 0; */
+    text-decoration: none;
+    /* color: Soft Silver (#D4D4DC); */
+    /* font-family: 'Courier New', Courier, monospace; */
+}
+body{
+    font-family: Arial, sans-serif;
+
+}
+/* -----------------navbar-------------------- */
+.nav-bar {
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+
+   /* backdro/p-filter: blur(.7rem);  akantu kubwenge on navbar  */
+    /* border-bottom: 1px solid red; */
+    /* padding-left: 10rem; */
+   background: #f1c40f;
+    color: #fff;
+    .logo{
+        span{
+            color: red;
+        }
+    }
+}
+
+.logo h2 {
+    font-size: 24px;
+    color: #fff;
+}
+.links {
+    display: flex;
+    gap: 30px;
+    padding-left: 60px;   
+}
+
+.links a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+   
+}
+.links a:hover {
+    color: orange; /* Change to your preferred hover color */
+    /* border-bottom: 2px solid #f1c40f;  Adds an underline effect on hover */ 
+}
+
+/* ----------drop down----------- */
+
+.category-dropdown .dropdown-menu li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Category Dropdown Container */
+.category-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    display: none; /* Hide dropdown initially */
+    background-color:  hsl(0, 0%, 100%);
+    /* box-shadow: 5px 5px 10px red; */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 1;
+    margin-top: 0;
+}
+
+/* Show Dropdown on Hover */
+.category-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hover color for dropdown items */
+/* .dropdown-menu li a:hover { */
+    /* background: #25D366; */
+    /* color: aqua; */
+/* } */
+.dropdown-menu li{
+    list-style: none;
+    text-decoration: none   ;
+}
+/* -------------------------------body------------------ */
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="date"]{
+  width: 12rem ;
+  height: 2rem ;
+  border-radius: 10px;
+}
+.payment {
+    /* background-color: #121212; */
+    color: #ffffff;
+    padding: 40px 20px;
+    /* text-align: center; */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .payment-container {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    justify-content: center;
+  }
+  
+  .payment-container h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .payment-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #000000;
+  }
+  
+  .payment-options {
+    /* display: inline; */
+    gap: 3rem;
+    display: block;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+ 
+  }
+  
+  .payment-method {
+    /* display: flex; */
+    gap: 2rem;
+    /* background-color: #1e1e1e; */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* text-align: center; */
+    transition: transform 0.3s ease;
+    border: 1px solid #cccccc;
+    width: 60%;
+    h5{
+      color: #000000;
+      /* text-align: left; */
+    }
+    .heading{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+form{
+  label{
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    text-align: left;
+    display:block;
+    padding-left: 9rem;
+
+  }
+  input[type="text"], 
+input[type="number"],
+input[type="email"] {
+    width: 60%;
+    height: 2rem;
+    border-radius: 7px;
+    border: 1px solid rgb(138, 134, 134);
+    padding: 10px;
+    outline: none;
+  }
+}
+input:active{
+  border: 1px solid rgb(138, 134, 134);
+
+}
+
+  } 
+  .payment-method:hover {
+    transform: scale(1.05);
+  }
+  /* .payment-method:active{
+    height: 20rem;
+  } */
+  
+  .payment-method img {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .payment-method h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    /* color: #ff9900; */
+    color: #000000;
+  }
+  
+  .payment-method p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #cccccc;
+  }
+  
+  .pay-now {
+    background-color: #ff9900;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pay-now:hover {
+    background-color: #e68a00;
+  }
+  /* ---------------mastercard ---------------- */
+
+  #visa{
+    .VisacardInputs{
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+     /* margin: -10rem 0 0 -3rem; */
+     /* flex-wrap: wrap; */
+     /* border: 2px solid rebeccapurple; */
+
+   }
+  
+    .inputHolders{
+      .titles{
+        text-align: left;
+        padding-left: 3rem;
+
+        input{
+          width: 27rem;
+          height: 2rem;
+          border-radius: 10px;
+          border: 1px solid #cccccc;
+          outline: none;
+        }
+
+      }
+    }
+    .labelInputsholders{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      .inputsLabel{
+        text-align: left;
+        p{
+
+          font-size: .8rem;
+        }
+        h3{
+          font-size: 1rem;
+        }
+      }
+      .inputs{
+        form{
+
+          display: flex;
+          flex-direction: column;
+          gap: .8rem;  
+          input{
+            width:12rem ;
+            border: 1px solid #ccc;
+            outline: none;
+
+          }      
+        }
+      }
+    }
+    .card{
+      position: relative;
+      background-image: url(images/payment/istockphoto-1699206625-612x612.jpg);
+      font-family: 'tektur';
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 30rem;
+      height: 20rem;
+      border-radius: 10px;
+      /* filter: brightness(50%); */
+     p, h3{
+      color: rgb(209, 209, 209);
+     }
+
+      .title{
+        display: flex;
+        /* justify-content: center; */
+        /* background-color: #e68a00; */
+        .logos{
+          position: absolute;
+          top: 0;
+          right: 0;
+          /* display: flex;
+          flex-direction: column;
+          gap: -4rem; */
+          img{
+            margin: 0;
+            padding: 0;
+            gap: -2rem;
+            width: 5rem;
+            display: block;
+          }
+          .logoTwo{
+            /* padding-bottom: 14rem; */
+            
+          }
+        }
+        h4{
+          display: flex;
+          align-items: center;
+          /* justify-content: space-between; */
+          text-align: left;
+          width: 80%;
+          height: 3rem;
+          background: linear-gradient(90deg,blue,rgb(0, 162, 255),blue);
+          font-size: 35px;
+          font-weight: lighter;
+          letter-spacing: 2px;
+          padding-left: 2rem;
+
+        }
+      }
+      .codes{
+        /* background-color: #f1c40f; */
+        display: flex;
+        padding-left: 2rem;
+        gap:20rem;
+        img{
+          width: 3rem;
+        }
+        /* width: 20rem; */
+        .wifiLogo{
+          transform: rotate(90deg);
+          filter: brightness(100);
+        }
+      }
+      .number{
+        text-align: left;
+        padding-left: 4rem;
+        h3{
+          font-size: 2rem;
+        }
+       
+      }
+      .date{
+        /* display: flex; */
+        text-align: left;
+        padding-left: 12rem;
+        p{
+          font-size: 1.1rem;
+        }
+      }
+      .visaLogoName{
+        display: flex;
+        /* background-color: blue; */
+        /* gap: 8rem; */
+        padding-left: .8rem;
+        h3{
+          /* background-color: #e68a00; */
+          width: 78%;
+        }
+        img{
+          /* float: right; */
+          /* position: fixed; */       
+        }
+      }
+    }
+    button{
+      background-color: #f1c40f;
+      padding: 7px 40px ;
+      border-radius: 8px;
+      border: 1px solid #f1c40f;
+      cursor: progress;
+    }
+  }
+/* ------------------------footer----------------------- */
+/* Footer Styling */
+.footer-contact {
+  max-width: 250px;
+  /* width: 100%; */
+}
+
+.footer-contact h4 {
+  color: #ff9900;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  i{
+      font-size: 1.5rem;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+
+  }
+  i:hover{
+      color: #ff9900;
+  }
+}
+.footer-bottom {
+  margin-top: 20px;
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+.footer-bottom a {
+  color: #ff9900;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}

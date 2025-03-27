@@ -1,0 +1,255 @@
+body{
+    background-image: url("/images/yanga/Fight\ club\ 1999\ cover\ poster\ wallpaper\ \ 4K.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    /* background: linear-gradient(to top,black); */
+}
+::-webkit-scrollbar{
+    width: 8px;
+}
+::-webkit-scrollbar-track{
+    background: #d1e5ff;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(yellow,green);
+}
+.nav-bar{
+    /* backdrop-filter: blur(.7rem); */
+    position: fixed;
+    width: 100%;
+}
+img{
+    /* background: rebeccapurple; */
+    width: 10%;
+    /* height: 100%; */
+}
+.navigation{
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    
+    .navigator{
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+        gap: 15px;
+        /* background: red; */
+        position: absolute;
+        top: 0;
+        margin-top: 30px;
+        .home-link{
+            color: brown;
+            font-size: 30px;
+            font-weight: 900;
+
+        }
+        .category-toggle{
+            font-size: 28px;
+            color: cadetblue;
+        }
+        .category-toggle:hover{
+            font-size: 30px;
+            color: darkkhaki;
+        }
+        a{
+            color: rgb(71, 105, 135);
+            font-size: 20px;
+            font-weight: 800;
+            text-decoration: none;
+            
+        }
+        .dropdown-menu li{
+            list-style: none;
+
+        }
+        .dropdown-menu{
+            display: none;
+            width: 120px;
+            padding-top: 4px;
+            /* padding: 6px 5px; */
+            height: 33vh;
+            background: black;
+            position: absolute;
+            margin-top: 0;
+            box-shadow: 5px 5px 10px wheat;
+            
+        }
+        .category-dropdown:hover .dropdown-menu {
+            display: block;
+            
+        }
+        
+        /* Hover color for dropdown items */
+        .dropdown-menu li a:hover {
+            /* background: #25D366; */
+            color: aqua;
+        }
+        
+    }
+}
+.container{
+    background-image: url("/images/yanga/Fight\ club\ 1999\ cover\ poster\ wallpaper\ \ 4K.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    /* position: fixed; */
+}
+.container {
+    width: 100%;
+   
+    /* background: red; */
+
+}
+/* ----------------moviedetails-------------- */
+.movie-detail{
+    /* background: rebeccapurple; */
+    margin-top: 19rem;
+    margin-left: 3rem;
+    color: white;
+    /* position: fixed; */
+        button{
+        /* background: red; */
+        padding: .8rem;
+        border-radius: 20px;
+    }
+    .watch{
+        background:white;
+        font-weight: 560;
+        border: none;
+    }
+    .more-info{
+        background: transparent;
+        border: 1px solid;
+        color: white;
+        margin-left: 2rem;
+    }
+}
+/* ----------movies section------------ */
+.container{
+   
+    .movies{
+        display: flex;
+        background: rgb(34, 32, 32);
+        margin-top: 12rem;
+        /* box-shadow: 0px 0px 5px 30px rgb(0, 0, 0); */
+        background: rgb(32, 27, 27);
+        height: 50rem;
+        width: 100rem;
+        overflow-x: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(255, 255, 255) black;
+        img{
+            width: 15rem;
+        }
+        .image1,.image2{
+            background: rgb(223, 216, 216);
+            height: 25rem;
+            border-radius: 10px;
+            margin: .5rem;
+            margin-top: 10rem;
+            img{
+                height: 20rem;
+            }
+        }
+    }
+    .header{
+        color: rgb(255, 255, 255);
+       
+        span{
+            color: aquamarine;
+           
+            }
+        }
+    }
+    .typing-text {
+        position: relative;
+    }
+    
+    .typing-text::before {
+        content: "yanga"; /* Default content */
+        color:rgb(36, 88, 162);
+        font-size: 35px;
+        font-weight: 800;
+        animation: nameChange 10s steps(1) infinite;
+    }
+    
+    /* Cursor blinking animation */
+    .typing-text::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        border-left: 3px solid black;
+        right: -8px;
+        animation: cursor 0.6s infinite;
+    }
+    @keyframes nameChange {
+        0% {
+            content: "Rocky"  ; 
+        }
+        15% {
+            content: "Sankara";
+        }
+        30% {
+            content: "Junior";
+        }
+        45% {
+            content: "Gaheza";
+        }
+        60%{
+            content: "Savimbi";
+        }
+        75%{
+            content: "Piqu";
+        }
+        85%{
+            content:"yakuza" ;
+        }
+        100% {
+            content: "Yanga"; /* Loop back to the first word */
+        }
+    } 
+    .movies{
+        
+        .image2{
+            width: 100%;
+            
+        }
+    }
+    .movies::-webkit-scrollbar{
+        width: 0;
+    }
+    /* ----------secondslide------------ */
+    .second-slide{
+        display: flex;
+        background: rgb(34, 32, 32);
+        margin-top: 12rem;
+        height:40rem;
+        /* box-shadow: 0px 0px 5px 30px rgb(0, 0, 0); */
+        background: rgb(32, 27, 27);
+        height: 50rem;
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: thin;
+        scrollbar-color: rgb(255, 255, 255) black;
+        h2{
+            color: white;
+            display: block;
+            /* margin-top: -2rem; */
+        }
+        img{
+            width: 15rem;
+            height: 20rem;
+        }
+        .image-slide2{
+            background: red;
+            height: 25rem;
+            margin: .5rem;
+            border-radius: 7px;
+        }
+    }

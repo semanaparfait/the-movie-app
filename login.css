@@ -1,0 +1,113 @@
+/* Styles for Login Page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f5;
+    background-image: url(/images/account/Spiderman\ logo.jpeg);
+}
+.backing{
+    background: rgb(0, 0, 0);
+    width: 4rem;
+    height: 4rem;
+    border: none;
+    /* float: left; */
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+.back{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 4rem;
+}
+.signup{
+    color: #ddd;
+    font-size: 1.4rem;
+}
+.signup:hover{
+    color: blue;
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="text"]#token {
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#login-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #d9534f; /* Red color for error messages */
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+}

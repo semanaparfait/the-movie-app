@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cinema</title>
+    <link rel="stylesheet" href="cinema.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <div id="backgroundImage" class="backgroundImage">
+          
+        </div>
+        <video autoplay loop muted playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+            <source src="/images/The Studio — Official Trailer Apple TV.mp4" type="video/mp4">
+        </video>
+        <div class="hereo-section">
+            <div class="movie-left">
+                <div class="movie-poster">
+
+                    <img src="/bgimg2.jpeg" >
+                    <div class="buttons"><br>
+        
+                        <button class="play-btn">Play Now</button>
+                        <button class="download-btn">Download</button>
+                    </div>
+                </div>
+
+                <div class="movie-titles">
+                    
+                    <h1 id="movieName">Tom & Jerry</h1>
+                    <h5>10k Watchers</h5>
+                </div>
+            </div>
+
+
+            <div class="movie-right">
+                <div class="description">
+                    <div class="titles" style="display: flex; gap: 2rem;">
+                        <div class="likebuttons">
+
+                        </div>
+
+                        <div class="sharebutton">
+                            
+                        </div>
+
+                        <h1 id="description" onclick="description()">Description</h1>
+                        <h1 id="detail" onclick="movieDetails()">Details</h1>
+                    </div><br><br>
+                    <div class="description-content">
+                        <p class="movie-discription" id="movieDescriptions">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga maiores modi, rem, quasi ad tenetur explicabo reiciendis et necessitatibus voluptatibus nostrum quia! Porro voluptates incidunt, iure natus nisi ad perferendis?</p>
+                        <div class="description-right">
+
+                            <div class="description-titles">
+                            <h2 >Genre:</h2>
+                            <h2 >Date:</h2>
+                            <h2>Country:</h2>
+                            <h2 >Interpreter: </h2>
+                        </div>
+                        
+                        <div class="description-answer">
+                            <div class="genre">
+                                <p id="movieGenre1">Action</p>
+                                <p id="movieGenre2">War</p>
+                            </div>
+                            <p id="movieDate">Feb 12 ,2020</p>
+                            <p id="movieCountry">Rwanda</p>
+                            <p id="movieUmusobanuzi">Yanga</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <div class="details" style="display: none;"> 
+                   
+                    <div class="details-content">
+                        <div class="casters-images">
+                            <div class="cast-role">
+
+                                <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                <div class="role">
+                                    <h2>SEMANA</h2><br>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="cast-role">
+
+                                <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                <div class="role">
+                                    <h2>SEMANA</h2><br>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="cast-role">
+
+                                <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                <div class="role">
+                                    <h2>SEMANA</h2><br>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="cast-role">
+
+                                <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                <div class="role">
+                                    <h2>SEMANA</h2><br>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                            <div class="cast-role">
+
+                                <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                <div class="role">
+                                    <h2>SEMANA</h2><br>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                </div>
+                            </div>
+                        
+
+                        </div><br><br>
+
+                        <h1 style="padding-left: 5rem;"><u><strong>ROLE</strong></u></h1><br>
+                        <div class="caster-names" >
+                            <div class="caster-role">
+                                <h2>Debande</h2>
+                                <h2>Tipe</h2>
+                            </div>
+
+                            <div class="caster-title-name">
+                                <p>Semana</p>
+                                <p>Yezu</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script src="cinema.js"></script>
+</body>
+</html>
