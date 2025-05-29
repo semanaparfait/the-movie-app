@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.left-container{
+    /* background: #ab2828; */
+    height: 100vh;
+    text-align: left;
+    .logo{
+        padding: 2rem;
+        img{
+            width: 5rem;
+            /* align-items: center; */
+        }
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-left: 2rem;
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* text-align: left; */
+
+
+        li{
+            text-align: left;
+           
+            padding: 8px;
+            /* background:rgb(32, 112, 233); */
+            width: 70%;
+            border-radius: 5px;
+           
+            a{
+                text-decoration: none;
+                text-align: left;
+                color: rgb(255, 255, 255);
+                font-size: 1.2rem;
+                transition: color 0.3s ease;
+                &:hover{
+                    /* color: #6d2121; */
+                }
+            }
+        }
+        li:hover{
+            background:rgb(32, 112, 233);
+
+        }
+    }
+}
+/* -------------------profile-------------- */
+.profile-container{
+    /* background: #000; */
+    .header{
+        display: flex;
+        align-items: center;
+        gap: 10rem;
+        justify-content: space-between;
+        padding: 1rem;
+        border-top: 1px solid #ccc;
+        .profile-image{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            img{
+                width: 10rem;
+                /* height: 10rem; */
+                border-radius: 7%;
+            }
+        }
+    }
+}
+/* -------------------personal-info-------------- */
+.personal-info-all{
+    border-top: 1px solid #ccc;
+    .personal-info{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        label{
+            /* font-size: .8rem; */
+            color: #333;
+        }
+    }
+
+}

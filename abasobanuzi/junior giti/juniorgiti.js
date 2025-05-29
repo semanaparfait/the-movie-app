@@ -103,19 +103,45 @@ const movieItems = document.querySelectorAll(".movie")
 
 movieItems.forEach(movie => {
     movie.addEventListener('click', function() {
-        console.log("ghfcbcbbc")
         // Get the attributes from the clicked movie div
-        const image = movie.getAttribute('data-image');
-        const name = movie.getAttribute('data-name');
-        const genre = movie.getAttribute('data-genre');
-        const director = movie.getAttribute('data-director');
-        const year = movie.getAttribute('data-year');
-        const rating = movie.getAttribute('data-rating');
-        const description = movie.getAttribute('data-description');
-        const narrator = movie.getAttribute('data-narrator');
+        const image = movie.dataset.image;
+        const trailerVideo = movie.dataset.videoTrailer;
+        const movieVideo = movie.dataset.movievideo;
+        const name = movie.dataset.name;
+        const genre = movie.dataset.genre;
+        const director = movie.dataset.director;
+        const year = movie.dataset.year;
+        const rating = movie.dataset.rating;
+        const description = movie.dataset.description;
+        const narrator = movie.dataset.narrator;
+        const country = movie.dataset.region;
+        const interpreter= movie.dataset.interpreter;
+        const genre2 = movie.dataset.genre2;
+
+        // console.log(name,image,genre,director,year,rating,description,narrator)
+
+        const url = `/cinema/cinemaAgasobanuye/cinema.html?` +
+        `image=${encodeURIComponent(image)}&` +
+        `trailerVideo=${encodeURIComponent(trailerVideo)}&` +
+        `movieVideo=${encodeURIComponent(movieVideo)}&` +
+        `country=${encodeURIComponent(country)}&` +
+        `name=${encodeURIComponent(name)}&` +
+        `genre=${encodeURIComponent(genre)}&` +
+        `director=${encodeURIComponent(director)}&` +
+        `year=${encodeURIComponent(year)}&` +
+        `rating=${encodeURIComponent(rating)}&` +
+        `genre2=${encodeURIComponent(genre2)}&` +
+        `interpreter=${encodeURIComponent(interpreter)}&` +
+        `description=${encodeURIComponent(description)}&` +
+        `narrator=${encodeURIComponent(narrator)}`;
+      
+      window.location.href = url;
+
 
        
     });
+
+
 });
 
 // Function to close the movie card

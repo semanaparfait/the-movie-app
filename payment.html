@@ -17,16 +17,19 @@
 
         <!-- Navbar -->
         <nav class="nav-bar" id="nav">
-            <div class="logo">
-                <h2><span>B</span>lAcK <span>D</span>oLlAr</h2>
-            </div>
-            <div class="links">
+          <div class="logo">
+            <!-- <h2><span>B</span>lAcK <span>D</span>oLlAr</h2> -->
+             <img src="images/main-logo/c2f30564-3a66-487a-9b94-a08fcb8b3264-removebg.png">
+        </div>
+        <div class="links" id="menu-links">
+          <i class="fa-solid fa-xmark" onclick="closemenu()" ></i>
                 <a href="movie.html" >Home</a>
                <a href="subscrption.html">Subscription</a>
                 <a href="#">Watchlist</a>
                 <a href="contact.html">Contact Us</a>
                 <a title="home" href="account.html">Account</a>
             </div>
+            <i class="fa-solid fa-bars" id="menu-bar" onclick="openmenu()" ></i>
     
         </nav><br><br><br><br><br><br><br>
 <!-- ------------------------------body-------------------         -->
@@ -38,10 +41,16 @@
     
       <div class="payment-options">
         <!-- MTN Mobile Money -->
+         <div class="pay mtn-method">
+          <div class="mtn-titles">
+            <h1>💰 Pay Instantly with MTN Mobile Money!</h1>
+<p>Experience the ease of secure payments directly from your mobile wallet. Fast, simple, and reliable.</p>
+
+          </div><br>
         <div class="payment-method" id="mtn" onclick="openmtn()">
           <div class="heading">
 
-            <input type="radio" name="" id="">
+            <!-- <input type="radio" name="" id=""> -->
             <p>Pay instantly with MTN Mobile Money.</p>
             <img src="images/payment/download_mtn-removebg-preview.png" alt="MTN Mobile Money">
           </div>
@@ -59,9 +68,17 @@
             </form>
              
           </div>
-        </div><br><br>
+        </div>
+      </div><br><br>
   
         <!-- Airtel Money -->
+         <div class="pay airtel-method">
+          <div class="airtel-titles">
+            <h1>📱 Airtel Money - Your Mobile Wallet, Now for Payments!</h1>
+            <p>Make hassle-free payments from your Airtel Money account. Fast, secure, and always available on your phone!</p>
+            
+          </div><br>
+         
         <div class="payment-method" id="airtel" onclick="openairtel()">
           
           <div class="heading">
@@ -83,9 +100,17 @@
                           </form>
           </div>
              
+        </div>
         </div><br><br><br>
   
         <!-- PayPal -->
+         <div class="pay paypal-method">
+          <div class="paypal-titles"> 
+            <h1>💳 Pay with PayPal - Secure & Easy!</h1>
+            <p>Enjoy global payments with just an email and password. Fast, secure, and widely trusted worldwide.</p>
+            
+          </div>
+         
         <div class="payment-method" id="paypal" onclick="openpaypal()">
           <div class="heading">
               <input type="radio" name="" id="">
@@ -95,7 +120,7 @@
 
           <div class="inputs" style="display: none;" id="paypalinputs">
 
-            <h3>Pay Pal</h3><br>
+            <h3>PayPal</h3><br>
             <form action="" method="post" onclick="event.preventDefault();" class="mtn-form"  >
 
               <label for="names">Sender's Names</label><br>
@@ -106,9 +131,17 @@
             </form>
              
           </div>
-        </div><br><br><br>
+        </div>
+      </div><br><br><br>
   
         <!-- Bank Transfer -->
+         <div class="pay bank-transfer-method">
+          <div class="bank-transfer-titles">
+            <h1>🏦 Bank Transfer – Secure Direct Payments!</h1>
+<p>Make secure payments directly from your bank account. A safe and simple way to transfer funds instantly.</p>
+
+          </div>
+         
         <div class="payment-method" id="bank" onclick="openbank()">
         <div class="heading">
           <input type="radio" name="" id="">
@@ -135,9 +168,16 @@
             </form>
              
           </div>
+        </div>
         </div><br><br><br>
 
                 <!-- crypto curency -->
+                 <div class="pay crypto-curency-method">
+                  <div class="crypto-curency-titles">
+                    <h1>🚀 Crypto Currency – Fast and Secure Payments!</h1>
+                    <p>Make fast and secure payments directly from your crypto wallet. A safe and simple way to transfer
+                  </div>
+                
                 <div class="payment-method" id="crypto" onclick="opencrypto()">
                  <div class="heading">
                   <input type="radio" name="" id="">
@@ -161,9 +201,17 @@
                     </form>
                      
                   </div>
+                </div>
                 </div><br><br><br>
   
         <!-- Visa -->
+         <div class="pay visa-method">
+          <div class="visa-titles">
+            <h1>🌍 Visa - Fast, Secure, Global Payments!</h1>
+<p>Pay with your Visa card and enjoy seamless transactions around the world. Fast, secure, and always reliable.</p>
+
+          </div>
+        
         <div class="payment-method" id="visa" onclick="openvisa()">
 
           
@@ -201,24 +249,16 @@
                 <div class="inputs">
                   <form method="post">
                     
-                    <input type="text" id="cardOwnerName"><br>
+                    <input type="text" id="cardOwnerName" required maxlength="16"><br>
                     <input type="number" id="cardCvvNumber"><br>
-                    <input type="date" id="cardExpiryDate"><br>
-                    
-                  </form>
-                  
+                    <input type="date" id="cardExpiryDate"><br>  
+                  </form> 
                 </div>
               </div>
-             
-          </div>
-            
+          </div>    
         </div>
       </div>
-      
       <div class="CardDetails" style="display: none;">
-        
-        
-        
         <div class="card"><br>
           <div class="title">
             <h4>Debit</h4>
@@ -254,9 +294,17 @@
       </div>
     </div>
     <button style="display: none;" id="payButton">Pay</button>
-    </div><br><br><br>
+  </div>  
+  </div><br><br><br>
     
     <!-- Redeem Code -->
+     <div class="redeemCode-method">
+      <div class="redeemCodeTitle">
+        <h1>🎉 Unlock Rewards with Redeem Codes!</h1>
+<p>Enter your special redeem code and enjoy exclusive discounts and offers. Your rewards are just a click away!</p>
+
+      </div>
+     
     <div class="payment-method" id="redeemcode" onclick="openredeem()">
       <div class="heading">
         <input type="radio" name="" id="">
@@ -278,6 +326,7 @@
              
           </div>
         </div>
+      </div>
 
       </div>
     </center>
@@ -345,6 +394,14 @@
     <p>Powered by <a href="https://hustelbase.rw">Hustel Base Rwanda</a></p>
   </div>
 </footer>
+<script>
+  document.getElementById("cardOwnerName").addEventListener("input", function() {
+      let currentValue = this.value;
+      if (currentValue.length > 16) {
+          this.value = currentValue.slice(0, 16); // Automatically truncate to 16 characters
+      }
+  });
+</script>
 <script src="payment.js"></script>
         </body>
         </html>

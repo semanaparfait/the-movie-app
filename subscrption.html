@@ -15,16 +15,18 @@
         <!-- Navbar -->
         <nav class="nav-bar">
             <div class="logo">
-                <h2><span>B</span>lAcK <span>D</span>oLlAr</h2>
+                <!-- <h2><span>B</span>lAcK <span>D</span>oLlAr</h2> -->
+                 <img src="images/main-logo/c2f30564-3a66-487a-9b94-a08fcb8b3264-removebg.png">
             </div>
-            <div class="links">
+            <div class="links" id="menu-links">
+              <i class="fa-solid fa-xmark" onclick="closemenu()" ></i>
                 <a href="movie.html" >Home</a>
-                <a href="subscription.html">Subscription</a>
+                <a title="home" href="subscrption.html">Subscription</a>
                 <a href="#">Watchlist</a>
-                <a href="contact.html">Contact Us</a>
-                <a title="home" href="account.html">Account</a>
+                <a href="contact.html">Contact </a>
+                <a   href="account.html">Account</a>
             </div>
-    
+            <i class="fa-solid fa-bars" id="menu-bar" onclick="openmenu()" ></i>
         </nav><br><br><br><br><br><br><br>
 
     <center>
@@ -32,8 +34,8 @@
         <h1 style="color: white;">Ready for Endless Movie Magic? <br>Choose the Perfect Plan and Start Streaming Now!</h1><br>
         <p style="color: white;">
             Enjoy exclusive, high-quality movies with affordable plans made for every movie lover!</p><br>
-            <button>English</button>
-            <button>Kinyarwanda</button>
+            <!-- <button>English</button>
+            <button>Kinyarwanda</button> -->
     </div>
     </center><br><br><br><br>
 
@@ -43,61 +45,79 @@
     <section class="container1">
 
             <div class="card-1">
-                <i class="fa-solid fa-battery-quarter"></i>
+              <div class="title-card1">
+
                 <h1>Free Plan </h1><br>
-                <p>enjoy now free movies</p><br>
-                <h2>Free</h2><br>
-                <h3>What will you get</h3><br>
-                <p><i class="fa-regular fa-circle-check"></i>Unlimited Streaming</p><br>
-                <p><i class="fa-regular fa-circle-check"></i>Explore Premium Content</p><br>
-                <p><i class="fa-regular fa-circle-check"></i>Ad-Free Viewing</p><br>
-                <p><i class="fa-regular fa-circle-check"></i>Curated Recommendations</p><br>
-                <p><i class="fa-regular fa-circle-check"></i>High-Quality Streaming</p><br>
-                <p><i class="fa-regular fa-circle-check"></i>Instant Access, No Payment Required </p><br><br><br>
+                <p>Unlimited movies for 7 days!</p><br>
+                <h2>No cost</h2><br>
+              </div><br>
+                <!-- <i class="fa-solid fa-battery-quarter"></i> -->
+                <center class="text">
+                 <h3>What will you get</h3><br>
+                 <p><span class="checkmark">✔</span>  Limited access to movies</p><br>
+                 <p><span class="checkmark">✔</span>  Standard quality streaming</p><br>
+                 <p><span class="checkmark">✔</span>  7-day free trial for premium content</p><br>
+                 <p><span class="x-mark">✘</span>  Ad-free streaming</p><br>
+                 <p><span class="x-mark">✘</span>  HD quality</p><br>
+                 <p><span class="x-mark">✘</span>  Early access to new releases</p><br>
+                 <p><span class="x-mark">✘</span> Offline downloads</p><br>
+               </center>
+
 <center>
   <a href="payment.html"><button>Enjoy Now</button></a>
-</center>
+</center><br>
             </div>
 
      </section>
      <!-- ------------------------secondcard------------------ -->
      <section class="container2">
-        <!-- <div class="popular" style="background-color: green; padding: 5px; border-radius: 10px 10px 0 0;">
-          <center>
-            <h2>Most popular</h2>
-          </center>
-        </div> -->
+
         <div class="card-2">
-            <i class="fa-solid fa-battery-full"></i>
+          <div class="title-card2">
+
             <h1>Basic Plan</h1><br>
-            <p>enjoy now free movies</p><br>
+            <p>Watch more, pay less!</p><br>
             <h2>$3 / weekly</h2><br>
-            <h3>What will you get</h3><br>
-            <p><i class="fa-regular fa-circle-check"></i> HD Streaming</p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Monthly Download Limit</p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Access to Popular Content</p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Multi-Device Streaming</p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Access to Popular Content </p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Personalized Recommendations </p><br><br>
+          </div><br>
+            <!-- <i class="fa-solid fa-battery-full"></i> -->
+             <center class="text">
+
+               <h3>What will you get</h3><br>
+               <p><span class="checkmark">✔</span>  Ad-free streaming</p><br>
+               <p><span class="checkmark">✔</span> HD quality content</p><br>
+               <p><span class="checkmark">✔</span> Weekly movie access</p><br>
+               <p><span class="checkmark">✔</span> Early access to new releases</p><br>
+               <p><span class="checkmark">✔</span> Offline downloads</p><br>
+               <p><span class="checkmark">✔</span> Priority customer support</p><br>
+             </center>
+
 <center>
   <a href="payment.html"><button>Enjoy Now</button></a>
-</center>
+</center><br><br>
         </div>
       </section>
       <!-- ----------------------thirdcard------------------- -->
        <section class="container3">
         <div class="card-3">
-            <i class="fa-solid fa-battery-full"></i>
+          <div class="title-card3">
+
             <h1>Premium Plan</h1><br>
-            <p>enjoy now free movies</p><br>
-            <h2>$10 / <p> Monthly</p></h2><br>
-            <h3>What will you get</h3><br>
-            <p><i class="fa-regular fa-circle-check"></i>Unlimited Downloads</p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Early Access to New Releases </p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Ad-Free Experience</p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Multi-Device Accesst</p><br>
-            <p><i class="fa-regular fa-circle-check"></i>High-Definition Streaming </p><br>
-            <p><i class="fa-regular fa-circle-check"></i>Exclusive Content Library</p><br>
+            <p>All movies. No limits.</p><br>
+            <h2>$10 <span>per month</span></h2><br>
+          </div><br>
+            <!-- <i class="fa-solid fa-battery-full"></i> -->
+             <center class="text">
+
+               <h3>What will you get</h3><br><br>
+               <p><span class="checkmark">✔</span>  Ad-free & unlimited access</p><br>
+               <p><span class="checkmark">✔</span>  Full HD & 4K streaming</p><br>
+               <p><span class="checkmark">✔</span> Exclusive content & early releases</p><br>
+               <p><span class="checkmark">✔</span>  Access to all movies and shows</p><br>
+               <p><span class="checkmark">✔</span>  Offline downloads for convenience</p><br>
+               <p><span class="checkmark">✔</span>  Priority customer support</p><br>
+             </center>
+
+
 <center>
   <a href="payment.html"> <button>Enjoy Now</button></a>
 </center>
@@ -110,7 +130,7 @@
 
 <!-- ----------------footer-----------------------     -->
 
-<footer>
+<!-- <footer>
     <div class="footer-container">
       <div class="footer-logo">
         <h2>BlAcK DoLlAr Movies</h2>
@@ -166,6 +186,28 @@
       <p>Powered by <a href="https://hustelbase.rw">Hustel Base Rwanda</a></p>
     </div>
   </footer>
-  
-</body>
+   -->
+
+<!-- <script>
+document.getElementById("menu-bar").addEventListener('click', function() {
+  document.getElementById("menu-links").classList.add("active");
+  });
+  document.querySelector(".fa-xmark").addEventListener('click' , function(){
+    document.querySelector(".links").style.display="none"
+
+  });
+
+</script> -->
+
+<script>
+  var sidemenu = document.getElementById("menu-links");
+
+function openmenu(){
+sidemenu.style.right="0";
+}
+function closemenu(){
+sidemenu.style.right="-150px";
+}
+</script>
+  </body>
 </html>

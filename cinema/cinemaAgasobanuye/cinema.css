@@ -48,10 +48,11 @@
         margin-left: 5rem;
         .movie-poster{
             img{
-                width: 50%;
+                width: 16rem;
                 height: 350px;
                 border-radius: 7px;
                 object-fit: cover;
+                /* border: 2px solid navy; */
             }
             .buttons{
                 button{
@@ -78,9 +79,12 @@
              gap: 2rem;
          
              /* color: aqua; */
-             position: absolute;
+             /* position: absolute; */
              right: 3%;
              font-size: 22px;
+             h1{
+                /* color: #000; */
+             }
         }
     }
 

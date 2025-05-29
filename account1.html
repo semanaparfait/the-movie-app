@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Signup Animation</title>
+    <link rel="stylesheet" href="account1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+          integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div class="back-to-home">
+        <a href="movie.html">
+            <button class="back-home" title="Home"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+        </a>
+    </div>
+
+    <div class="container" id="container">
+        <!-- Sign In Form -->
+        <div class="form-container signin-container">
+            <h1>Sign in</h1>
+            <div class="links">
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+            <p>Welcome back! Please log in with your credentials.</p>
+            <form method="post">
+                <!-- Email Field -->
+                <div class="input-container">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email / Name" required>
+                </div>
+
+                <!-- code Field -->
+                <div class="input-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" placeholder="Enter your Login Code" required>
+                </div>
+
+                <!-- Password Field -->
+                <div class="input-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit">Sign In</button>
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="form-container signup-container">
+            <h1>Sign up</h1>
+            <div class="links">
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-google-plus-g"></i></a>
+            </div>
+            <p>Welcome</p>
+            <p>Create your account and start your journey with us!</p>
+            <form method="post">
+                <!-- Name Field -->
+                <div class="input-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+  
+                <!-- Email Field -->
+                <div class="input-container">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+  
+                <!-- Phone Number Field -->
+                <div class="input-container">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="number" placeholder="Enter your phone number" required>
+                </div>
+  
+                <!-- Password Field -->
+                <div class="input-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+  
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+        
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <h1>Welcome to <br> The Movies</h1>
+            <p id="message">New Here?</p>
+            <button id="togglebtn">Sign Up</button>
+        </div>
+    </div>
+    
+    <!-- Script -->
+    <script>
+        const container = document.getElementById("container");
+        const toggleBtn = document.getElementById("togglebtn");
+        const message = document.getElementById("message");
+
+        toggleBtn.addEventListener("click", () => {
+            container.classList.toggle("active");
+            if (container.classList.contains("active")) {
+                message.textContent = "Enjoy creating a new account with us!";
+                toggleBtn.textContent = "Log In";
+            } else {
+                message.textContent = "New Here?";
+                toggleBtn.textContent = "Sign Up";
+            }
+        });
+    </script>
+</body>
+</html>

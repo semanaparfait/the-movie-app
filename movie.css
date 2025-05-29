@@ -47,12 +47,35 @@ body{
     position: fixed;
     width: 100%;
     z-index: 2;
-
-   backdrop-filter: blur(.7rem); /*  akantu kubwenge on navbar */
+    
+    backdrop-filter: blur(.7rem); /*  akantu kubwenge on navbar */
     /* border-bottom: 1px solid red; */
     /* padding-left: 10rem; */
-   
+    
     color: #fff;
+    .accountnotfication{
+        display: flex;
+        align-items: center;
+        /* justify-content: space-evenly; */
+        .fa-bell{
+            font-size: 1.5rem;
+            margin-right: .5rem;
+            cursor: pointer;
+        }
+        button{
+            margin-left: .8rem;
+            padding: .4rem;
+            border-radius: 7px;
+            border: none;
+            background: #1DA1F2;
+            cursor: pointer;
+
+        }
+        .acc{
+            width: 30px;
+            border-radius: 50%;
+        }
+    }
     .logo{
         span{
             color: red;
@@ -71,10 +94,6 @@ body{
     padding-left: 60px;
 [title]{
     color: #9b0d0d;
-}
-img{
-    width: 30px;
-    border-radius: 50%;
 }
     
 }

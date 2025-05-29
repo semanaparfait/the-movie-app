@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineAdmin - Movie Website Dashboard</title>
+  <link rel="stylesheet" href="adminacc.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="all-container">
+        <img src="/images/admin/adminacc/WhatsApp Image 2025-05-28 at 13.58.07_4d072d8d.jpg" alt="">
+    </div>
+ 
+  <div class="adminacc" >
+    <div class="image">
+      <img src="/images/admin/adminacc/WhatsApp Image 2025-05-28 at 13.58.07_4d072d8d.jpg" alt="">
+    </div>
+
+
+    <div class="admin-signup" style="display: none;" >
+      <h1>Admin Signup</h1>
+      <p>Welcome to The movienest</p><br>
+      <form action="#" method="post">
+        <div class="input-group">
+          <input type="text" id="username" placeholder="Username"><br><br>
+        </div>
+        <div class="input-group">
+          <input type="text" id="tokencode" placeholder="Token Code" required><br><br>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" placeholder="Email"><br><br>
+        </div>
+        <div class="input-group">
+          <input type="password" id="password" placeholder="Password" required><br>
+        </div><br>
+        <input type="checkbox" name="checkboxterms" id="checkboxterms"> agree to the <a href="#">terms and conditions</a><br><br>
+        <button style="      width: 20rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;">Log in with <img src="/images/admin/adminacc/download.png"></button><br>
+        <button type="submit">Sign Up</button><br><br>
+      </form>
+      already have an account? <a href="#" onclick="openAdminlogin()">Login</a><br><br>
+      <div class="platforms">
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+            <!-- ---------------------login---------------- -->
+            <div class="admin-login">
+                <h1>Admin Login</h1>
+                <p>Welcome to The movies</p><br>
+                <form action="#" method="post">
+                  <div class="input-group">
+                    <input type="text" id="usernamelogin" name="usernamelogin" placeholder="Email" required><br><br>
+                  </div>
+                  <div class="input-group">
+                    <input type="password" id="passwordlogin"  placeholder="Password" required><br>
+                  </div><br>
+                  <div class="input-group logInIdCode" >
+                      <input type="password" id="loginIdcode"  placeholder="Your ID / code" ><br>
+                    </div><br>
+                  <a href="#" style="text-align: l;">Forgot Password ?</a>
+                  <br><br>
+      
+            
+                  <button style="      width: 20rem;
+                  height: 2.5rem;
+                  border-radius: 10px;
+                  border: 1px solid #ccc;
+                  background-color: #ffffff;
+                  color: rgb(0, 0, 0);
+                  font-size: 1rem;
+                  cursor: pointer;
+                  transition: background-color 0.3s ease;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;">Log in with <img src="/images/admin/adminacc/download.png"></button><br>
+      
+                  <button type="submit">Login</button><br><br>
+                  don't have an account? <a href="#" onclick="openAdminsignup()">Sign Up</a><br><br>
+                </form>
+                <div class="platforms">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+  </div>
+  <!-- --------------------alert------------------- -->
+  <div class="alert" style="display: none;">
+    <div class="alert-content">
+      <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc25ycGFoMHRiZHoya2Z4eTV3MzZ4OHNyMzMyczI3amI0cmE2Z3dkdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fUQ4rhUZJYiQsas6WD/giphy.gif" alt="">
+      <h2 style="color:#3ce767 ;">Congruturations</h2><br>
+      <p>You're in! Welcome <br> back to your dashboard.</p><br>
+      <button onclick="document.querySelector('.alert').style.display='none'" id="Okalert">OK</button>
+    </div>
+
+  <script>
+    function openAdminsignup() {
+      document.querySelector('.admin-login').style.display = 'none';
+      document.querySelector('.admin-signup').style.display = 'block';
+    }
+
+    function openAdminlogin() {
+      document.querySelector('.admin-login').style.display = 'block';
+      document.querySelector('.admin-signup').style.display = 'none';
+    }
+    // getting the log in  content----------------
+    const alertBox = document.querySelector('.alert');
+    const Okalert = document.getElementById('Okalert');
+document.querySelector(".admin-login").addEventListener("submit", function(event) {
+
+event.preventDefault(); // Prevent the form from submitting normally
+
+// Get the values from the form fields
+const username = document.getElementById('usernamelogin').value;
+const password = document.getElementById('passwordlogin').value;
+const loginIdcode = document.getElementById('loginIdcode').value;
+
+
+// Check if the credentials are correct (this is just a placeholder, replace with actual validation)
+if (username === 'semana' && password === 'semana' && loginIdcode === '2004') {
+//    loginIdcode.style.display = 'block'; 
+alertBox.style.display = 'block'; 
+  // window.location.href = 'admin.html'; 
+} else {
+  alert('Invalid username or password. Please try again.');
+}
+});
+Okalert.addEventListener('click', function(){
+  alertBox.style.display = 'none'; 
+  window.location.href = 'admin.html'; // Redirect to the admin page
+
+});
+// ---------------------getiing the alert content----------------
+    </script>
+</body>
+</html>

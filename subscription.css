@@ -7,7 +7,7 @@
     /* font-family: 'Courier New', Courier, monospace; */
 }
 body{
-     background: rgb(0, 0, 0);
+    background: linear-gradient(to top, rgb(44, 58, 87), rgb(3, 16, 32));
     color: white;
     font-family: Arial, sans-serif;
     /* background: url("bgimg4.jpg")no-repeat;
@@ -41,17 +41,23 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem;
+    /* padding: 2rem; */
     position: fixed;
     width: 100%;
+    height:5rem;
     z-index: 100;
 
    /* backdro/p-filter: blur(.7rem);  akantu kubwenge on navbar  */
     /* border-bottom: 1px solid red; */
     /* padding-left: 10rem; */
-   background: black;
+   /* background: black; */
+   background: linear-gradient(to bottom, rgb(44, 58, 87), rgb(3, 16, 32));
     color: #fff;
     .logo{
+        margin-left: 3rem;
+        img{
+            width: 20%;
+        }
         span{
             color: red;
         }
@@ -65,8 +71,8 @@ body{
 
 .links {
     display: flex;
-    gap: 30px;
-    padding-left: 60px;
+    gap: 70px;
+    margin-right: 6rem;
 [title]{
     color: #9b0d0d;
 }
@@ -81,53 +87,10 @@ body{
 }
 .links a:hover {
     color: orange; /* Change to your preferred hover color */
-    border-bottom: 2px solid #f1c40f; /* Adds an underline effect on hover */
+    /* border-bottom: 2px solid #f1c40f; Adds an underline effect on hover */
 }
 
 
-
-/* ----------drop down----------- */
-
-.category-dropdown .dropdown-menu li a {
-    display: block;
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    padding: 10px;
-}
-
-/* Category Dropdown Container */
-.category-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Menu Styling */
-.dropdown-menu {
-    display: none; /* Hide dropdown initially */
-    background-color:  hsl(0, 0%, 100%);
-    /* box-shadow: 5px 5px 10px red; */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 150px;
-    z-index: 1;
-    margin-top: 0;
-}
-
-/* Show Dropdown on Hover */
-.category-dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-/* Hover color for dropdown items */
-/* .dropdown-menu li a:hover { */
-    /* background: #25D366; */
-    /* color: aqua; */
-/* } */
-.dropdown-menu li{
-    list-style: none;
-    text-decoration: none   ;
-}
 /* -------------------body----------------------- */
 .sub{
     color: rgb(255, 255, 255);
@@ -162,32 +125,54 @@ body{
     flex-wrap: wrap;
 
 
+    .text{
+        text-align: left;
+        padding-left: 3rem;
+    }
+    .checkmark {
+        color: green;
+        font-weight: 900;
+      }
+      
+      .x-mark {
+        color: red;
+      }
 }
 .container1{
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: rgb(3, 16, 32);
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid white;
-    width: 22rem;
-    padding: 2rem;
-    border-radius: 10px;
-    text-align: left;
+    /* border: 1px solid white; */
+    /* width: 22rem; */
+    /* padding: 2rem; */
+    border-radius: 150px 10px 10px 10px ;
+    /* text-align: center; */
     cursor: pointer;
     color: white;
+    .title-card1{
+        background: rgb(255, 181, 92);
+        width: 22rem;
+        padding: 2rem;
+        border-radius: 150px 1px 150px 1px ;
+        text-align: center;
+        /* margin-right: 10rem; */
+    }
 
     button {
-        width: 100%;
-        background: white;
+        /* width: 100%; */
+        background: rgb(255, 181, 92);
         color: black;
-        padding: 10px;
+        padding: 10px 20px;
         border: none;
-        border-radius: 5px;
+        border-radius: 800px 1px 800px 1px;
         margin-top: 10px;
         cursor: pointer;
     }
     
     button:hover {
-        background: gray;
+        /* background: gray; */
+        background: rgb(24, 143, 58);
     }
     i{
         color:  #0056b3;
@@ -197,28 +182,39 @@ body{
 /* -------------------secondcard----------------- */
 .card-2{
 
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: rgb(3, 16, 32);
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-        border: 1px solid white;
-        width: 22rem;
-        padding: 3rem;
-        border-radius: 0px 0px 10px 10px;
+        /* border: 1px solid white; */
+        /* width: 22rem;
+        padding: 3rem; */
+        border-radius: 150px 10px 10px 10px ;
         text-align: left;
         cursor: pointer;
+         
+        .title-card2{
+            background: rgb(0, 114, 167);
+            width: 22rem;
+            padding: 2rem;
+            border-radius: 150px 1px 150px 1px ;
+            text-align: center;
+            /* margin-right: 10rem; */
+        }
         button {
-            width: 100%;
-            background: white;
+            /* width: 100%; */
+            background: rgb(0, 114, 167);
             color: black;
-            padding: 10px;
+            padding: 10px 20px;
             border: none;
             border-radius: 5px;
             margin-top: 10px;
             cursor: pointer;
+            border-radius: 800px 1px 800px 1px;
         }
         
         button:hover {
-            background: gray;
+            background: rgb(24, 143, 58);
         }
         i{
             color: #0056b3;
@@ -228,33 +224,98 @@ body{
 /* -------------------thirdcard----------------- */
 .container3{
     
-    background: rgba(255, 255, 255, 0.1);
+    /* background: rgba(255, 255, 255, 0.1); */
+    background: rgb(3, 16, 32);
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid white;
-    width: 22rem;
-    padding: 3rem;
-    border-radius: 10px;
+    /* border: 1px solid white; */
+    /* width: 22rem;
+    padding: 3rem; */
+    border-radius: 150px 10px 10px 10px ;
     text-align: left;
     cursor: pointer;
+
+    .title-card3{
+        background: rgb(64, 24, 157);
+        width: 22rem;
+        padding: 2rem;
+        border-radius: 150px 1px 150px 1px ;
+        text-align: center;
+        /* margin-right: 10rem; */
+    }
     button {
-        width: 100%;
-        background: white;
+        /* width: 100%; */
+        background: rgb(64, 24, 157);
         color: black;
-        padding: 10px;
+        padding: 10px 20px;
         border: none;
         border-radius: 5px;
         margin-top: 10px;
         cursor: pointer;
+        border-radius: 800px 1px 800px 1px;
     }
     
     button:hover {
-        background: gray;
+        /* background: gray; */
+        background: rgb(24, 143, 58);
     }
     i{
         color: #0056b3;
     }
 }
+/* -----------------------animations-------------- */
+
+.card-1 {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+.card-2 {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+.card-3 {
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+    animation-delay: 0.9s;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-130px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(80px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 
 
 
@@ -347,5 +408,69 @@ body{
   
   .footer-bottom a:hover {
     text-decoration: underline;
+  }
+
+  .fa-bars{
+     opacity: 0;
+  }
+  .fa-xmark{
+      opacity: 0;
+  }
+  /* -----------------responsive--------------- */
+  @media (max-width: 600px) {
+    /* phone */
+    .fa-bars{
+        opacity: 1;
+     }
+     .fa-xmark{
+         opacity: 1;
+     }
+    .nav-bar{
+        position: relative;
+        gap: 0;
+    
+    }
+    #menu-links{
+        /* display: none; */
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        height: 100vh;
+        margin-right: 0;
+        padding: 2rem;
+        background-color: #004d00;
+        position: fixed;
+        /* top: 0;
+        right: -150px; */
+        width: 150px;
+        /* height: 100vh; */
+        /* padding-top: 50px; */
+        z-index: 2;
+        transition: right .5s;
+        
+        /* opacity: 0;
+        animation: slideInRight 1s ease-out forwards;
+        animation-delay: 0.9s; */
+    }
+    /* #menu-links.active{
+        right: 0;
+
+    } */
+    /* @keyframes navInRight {
+        from {
+            opacity: 0;
+            transform: translateX(150px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    } */
+    
+
+  }
+  @media (max-width: 768px) {
+    /* small tables and small pc */
   }
   

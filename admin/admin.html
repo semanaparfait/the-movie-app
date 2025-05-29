@@ -1,67 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="admin.css">
-    <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineAdmin - Movie Website Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <h2>Admin Panel</h2>
-        <nav>
-          <ul><br><br>
-            <li><a href="#account"><i class="fa-solid fa-user"></i> Account</a></li><br>
-            <li><a href="#dashboard"><i class="fas fa-chart-pie"></i> Dashboard</a></li><br>
-            <li><a href="#movies"><i class="fas fa-film"></i> Movies</a></li><br>
-            <li><a href="upload.html"><i class="fa-solid fa-upload"></i> Upload</a></li><br>
-            <li><a href="#users"><i class="fas fa-users"></i> Users</a></li><br>
-            <li><a href="#subscriptions"><i class="fas fa-wallet"></i> Subscriptions</a></li><br>
-            <li><a href="#settings"><i class="fas fa-cogs"></i> Settings</a></li><br>
-            <li><a href="#help"><i class="fa-solid fa-question"></i>Help</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <!-- -------dashboard--------------- -->
-      <main class="main-content" id="dashboard">
-        <!-- Dashboard Section -->
-        <section id="dashboard" class="section">
-          <h1>Welcome on Dashboard</h1><br><br>
-          <div class="dashboard-cards">
-            <div class="card">
-              <h3>Total Movies</h3>
-              <p>120</p>
+  <!-- <div class="adminacc">
+    <div class="image">
+      <img src="/images/admin/adminacc/WhatsApp Image 2025-05-28 at 13.58.07_4d072d8d.jpg" alt="">
+    </div>
+        ---------------------login----------------
+        <div class="admin-login">
+          <h1>Admin Login</h1>
+          <form action="#" method="post">
+            <div class="input-group">
+              <label for="usernamelogin">Username</label><br><br>
+              <input type="text" id="usernamelogin" name="usernamelogin" required><br><br>
             </div>
-            <div class="card">
-              <h3>Total Users</h3>
-              <p>1,245</p>
-            </div>
-            <div class="card">
-              <h3>Revenue</h3>
-              <p>$5,120</p>
-            </div>
-          </div>
-        </section>
-        </main><br>
-        
-        <div class="recent-activity">
-            <div class="title">
-                <h1>Recent Activities</h1>
-            </div>
-                <div class="recent-movie">
-                    <img src="/images/sankara/fith/Plumbing and Money_  What is your bathroom telling you_.jpeg" alt="">
-                </div>
-                <div class="recent-movie">
-                    <img src="/images/sankara/fith/money loves me _ subliminal affirmations to accumulate wealth.jpeg" alt="">
-                </div>
-                <div class="recent-movie">
-                    <img src="/images/sankara/fith/These 10 Countries Offer the Highest Interest Rates in 2024.jpeg" alt="">
-                </div>
-               </div>
-               <!-- -------------------upload--------- -->
-              
+            <div class="input-group">
+              <label for="passwordlogin">Password</label><br><br>
+              <input type="password" id="passwordlogin" name="passwordlogin" required><br>
+            </div><br>
+            <input type="checkbox" name="checkboxtermslogin" id="checkboxtermslogin"> remember me<br><br>
+            don't have an account? <a href="#" onclick="openAdminsignup()">Sign Up</a><br><br>
+            <button type="submit">Login</button>
+          </form>
+      </div>
 
+    <div class="admin-signup" style="display: none;">
+      <h1>Admin Signup</h1>
+      <form action="#" method="post">
+        <div class="input-group">
+          <label for="username">Username</label><br><br>
+          <input type="text" id="username" name="username" required><br><br>
+        </div>
+        <div class="input-group">
+          <label for="username">Token code</label><br><br>
+          <input type="text" id="tokencode" name="tokencode" required><br><br>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label><br><br>
+          <input type="email" id="email" name="email" required><br><br>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label><br><br>
+          <input type="password" id="password" name="password" required><br>
+        </div><br>
+        <input type="checkbox" name="checkboxterms" id="checkboxterms"> agree to the <a href="#">terms and conditions</a><br><br>
+        already have an account? <a href="#" onclick="openAdminlogin()">Login</a><br><br>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div> -->
+
+
+  <div class="sidebar">
+    <div class="logo">
+      <i class="fas fa-film fa-lg"></i>
+      <h1>CineAdmin</h1>
+    </div>
+    <nav>
+      <a href="#" class="nav-item active">
+        <i class="fas fa-tachometer-alt"></i>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-film"></i>
+        Movies
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-users"></i>
+        Users
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-cog"></i>
+        Coupon code
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-star"></i>
+        Reviews
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-ticket-alt"></i>
+        Subscriptions
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-chart-bar"></i>
+        Analytics
+      </a>
+      <a href="#" class="nav-item">
+        <i class="fas fa-cog"></i>
+        Settings
+      </a>
+    </nav>
+  </div>
+  
+  <div class="main-content">
+    <div class="header">
+      <div>
+        <h1>Dashboard</h1>
+        <p>Welcome back, Admin!</p>
+      </div>
+      
+      <div class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="Search movies, users...">
+      </div>
+      
+      <div class="user-profile">
+        <div>
+          <i class="fas fa-bell"></i>
+        </div>
+        <img src="/images/mv logo/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" alt="Admin Profile">
+      </div>
+    </div>
     
+    <div class="dashboard-cards">
+      
+      <div class="card stat-card">
+        <div class="stat-icon movies">
+          <i class="fas fa-film"></i>
+        </div>
+        <div class="stat-details">
+          <h3>2,584</h3>
+          <p>Total Movies</p>
+        </div>
+      </div>
+      
+      <div class="card stat-card">
+        <div class="stat-icon users">
+          <i class="fas fa-users"></i>
+        </div>
+        <div class="stat-details">
+          <h3>18,249</h3>
+          <p>Total Users</p>
+        </div>
+      </div>
+      
+      <div class="card stat-card">
+        <div class="stat-icon reviews">
+          <i class="fas fa-star"></i>
+        </div>
+        <div class="stat-details">
+          <h3>48,362</h3>
+          <p>Total Reviews</p>
+        </div>
+      </div>
+      
+      <div class="card stat-card">
+        <div class="stat-icon revenue">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+        <div class="stat-details">
+          <h3>$52,489</h3>
+          <p>Monthly Revenue</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="dashboard-charts">
+      <div class="card chart-card">
+        <div class="chart-header">
+          <h2>Viewer Activity</h2>
+          <select>
+            <option>Last 7 days</option>
+            <option>Last 30 days</option>
+            <option>Last 90 days</option>
+          </select>
+        </div>
+        <div class="chart-placeholder">
+          <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['Mon','Tue','Wed','Thu','Fri','Sat','Sun'],datasets:[{label:'Views',data:[15421,13985,12868,17983,19841,17500,18250],borderColor:'%233498db',fill:false},{label:'New Users',data:[513,485,497,562,619,553,587],borderColor:'%232ecc71',fill:false}]}}" alt="Viewer Activity Chart">
+        </div>
+      </div>
+      
+      <div class="card chart-card">
+        <div class="chart-header">
+          <h2>Genre Distribution</h2>
+        </div>
+        <div class="chart-placeholder">
+          <img src="https://quickchart.io/chart?c={type:'pie',data:{labels:['Action','Comedy','Drama','Sci-Fi','Horror','Romance'],datasets:[{data:[30,22,18,15,10,5],backgroundColor:['%233498db','%232ecc71','%23e74c3c','%239b59b6','%23f39c12','%23e84393']}]}}" alt="Genre Distribution Chart">
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="chart-header">
+        <h2>Recent Movies Added</h2>
+        <button class="view-all">View All</button>
+      </div>
+      <div class="table-container">
+        <table class="recent-table">
+          <thead>
+            <tr>
+              <th>Movie</th>
+              <th>Genre</th>
+              <th>Release Date</th>
+              <th>Status</th>
+              <th>Rating</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="movie-title">
+                  <img src="https://picsum.photos/id/10/40/60" alt="Movie Poster 1">
+                  <div>
+                    <strong>Inception 2</strong>
+                    <div>Christopher Nolan</div>
+                  </div>
+                </div>
+              </td>
+              <td>Sci-Fi, Action</td>
+              <td>Apr 12, 2025</td>
+              <td><span class="status active">Active</span></td>
+              <td>4.8/5</td>
+              <td>
+                <button class="action-btn"><i class="fas fa-edit"></i></button>
+                <button class="action-btn"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <div class="movie-title">
+                  <img src="https://picsum.photos/id/22/40/60" alt="Movie Poster 2">
+                  <div>
+                    <strong>The Tomorrow War</strong>
+                    <div>Chris McKay</div>
+                  </div>
+                </div>
+              </td>
+              <td>Sci-Fi, Action</td>
+              <td>Apr 10, 2025</td>
+              <td><span class="status active">Active</span></td>
+              <td>4.5/5</td>
+              <td>
+                <button class="action-btn"><i class="fas fa-edit"></i></button>
+                <button class="action-btn"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            
+            <tr>
+              <td>
+                <div class="movie-title">
+                  <img src="https://picsum.photos/id/25/40/60" alt="Movie Poster 3">
+                  <div>
+                    <strong>Galaxy Quest Returns</strong>
+                    <div>Dean Parisot</div>
+                  </div>
+                </div>
+              </td>
+              <td>Comedy, Sci-Fi</td>
+              <td>Apr 8, 2025</td>
+              <td><span class="status pending">Pending</span></td>
+              <td>N/A</td>
+              <td>
+                <button class="action-btn"><i class="fas fa-edit"></i></button>
+                <button class="action-btn"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr>
+            
+            <!-- <tr>
+              <td>
+                <div class="movie-title">
+                  <img src="https://picsum.photos/id/42/40/60" alt="Movie Poster 4">
+                  <div>
+                    <strong>The Last Symphony</strong>
+                    <div>Jane Anderson</div>
+                  </div>
+                </div>
+              </td>
+              <td>Drama, Music</td>
+              <td>Apr 5, 2025</td>
+              <td><span class="status active">Active</span></td>
+              <td>4.7/5</td>
+              <td>
+                <button class="action-btn"><i class="fas fa-edit"></i></button>
+                <button class="action-btn"><i class="fas fa-trash"></i></button>
+              </td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="admin.js"></script>
 </body>
 </html>

@@ -47,3 +47,15 @@
     window.location.href = '../admin/movie.html';
   });
 
+  // -------------------------------------openingadmin login/signup-------------------------------------
+ 
+  function openAdminlogin() {
+    // console.log("Admin login opened");
+    document.querySelector(".admin-login").style.display = "block";
+    document.querySelector(".admin-signup").style.display = "none";
+  }
+  function openAdminsignup() {
+    document.querySelector(".admin-signup").style.display = "block";
+    document.querySelector(".admin-login").style.display = "none";
+  }
+

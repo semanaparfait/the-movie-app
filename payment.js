@@ -1,6 +1,27 @@
+var allContainer = document.querySelector(".payment-container");
+var mtnPayment = document.querySelector(".mtn-method");
+var visaPayment = document.querySelector(".visa-method");
+var mastercardPayment = document.querySelector(".mastercard-method");
+var paypalPayment = document.querySelector(".paypal-method");
+var airtelpayment = document.querySelector(".airtel-method");
+var bankPayment = document.getElementById("bank");
+var cryptoPayment = document.getElementById("crypto");
+var redeem = document.querySelector(".redeemCode-method");
+
+// document.getElementById("mtn").addEventListener('click' , function(){
+//     // alert("mtn clicked")
+//     allContainer.classList.add("active");
+//     allContainer.style.display="none";
+//     mtnPayment.style.display="block";
+
+
+// });
 function openmtn(){
-    document.getElementById("mtn").style.height="25rem";
-    document.getElementById("mtn").style.paddingBottom="25rem";
+    // allContainer.style.display="none";
+    // mtnPayment.style.display="block";
+    mtnPayment.style.marginBottom="-15rem"
+    document.getElementById("mtn").style.height="26rem";
+    document.getElementById("mtn").style.paddingBottom="27rem";
     document.getElementById("mtninputs").style.display= "block";
     document.getElementById("nav").style.background="#f1c40f";
 
@@ -9,14 +30,14 @@ function openmtn(){
     //     document.getElementById(method).style.display = "none";
     // });
 
-    document.getElementById("airtel").style.display="none";
+    airtelpayment.style.display="none";
     document.getElementById("paypal").style.display="none";
     document.getElementById("bank").style.display="none";
     document.getElementById("crypto").style.display="none";
     document.getElementById("visa").style.display="none";
     document.getElementById("redeemcode").style.display="none";
     
-    window.alert("Thank you for choosing MTN")
+    // window.alert("Thank you for choosing MTN")
 
     // document.getElementById("mtn").style.paddingBottom="25rem";
 
@@ -26,7 +47,8 @@ function openmtn(){
 }
 
 function openairtel(){
-    document.getElementById("airtel").style.height="25rem";
+    airtelpayment.style.marginBottom="-13rem"
+    document.getElementById("airtel").style.height="29rem";
     document.getElementById("Airtelinputs").style.display= "block";
     document.getElementById("nav").style.background="red";
 
@@ -39,7 +61,10 @@ function openairtel(){
 }
 
 function openpaypal(){
-    document.getElementById("paypal").style.height="25rem";
+    paypalPayment.style.marginTop="-8rem"
+
+    paypalPayment.style.marginBottom="-10rem"
+    document.getElementById("paypal").style.height="29rem";
     document.getElementById("paypalinputs").style.display= "block";
     document.getElementById("nav").style.background="rgb(68, 156, 220)";
 
@@ -52,6 +77,8 @@ function openpaypal(){
 }
 
 function openbank(){
+    bankPayment.style.marginTop="-8rem"
+    bankPayment.style.marginBottom="-10rem"
     document.getElementById("bank").style.height="fit-content";
     document.getElementById("bankinputs").style.display= "block";
     document.getElementById("nav").style.background="rgb(20, 83, 165)";
@@ -65,7 +92,9 @@ function openbank(){
 }
 
 function opencrypto(){
-    document.getElementById("crypto").style.height="25rem";
+    cryptoPayment.style.marginTop="-14rem"
+    cryptoPayment.style.marginBottom="-5rem"
+    document.getElementById("crypto").style.height="29rem";
     document.getElementById("cryptoinputs").style.display= "block";
     document.getElementById("nav").style.background="rgb(171, 99, 24)";
 
@@ -80,8 +109,9 @@ function opencrypto(){
 function openvisa(){
 
     // document.getElementById("visa").style.height="50rem";
-
-    document.getElementById("visa").style.width="60rem";
+    visaPayment.style.marginLeft="-7rem";
+    visaPayment.style.marginTop="-15rem";
+    document.getElementById("visa").style.width="50rem";
     document.getElementById("visainputs").style.display= "block";
     document.getElementById("payButton").style.display= "block";
     document.querySelector(".CardDetails").style.display="block";
@@ -95,7 +125,10 @@ function openvisa(){
 }
 
 function openredeem(){
-    document.getElementById("redeemcode").style.height="20rem";
+    // redeem.style.marginBottom="-3rem";
+    redeem.style.marginTop="-20rem";
+
+    document.getElementById("redeemcode").style.height="25rem";
     document.getElementById("codeinputs").style.display= "block";
 
 
@@ -147,4 +180,14 @@ function openredeem(){
 
 //         console.log(player.name, player.score);
 //     }
-    
+
+// ---------------------sidemenu-bar---------------
+
+  const sidemenu = document.getElementById("menu-links");
+
+function openmenu(){
+sidemenu.style.right="0";
+}
+function closemenu(){
+sidemenu.style.right="-150px";
+}

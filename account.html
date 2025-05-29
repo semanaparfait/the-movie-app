@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="nav-bar">
+    <!-- <nav class="nav-bar">
         <div class="logo">
             <h2><span>B</span>lAcK <span>D</span>oLlAr</h2>
         </div>
@@ -26,9 +26,17 @@
             <a title="home" href="account.html">Account</a>
         </div>
 
-    </nav><br><br><br><br><br><br><br>
+    </nav><br><br><br><br><br><br><br> -->
+   
+    <div class="back-to-home">
+        <a href="movie.html">
+            <button class="back-home" title="Home"><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+        </a>
+    </div>
+   
 
     <!-- Body -->
+ <center>
     <div class="container" id="container">
         <!-- Sign In Form -->
         <div class="form-container signin-container">
@@ -98,10 +106,10 @@
       </div>
 
             <!-- Password Field confirm -->
-            <div class="input-container">
+            <!-- <div class="input-container">
                 <i class="fa-solid fa-lock"></i>
                 <input type="password" placeholder="Confirm  your password" required>
-              </div>
+              </div> -->
           
   
               <button type="submit">Sign Up</button>
@@ -113,50 +121,25 @@
             <p id="message">New Here?</p>
             <button id="togglebtn">Sign Up</button>
         </div>
-    </div><br><br><br>
+    </div>
+ </center>
     
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Your one-stop destination for the latest movies. Stream, download, and enjoy anytime, anywhere!</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="movie.html">Home</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="subscrption.html">Pricing</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2025 BlAcK DoLlAr Movies. All rights reserved. | Designed with ❤️ by Semana from Rwanda.</p>
-        </div>
-    </footer>
+   
 
     <!-- Script -->
     <script>
         const container = document.getElementById("container");
         const toggleBtn = document.getElementById("togglebtn");
         const message = document.getElementById("message");
+        var overlay = document.querySelector(".overlay-container");
 
         toggleBtn.addEventListener("click", () => {
             container.classList.toggle("active");
             if (container.classList.contains("active")) {
                 message.textContent = "Enjoy creating a new account with us!";
                 toggleBtn.textContent = "Log In";
+                overlay.style.borderRadius = "20px 120px 20px 20px"; // just makes slightly rounded corners
+
             } else {
                 message.textContent = "New Here?";
                 toggleBtn.textContent = "Sign Up";

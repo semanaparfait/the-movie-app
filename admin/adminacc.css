@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+.all-container{
+    width: 60%;
+    height: 100vh;
+    clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+    position: relative;
+
+    img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+    .adminacc{
+        position: absolute;
+        background: #ffffff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  /* justify-content: space-between; */
+  border: 2px solid #c1c6ca;
+  border-radius: 30px;
+  width: 65%;
+  height: 90%;
+  /* padding: 2rem; */
+  .image{
+    img{
+      width: 26rem;
+      height: 100vh;
+      object-fit: cover;
+      clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+
+    }
+  }
+  .admin-signup, .admin-login{
+    /* background: #9a6262; */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 20rem;
+      height: 2rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      caret-color: #3ce767;
+      padding: 10px;
+  
+    }
+    input:active, input:focus{
+      outline: none;
+      border-color: #3498db;
+    }
+    button[type="submit"] {
+      width: 20rem;
+      height: 2.5rem;
+      border-radius: 10px;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  }
+  .platforms{
+    margin-left: 5rem;
+
+    a{
+        color: black;
+    }
+  }
+}
+/* -------------------alert------------------- */
+.alert{
+  background-color: #d4edda;
+  /* color: #155724; */
+  /* border: 2px solid #c1c6ca; */
+  width: fit-content;
+  padding: 70px 30px;
+  border-radius: 20px;
+  /* line-height: 35px; */
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: 20px 5px 20px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+
+  img{
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -2.5rem;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  button{
+    background-color: #3ce767;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+}

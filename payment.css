@@ -26,11 +26,16 @@ body{
     /* padding-left: 10rem; */
    background: #f1c40f;
     color: #fff;
+    height: 5rem;
     .logo{
-        span{
-            color: red;
-        }
-    }
+      margin-left: 3rem;
+      img{
+          width: 20%;
+      }
+      span{
+          color: red;
+      }
+  }
 }
 
 .logo h2 {
@@ -229,6 +234,89 @@ input:active{
   
   .pay-now:hover {
     background-color: #e68a00;
+  }
+/* .payment-container:active{
+  background: #004d00;
+  display: none;
+} */
+  /* ---------------------mtn----------------- */
+  .mtn-method{
+    /* background-color: #c61616; */
+    color: #000000;
+    .mtn-titles{
+      h1,p{
+        color: #058f5e;
+        display: none;
+      }
+    }
+  }
+  /* -----------------------airtel--------------- */
+  .airtel-method{
+    /* background-color: #c61616; */
+    color: #000000;
+    .airtel-titles{
+      h1,p{
+        color: #058f5e;
+        display: none;
+      }
+    }
+  }
+  /* ---------------------paypal----------------- */
+  .paypal-method{
+    /* background-color: #c61616; */
+    color: #000000;
+    .paypal-titles{
+      h1,p{
+        color: #058f5e;
+        display: none;
+      }
+    }
+  }
+  /* ---------------------bank--------------------- */
+  .bank-transfer-method{
+    /* background-color: #c61616; */
+    color: #000000;
+    .bank-transfer-titles{
+      h1,p{
+        color: #058f5e;
+        display: none;
+      }
+    }
+  }
+  /* -------------------------crypto----------------- */
+  .crypto-curency-method{
+    /* background-color: #c61616; */
+    color: #000000;
+    .crypto-curency-titles{
+      h1,p{
+        color: #058f5e;
+        display: none;
+      }
+    }
+  }
+  /* --------------------visa--------------------- */
+  .visa-method{
+    /* background-color: #c61616; */
+    color: #000000;
+    /* margin-left: -6rem; */
+    /* width: 10rem; */
+    .visa-titles{
+      h1,p{
+        color: #058f5e;
+        display: none;
+      }
+    }
+  }
+  /* --------------------------code--------------------- */
+  .redeemCode-method{
+    /* background-color: #c61616; */
+    color: #000000;
+    .redeemCodeTitle{
+      h1,p{
+        color: #058f5e;
+        display: none;
+      }
+    }
   }
   /* ---------------mastercard ---------------- */
 
@@ -433,4 +521,137 @@ input:active{
 
 .footer-bottom a:hover {
   text-decoration: underline;
+}
+/* -------------------- */
+
+.fa-bars{
+  opacity: 0;
+}
+.fa-xmark{
+   opacity: 0;
+}
+/* -----------------responsive--------------- */
+@media (max-width: 600px) {
+ /* phone */
+ .fa-bars{
+     opacity: 1;
+  }
+  .fa-xmark{
+      opacity: 1;
+  }
+ .nav-bar{
+     position: relative;
+     gap: 0;
+     height: 5rem;
+ 
+ }
+ #menu-links{
+     /* display: none; */
+     position: absolute;
+     top: 0;
+     right: 0;
+     flex-direction: column;
+     height: 100vh;
+     margin-right: 0;
+     padding: 2rem;
+     background-color: #004d00;
+     position: fixed;
+     /* top: 0;
+     right: -150px; */
+     width: 150px;
+     /* height: 100vh; */
+     /* padding-top: 50px; */
+     z-index: 2;
+     transition: right .5s;
+ }
+ /* ------------------payment method--------------- */
+ .payment-method {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding: 1rem 0 100rem 1rem;  */
+  /* background-color: #004d00; */
+ 
+  .heading{
+    display: block;
+  }
+ 
+}
+/* -------------------------mtn--------------------- */
+.mtn-method{
+  /* background-color: #c61616; */
+  color: #000000;
+  .inputs{
+    /* background-color: #f1c40f;  */
+    label{
+      /* color: #058f5e; */
+      padding-left: 2rem;
+    }
+    form{
+
+      input{
+        width: 15rem;
+      }
+    }
+  }
+
+  }
+
+/* -------------------------airtel--------------------- */
+.airtel-method,  .redeemCode-method {
+  /* background-color: #c61616; */
+  color: #000000;
+  .inputs{
+    /* background-color: #f1c40f;  */
+    label{
+      /* color: #058f5e; */
+      padding-left: 2rem;
+    }
+    form{
+
+      input{
+        width: 15rem;
+      }
+    }
+  }
+
+}
+/* -------------------------paypal--------------------- */
+.paypal-method,  .bank-transfer-method, .crypto-curency-method{
+  /* background-color: #c61616; */
+  color: #000000;
+  .inputs{
+    /* background-color: #f1c40f;  */
+    label{
+      /* color: #058f5e; */
+      padding-left: 2rem;
+    }
+    form{
+
+      input{
+        width: 15rem;
+      }
+    }
+  }
+
+}
+/* -------------------------bank--------------------- */
+.visa-method{
+  /* display: flex; */
+  /* background: #004d00; */
+  .payment-method{
+    background-color: #e68a00;
+    display: flex;
+    flex-direction: column;
+  }
+  .CardDetails{
+    display: none;
+  }
+  form{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 }
