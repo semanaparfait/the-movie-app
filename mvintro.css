@@ -9,6 +9,7 @@ body{
     background-repeat: no-repeat ;
     background-size: cover;
     color: white;
+    overflow: hidden;
     
 }
 .container1{
@@ -24,7 +25,7 @@ body{
     }
    
     .continue{
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
 img{
     width: 4rem;
@@ -38,8 +39,13 @@ input[type="email"] {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
+    caret-color: #4285F4;
+    padding: 10px;
   }
-  button {
+  input:focus {
+    outline: none;
+  }
+  #next-button {
     background-color: #4285F4; /* Google Blue */
     color: white;
     padding: 10px 20px;
@@ -48,7 +54,11 @@ input[type="email"] {
     cursor: pointer;
     font-size: 1em;
   }
-  button:disabled {
+  #next-button:focus {
+    outline: none;
+
+  }
+  #next-button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
@@ -56,3 +66,92 @@ input[type="email"] {
     color: white;
     font-size: 0.9em;
   }
+  #continue-google,
+  #continue-facebook{
+        width: 20rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;    
+        font-weight: bold;    
+      }
+#continue-google-image,
+#continue-facebook-image {
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+.alert{
+  position: absolute;
+  right: 0;
+  bottom: 0;;
+  background: #ffffff;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 10px;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: fadeIn 3s ease-in-out;
+  .fa-check{
+    color: #00ff00;
+    font-size: 2rem;
+    border: 1px solid #00ff00;
+    width: fit-content;
+    border-radius: 50%;
+    padding: 9px;
+    width: 50px;
+    height: 50px;
+    place-items: center;
+
+  }
+  #alert-name{
+    font-weight: 800;
+    /* font-size: 1.5rem; */
+    /* margin-left: 10px; */
+    color: cadetblue;
+  }
+  button{
+    border: 1px solid #ccc;
+    background: transparent;
+    color: rgb(0, 0, 0);
+    font-size: 20chpx;
+    border-radius: 10px;
+    width: 15rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 20px;
+    /* justify-content: center; */
+    img{
+      width: 40px;
+      border-radius: 5px;
+    }
+  }
+  button:active,
+  button:focus{
+    background: #a0ebb2;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

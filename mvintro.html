@@ -8,24 +8,42 @@
     <link rel="stylesheet" href="fontawesome-free-6.6.0-web/css/all.css">
 </head>
 <body>
-    <i class="fa-sharp fa-solid fa-chevron-left"></i>
+    <!-- <i class="fa-sharp fa-solid fa-chevron-left"></i> -->
 
     <div class="container1">
-    <b><h1>Step into the <br>World of Cineme</h1></b><br><br>
+    <b><h1 style="font-size: 65px;">Step into the <br>World of Cineme</h1></b><br><br>
     <b><p>Watch. Download. Experience the Best of Cinema</p></b><br>
     <p>Unlimited Movies at Your Fingertips</p><br> 
-    <p>Stream Anytime, Anywhere</p><br><br><br><br>
-    <input type="email" name="" id="email" placeholder="Enter your Email">
+    <p>Stream Anytime, Anywhere</p><br><br><br>
+    <p id="user-email-intro"></p>
+    <input type="email" id="email" placeholder="Enter your Email">
     
     <button id="next-button" disabled>Get started</a></button><br><br>
     <p class="error" id="error-message"></p>
-    <p class="continue">Continue with</p><br>
-    <img class="google" src="/images/intr/download-removebg-preview.png" alt="">
-    <img class="facebook" src="/images/intr/programming-removebg-preview.png" alt="">
-    <img class="gmail" src="/images/intr/Gmail_Logo___SVG___Real_Company___Alphabet__Letter_M_Logo-removebg-preview.png" alt="">
+    <p class="continue">Or</p><br> 
+    <center>
+
+        <button id="continue-google">Continue with Google  <img id="continue-google-image" src="/images/admin/adminacc/download.png"></button><br>
+        
+        <button id="continue-facebook" >Continue with Facebook <img id="continue-facebook-image" src="/images/admin/adminacc/download (1).png"></button><br>
+    </center>
    
     </div>
+    <div class="alert" style="display: none;">
+        <center>
+               <i class="fa-solid fa-check"></i><br>
+        </center><br>
+        <h2>Welcome Back <br><span id="alert-name"></span><br> in the world of Cinema</h2><br>
+        <h3 style="text-align: center;">Language / Ururimi</h3><br>
+        <button ><img src="/images/mvintro/download (2).png" alt=""> Kinyarwanda</button><br>
+        <button id="English-version"><img src="/images/mvintro/download.png" alt=""><audio id="audio-endlish-vesion" src="/images/mvintro/ElevenLabs_Text_to_Speech_audio.mp3"></audio> English</button><br>
+        <button><img src="/images/mvintro/download (1).png" alt=""> Français</button><br>
+        <button><img src="/images/mvintro/download.jpg" alt=""> Swahili</button>
+
+
+    </div>
 </div>
-    <script src="mvintro.js"></script>
+   <script src="mvintro.js" type="module"></script>
+   
 </body>
 </html>

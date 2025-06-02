@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body >
   <!-- <div class="adminacc">
     <div class="image">
       <img src="/images/admin/adminacc/WhatsApp Image 2025-05-28 at 13.58.07_4d072d8d.jpg" alt="">
@@ -58,21 +58,21 @@
   </div> -->
 
 
-  <div class="sidebar">
+  <div class="sidebar"  >
     <div class="logo">
       <i class="fas fa-film fa-lg"></i>
       <h1>CineAdmin</h1>
     </div>
     <nav>
-      <a href="#" class="nav-item active">
+      <a href="#" class="nav-item active" id="dashboard-link">
         <i class="fas fa-tachometer-alt"></i>
         Dashboard
       </a>
-      <a href="#" class="nav-item">
+      <a href="#" class="nav-item" id="upload-movie-link">
         <i class="fas fa-film"></i>
         Movies
       </a>
-      <a href="#" class="nav-item">
+      <a href="#" class="nav-item" id="user-management-link">
         <i class="fas fa-users"></i>
         Users
       </a>
@@ -289,6 +289,198 @@
       </div>
     </div>
   </div>
-  <script src="admin.js"></script>
+
+  <!-- -------------------movie upload------------------- -->
+
+  <div class="upload-movie" style="display: none;">
+    <div class="upload-container">
+      <h2>Upload New Movie</h2><br><br>
+      <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form">
+        <div class="first-div-left" >
+        <div class="input-group">
+          <label for="movie-title">Movie Title</label>
+          <input type="text" id="movie-title" name="movie-title" required>
+        </div>
+        <div class="input-group">
+          <label for="movie-poster">Movie Poster</label>
+          <input type="file" id="movie-poster" name="movie-poster" accept=".jpg, .jpeg, .png" required>
+        </div>
+        <div class="input-group">
+          <label for="play-link">play Link</label>
+          <input type="url" name="play-link" id="play-link" placeholder="https://example.com/movie.mp4" required>
+        </div>
+        <div class="input-group">
+          <label for="download-link">Download Link</label>
+          <input type="url" name="download-link" id="download-link" placeholder="https://example.com/movie.zip" required>
+        </div>
+        <div class="input-group">
+          <label for="movie-trailer">Movie Trailer</label>
+          <input type="url" name="movie-trailer" id="movie-trailer" placeholder="https://example.com/trailer.mp4" required>
+        </div>
+        <div class="input-group">
+          <label for="movie-genre">Genre</label>
+          <select id="movie-genre" name="movie-genre" required>
+            <option value="">Select Genre</option>
+            <option value="action">Action</option>
+            <option value="comedy">Comedy</option>
+            <option value="drama">Drama</option>
+            <option value="sci-fi">Sci-Fi</option>
+            <option value="horror">Horror</option>
+            <option value="romance">Romance</option>
+          </select>
+
+        </div>
+        <div class="input-group">
+          <label for="countries">Country</label>
+          <select name="countries" id="countries">
+            <option value="">Select Country</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+            <option value="india">India</option>
+            <option value="france">France</option>
+            <option value="japan">Japan</option>
+            <option value="south-korea">South Korea</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="interpreter">Interpreter</label>
+          <select name="interpreter" id="interpreter">
+            <option value="">Choose Interpreter</option>
+            <option value="rocky">Rocky</option>
+            <option value="john">Sankara</option>
+            <option value="james">Junior Giti</option>
+            <option value="michael">Gaheza</option>
+            <option value="sarah">Pique</option>
+            <option value="emma">Yakuza</option>
+            <option value="olivia">Yanga</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="release-date">Release Date</label>
+          <input type="date" id="release-date" name="release-date" required>
+        </div>
+        <div class="input-group">
+          <label for="movie-description">Description</label>
+          <textarea id="movie-description" name="movie-description" rows="4" required></textarea>
+        </div>
+        <div class="input-group">
+          <label for="movie-rating">Rating</label>
+          <input type="number" id="movie-rating" name="movie-rating" min="0" max="10" step="0.1" required>
+        </div>
+        <div class="input-group">
+          <label for="movie-duration">Duration (in minutes)</label>
+          <input type="number" id="movie-duration" name="movie-duration" min="1" required>
+        </div>
+        <div class="input-group">
+          <label for="movie-rating">Rating</label>
+          <input type="number" id="movie-rating" name="movie-rating" min="0" max="10" step="0.1" required>
+        </div>
+        <div class="input-group">
+          <label for="debande">Debande</label>
+          <input type="text" id="debande" name="debande" placeholder="Enter Debande" required>
+        </div>
+        <div class="input-group">
+          <label for="tipe">Tipe</label>
+          <input type="text">
+        </div>
+        <div class="input-group">
+          <label for="actor-1">Name of Actor-1</label>
+          <input type="text" id="actor-1" name="actor-1" placeholder="Enter Actor Name" required>
+          <label for="actor-1-photo">Actor1 photo</label>
+          <input type="file" name="actor-1-photo" id="actor-1-photo" accept=".jpg, .jpeg, .png" required>
+          <label for="Actor-1-role">Actor 1 Role</label>
+          <textarea name="Actor-1-role" id="Actor-1-role" cols="20" rows="5"></textarea>
+        </div>
+        
+
+      </div>
+      
+
+     
+
+        <div class="main-actors">
+          <div class="input-group">
+            <label for="actor-1">Name of Actor-1</label>
+            <input type="text" id="actor-1" name="actor-1" placeholder="Enter Actor Name" required>
+            <label for="actor-1-photo">Actor1 photo</label>
+            <input type="file" name="actor-1-photo" id="actor-1-photo" accept=".jpg, .jpeg, .png" required>
+            <label for="Actor-1-role">Actor 1 Role</label>
+            <textarea name="Actor-1-role" id="Actor-1-role" cols="20" rows="5"></textarea>
+          </div>
+    
+          
+          <div class="input-group">
+            <label for="actor-2">Name of Actor-2</label>
+            <input type="text" id="actor-2" name="actor-2" placeholder="Enter Actor Name" required>
+            <label for="actor-2-photo">Actor1 photo</label>
+            <input type="file" name="actor-2-photo" id="actor-1-photo" accept=".jpg, .jpeg, .png" required>
+            <label for="Actor-2-role">Actor 1 Role</label>
+            <textarea name="Actor-2-role" id="Actor-2-role" cols="20" rows="5"></textarea>
+          </div>
+
+
+          <div class="input-group">
+            <label for="actor-3">Name of Actor-3</label>
+            <input type="text" id="actor-3" name="actor-3" placeholder="Enter Actor Name" required>
+            <label for="actor-3-photo">Actor3 photo</label>
+            <input type="file" name="actor-3-photo" id="actor-3-photo" accept=".jpg, .jpeg, .png" required>
+            <label for="Actor-3-role">Actor 3 Role</label>
+            <textarea name="Actor-3-role" id="Actor-3-role" cols="20" rows="5"></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="actor-4">Name of Actor-4</label>
+            <input type="text" id="actor-4" name="actor-4" placeholder="Enter Actor Name" required>
+            <label for="actor-4-photo">Actor1 photo</label>
+            <input type="file" name="actor-4-photo" id="actor-4-photo" accept=".jpg, .jpeg, .png" required>
+            <label for="Actor-4-role">Actor 1 Role</label>
+            <textarea name="Actor-4-role" id="Actor-4-role" cols="20" rows="5"></textarea>
+          </div>
+
+          <div class="input-group">
+            <label for="actor-5">Name of Actor-1</label>
+            <input type="text" id="actor-5" name="actor-5" placeholder="Enter Actor Name" required>
+            <label for="actor-5-photo">Actor1 photo</label>
+            <input type="file" name="actor-5-photo" id="actor-1-photo" accept=".jpg, .jpeg, .png" required>
+            <label for="Actor-5-role">Actor 5 Role</label>
+            <textarea name="Actor-5-role" id="Actor-5-role" cols="20" rows="5"></textarea>
+          </div>
+        </div>
+
+        </div><br><br>
+        <button type="submit">Upload Movie</button>
+      </form>
+    </div>
+  </div>
+<!-- -------------------user management------------------- -->
+  <div class="user-management" style="display: none;">
+    <h2>User Management</h2>
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search users...">
+    </div>
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Email</th>
+          <th>Date</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example user row -->
+        <tr>
+          <td id="Movie-Intro-id"></td>
+          <td id="Movie-intro-email"></td>
+          <td id="Movie-intro-date"></td>
+          <td id="Movie-intro-time"> </td>
+          </tr>
+          </tbody>
+          </table>
+          </div>
+<script type="module" src="admin.js"></script>
+  
 </body>
 </html>

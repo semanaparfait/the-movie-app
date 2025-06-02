@@ -26,6 +26,7 @@
   overflow-y: hidden;
   display: flex;
   align-items: center;
+  /* flex-wrap: wrap; */
   gap: 2rem;
   /* justify-content: space-between; */
   border: 2px solid #c1c6ca;
