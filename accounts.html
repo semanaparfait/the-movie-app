@@ -9,30 +9,51 @@
 
 </head>
 <body>
-    <div class="all-container" style="display: flex; flex-wrap: wrap; gap: 2rem;">
+    <!-- <nav style="display: flex;">
+                    <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" alt="" style="width: 30px; margin-left: 4rem;">
+        <div class="nav-title-left" style="margin-left: -25rem; line-height: 1.5;">
 
-        <aside style="background-color: rgb(17, 25, 38); width: 19%; height: 100%; ">
+            <h2>My personal information</h2>
+            <p>Welcome to your personal profile</p>
+        </div>
+
+            <div class="profile-image" style="display: flex; align-items: center; gap: 20px; float: right;">
+                <img src="/images/mv logo/WhatsApp Image 2024-12-08 at 09.38.11_7237b087.jpg" alt="Profile Image" style="width: 50px; height: 50px; border-radius: 50%;">
+                <div class="profile-info">
+                    <h3>John Doe</h3>
+                    <p>ID: 12dfg5F57</p>
+                </div>
+            </div>
+         
+    
+    </nav> -->
+    
+
+    <div class="all-container" >
+
+        <aside >
+
             
             <div class="left-container">
-                <div class="logo">
-                    <a href="/movie.html">
-                        <img src="/images/mv logo/WhatsApp Image 2024-12-08 at 09.37.28_f70d903a.jpg" style="border-radius: 50%; width: 5rem; height: 5rem;" alt="Logo">
-                    </a>
-                    <h4 style="color: white;">SEMANA SHEMA Parfait</h3>
-                </div>
-                <ul style="border-top: 2px solid #ccc;"><br>    
-                    <li><a href="#"><i class="fa-solid fa-person"></i> My Profile</a></li>
-                    <li><a href="#"><i class="fa-solid fa-user"></i> Account</a></li>
-                    <li><a href="#"><i class="fa-solid fa-bell"></i> Notification</a></li>
-                    <li><a href="#"><i class="fa-solid fa-receipt"></i> Invoices</a></li>
+                <ul><br>    
+                    <li id="profile-page"><a href="#"><i class="fa-solid fa-person"></i> My Profile</a></li>
+                    <li id="notification-page"><a href="#"><i class="fa-solid fa-bell"></i> Notification</a></li>
+                    <li id="invoice-page"><a href="#"><i class="fa-solid fa-receipt"></i> Invoices</a></li>
                 <li><a href="subscrption.html"><i class="fa-solid fa-sack-dollar"></i> Subscription</a></li>
-                <li><a href="#" style="color: red;">Delete Account</a></li>
+                <!-- <li><a href="#" style="color: red;">Delete Account</a></li> -->
             </ul>
             
+            <div class="profile-image">
+                <img src="/images/mv logo/WhatsApp Image 2024-12-08 at 09.38.11_7237b087.jpg" alt="Profile Image" style="width: 50px; height: 50px; border-radius: 50%;">
+                <div class="profile-info">
+                    <h3>John Doe</h3>
+                    <p>ID: 12dfg5F57</p>
+                </div>
+            </div>
         </div>
     </aside>
     <!-- ---------------------profile--------------------- -->
-    <div class="profile-container" style=" width: 60%; height: 100vh; padding: 2rem;">
+    <div class="profile-container">
         <h2>My profile</h2><br>
         <div class="header">
             <div class="profile-image">
@@ -54,22 +75,22 @@
                  <div class="name-container">
                      
                      <div class="info-item">
-                         <label for="name"> First Name:</label><br><br>
-                    <span id="name">John Doe</span><br><br><br>
+                         <label for="name"> First Name:</label><br>
+                    <span id="name">John Doe</span><br>
                 </div><br>
                 <div class="info-name-second">
-                    <label for="lastname">Last Name:</label><br><br>
+                    <label for="lastname">Last Name:</label><br>
                     <span id="lastname">Doe</span>
                 </div>
             </div>
             <div class="email-phone">
                 
                 <div class="info-item">
-                    <label for="email">Email Address:</label><br><br>
-                    <span id="email">semana@gmail.com</span><br><br><br>
+                    <label for="email">Email Address:</label><br>
+                    <span id="email">semana@gmail.com</span><br>
                 </div><br>
                 <div class="info-item">
-                    <label for="phone">Phone Number:</label><br><br>
+                    <label for="phone">Phone Number:</label><br>
                     <span id="phone">+1234567890</span>
                 </div>
             </div>
@@ -77,8 +98,158 @@
                 <button style="padding: 5px 10px; border-radius: 20px; border: 1px solid #ccc;">Edit <i class="fa-solid fa-pen-to-square"></i></button>
             </div>
         </div>  
+         </div>
     </div><br>
-    <!-- ---------------addrees---------------- -->
+    <!-- ---------------billings and invoices---------------- -->
+     <main class="invoices-container" style="display: none;">
+        <div class="invoice-headings">
+            <h2>Billings & Invoices</h2>
+            <p>Effortlessly handle Your Billing and invoices right here.</p>
+        </div><br>
+        <div class="invoice-summary-container">
+            <div class="current-summary">
+                <div class="currenty-summary-headings" style="display: flex;">
+                    <h3>Current Plan Summary</h2>
+                    <button>Upgrade</button>
+                </div><br>
+                <div class="current-summary-details">
+                    <div class="current-plan">
+                        <p>Current Plan</p>
+                        <h4>Premium</h4>
+                    </div>
+                    <div class="next-billing">
+                        <p>Next Billing Date</p>
+                        <h4>December 15, 2024</h4>
+                    </div>
+                    <div class="billing-amount">
+                        <p>Billing Amount</p>
+                        <h4>$9.99</h4>
+                    </div>
+                </div><br>
+                <div class="current-paln-growth">
+                    <p>Plan Growth</p>
+                    <h4>+20% since last month</h4>
+                    <div class="range-container">
+                        <div class="range-fill"></div>
 
+                    </div>
+
+                </div><br>
+
+            </div>
+
+            <div class="current-payment-method">
+                <div class="payment-title">
+                    <h2>Payment Method</h2>
+                </div><br>
+                <div class="payment-method">
+                    <div class="payment-logo">
+                        <img src="/images/payment/download_mastercard-removebg-preview.png" alt="" style="width: 40px;">
+                    </div>
+
+                    <div class="payment-details">
+                        <h4>MasterCard</h4>
+                        <h4>**** **** **** 1234</h4>
+                        <p>Expiry on 20/8/2030</p>
+                        <p>semana@gmail.com</p>
+                    </div>
+                    <div class="payment-change">
+                        <button>Change</button>
+                    </div>
+            </div><br>
+        </div>
+
+     </div><br>
+
+     <div class="invoices-table-container">
+        <div class="invoce-table-headings">
+            <h2>Invoices</h2>
+            <p>Effortlessly handle your Billing and invoices right here</p>
+        </div><br>
+        <div class="invoice-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Invoice ID</th>
+                        <th>Billing Date</th>
+                        <th>Expire Date</th>
+                        <th>Time Gained</th>
+                        <th>Time Expired</th>
+                        <th>Days</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                                        <tr>
+                        <td>INV-001</td>
+                        <td>December 1, 2024</td>
+                        <td>January 3, 2023</td>
+                        <td>12:39 AM</td>
+                        <td>12:54 PM</td>
+                        <td>30 Days</td>
+                        <td>$9.99</td>
+                         <td><span class="status paid">Paid</span></td>
+                        <td><button class="view-invoice"><i class="fa-solid fa-eye"></i></button></td>
+                        <td><button class="download-invoice"><i class="fa-solid fa-download"></i></button></td>
+                    </tr>
+                                        <tr>
+                        <td>INV-001</td>
+                        <td>December 1, 2024</td>
+                        <td>January 3, 2023</td>
+                        <td>12:39 AM</td>
+                        <td>12:54 PM</td>
+                        <td>30 Days</td>
+                        <td>$9.99</td>
+                         <td><span class="status paid">Paid</span></td>
+                        <td><button class="view-invoice"><i class="fa-solid fa-eye"></i></button></td>
+                        <td><button class="download-invoice"><i class="fa-solid fa-download"></i></button></td>
+                    </tr>
+                                        <tr>
+                        <td>INV-001</td>
+                        <td>December 1, 2024</td>
+                        <td>January 3, 2023</td>
+                        <td>12:39 AM</td>
+                        <td>12:54 PM</td>
+                        <td>30 Days</td>
+                        <td>$9.99</td>
+                         <td><span class="status paid">Paid</span></td>
+                        <td><button class="view-invoice"><i class="fa-solid fa-eye"></i></button></td>
+                        <td><button class="download-invoice"><i class="fa-solid fa-download"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>INV-001</td>
+                        <td>December 1, 2024</td>
+                        <td>January 3, 2023</td>
+                        <td>12:39 AM</td>
+                        <td>12:54 PM</td>
+                        <td>30 Days</td>
+                        <td>$9.99</td>
+                         <td><span class="status paid">Paid</span></td>
+                        <td><button class="view-invoice"><i class="fa-solid fa-eye"></i></button></td>
+                        <td><button class="download-invoice"><i class="fa-solid fa-download"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>INV-002</td>
+                        <td>November 1, 2024</td>
+                        <td>February 3, 2000</td>
+                        <td>23:23 PM</td>
+                        <td>12:00 PM</td>
+                        <td>30 Days</td>
+                        <td>$9.99</td>
+                        <td><span class="status overdue">Expired</span></td>
+                        <td><button class="view-invoice"><i class="fa-solid fa-eye"></i></button></td>
+                        <td><button class="download-invoice"><i class="fa-solid fa-download"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+     </div>
+    </main>
+
+</div>
+    <script src="accounts.js"></script>
     </body>
     </html>

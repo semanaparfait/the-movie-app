@@ -4,10 +4,65 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+:root{
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --sidebar-width: 155px;
+
+}
+body{
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /* overflow-y: scroll; */
+}
+nav{
+    background-color: rgb(17, 25, 38);
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    /* position: fixed; */
+    width: 100%;
+    /* display: none; */
+
+}
+aside{
+    width: var(--sidebar-width);
+  background-color: rgb(17, 25, 38);
+  color: white;
+  padding: 20px 0;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  flex-shrink: 0;
+  /* display: none; */
+}
+.all-container{
+    overflow-y: auto;
+    display: flex; 
+    flex-wrap: wrap-reverse;
+    align-items: flex-start; 
+    justify-content: space-between; 
+     margin-left: 2rem;
+    gap: 2rem;
+    height: 100vh;
+    /* position: relative; */
+    /* overflow-y: scroll; */
+}
 .left-container{
     /* background: #ab2828; */
     height: 100vh;
     text-align: left;
+    padding: 0;
+    margin: 0;
+    position: fixed;
     .logo{
         padding: 2rem;
         img{
@@ -21,18 +76,11 @@
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        padding-left: 2rem;
-        /* align-items: center; */
-        /* justify-content: center; */
-        /* text-align: left; */
-
-
         li{
-            text-align: left;
-           
+            text-align: left;  
             padding: 8px;
             /* background:rgb(32, 112, 233); */
-            width: 70%;
+            /* width: 70%; */
             border-radius: 5px;
            
             a{
@@ -54,17 +102,27 @@
 }
 /* -------------------profile-------------- */
 .profile-container{
-    /* background: #000; */
+    /* background: #0aad5c; */
+    /* display: none; */
+    /* width: 75%; */
+    height: 100%;
+    position: relative;
+    /* left: 18%; */
+    margin-left: var(--sidebar-width);
+
     .header{
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 10rem;
         justify-content: space-between;
         padding: 1rem;
         border-top: 1px solid #ccc;
+        /* background-color: #007bff; */
         .profile-image{
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 1rem;
             img{
                 width: 10rem;
@@ -81,10 +139,171 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 4rem;
         label{
             /* font-size: .8rem; */
             color: #333;
+        }
+    }
+
+}
+
+/* ----------------------invoces----------------- */
+.invoices-container{
+    display: none;
+    margin-left: var(--sidebar-width);
+    .paid { background: green; }
+    .unpaid { background: orange; }
+    .overdue { background: red; }
+        .status {
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+    }
+    /* background-color: #17a2b8; */
+    /* width: var(--sidebar-width); */
+    .invoice-summary-container{
+        /* background-color: var(--info-color); */
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        align-items: center;
+        /* justify-content: space-evenly; */
+        flex-wrap: wrap;
+        gap: 2rem;
+        width: 100%;
+        .current-summary{
+            width: 25rem;
+            /* background-color: #35b817; */
+            border: 2px solid #ccc;
+            border-radius: 7px;
+            .currenty-summary-headings{
+                align-items: center;
+                justify-content: space-between;
+                /* background-color: #007bff; */
+                border-bottom: 1px solid #ccc;
+                padding: 10px;
+
+                button{
+                    background-color: var(--info-color);
+                    color: white;
+                    border: none;
+                    padding: 0.5rem .6rem;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+            .current-summary-details{
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                p{
+                    font-size: 14px;
+
+                }
+            }
+            .current-paln-growth{
+                
+                line-height: 1.3;
+                padding-left: 1.4rem;
+                h4{
+                    padding-bottom: 10px;
+                }
+                
+                .range-container {
+
+                width: 330px;
+                height: 15px;
+                background: #ddd;
+                position: relative;
+                border-radius: 2px;
+
+                }
+
+                .range-fill {
+                height: 100%;
+                background: #007bff;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 70%; /* Fill width – change this to simulate value */
+                }
+
+
+            }
+        }
+
+    }
+    /* --------------------payments-method------------------- */
+    .current-payment-method{
+        /* background-color: #007bff; */
+        width: 25rem;
+        border: 2px solid #ccc;
+        border-radius: 7px;
+        padding: 12px;
+        /* padding: 20px 0 23px 10px; */
+
+        .payment-title{
+            border-bottom: 2px solid #ccc;
+            padding: 10px;
+        }
+        .payment-method{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* gap: 2rem; */
+            border: 2px solid #ccc;
+            width: 98%;
+            border-radius: 7px;
+            padding: 5px;
+            .payment-details{
+                line-height: 1.5;
+            }
+            .payment-details{
+                margin-left: -5rem;
+
+            }
+            .payment-change{
+                float: right;
+                justify-content: flex-end;
+                /* margin-left: 6rem; */
+                button{
+                    border: 1px solid #ccc;
+                    color: rgb(0, 0, 0);
+                    padding: 5px 10px;
+                    border-radius: 7px;
+                }
+            }
+        }
+    }
+    /* ----------------------invoices table----------------- */
+    .invoices-table-container{
+        /* background-color: #007bff; */
+
+        .invoce-table-headings{
+            line-height: 1.5;
+        }
+        .invoice-table{
+            table{
+                /* width: 90%; */
+                /* background-color: #007bff; */
+                    th, td {
+                    padding: 12px 15px;
+                    border-bottom: 1px solid #ddd;
+                    text-align: left;
+                
+                    }
+
+                tbody{
+                    tr:nth-child(even){
+                        background-color: #852121;
+
+                    }
+                }
+
+            }
         }
     }
 

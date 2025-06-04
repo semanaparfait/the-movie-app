@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* -----------------------account----------------- */
+.account-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10rem;
+    position: relative;
+    left: var(--sidebar-width);
+    /* padding: 2rem; */
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+
+    .overlay-login {
+        display: none;
+        background-image: url(/images/admin/adminacc/WhatsApp\ Image\ 2025-05-28\ at\ 13.58.07_4d072d8d.jpg);
+        width: 38%;
+        background-size: cover;
+        border-radius: 10px;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 200; /* <-- Add this line */
+        /* animation: login 2s ease-in-out forwards;     */
+        /* opacity: 0; */
+        button {
+            width: 10rem;
+            height: 2.5rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+    }
+    .overlay-login.active {
+        animation: login 2s ease-in-out forwards;
+        width: 45%;
+        z-index: 201; /* <-- Add this line to ensure it's above others when active */
+    }
+    /* ----------------------signup overlay----------------- */
+    .overlay-signup {
+        background-image: url(/images/admin/adminacc/WhatsApp\ Image\ 2025-05-28\ at\ 13.58.07_4d072d8d.jpg);
+        background-size: cover;
+        width: 40%;
+        border-radius: 10px;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 2%;
+        opacity: 0;
+        z-index: 200; /* <-- Add this line */
+        button {
+            width: 10rem;
+            height: 2.5rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: transparent;
+            color: rgb(255, 255, 255);
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+    }
+    .overlay-signup.active {
+        opacity: 1;
+        /* animation: signup 0.5s ease-in-out forwards; */
+        z-index: 201; /* <-- Add this line */
+    }
+
+    .login-page,
+    .signup-page{
+        /* background-color: #17a2b8; */
+        input{
+            width: 20rem;
+            height: 2rem;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            caret-color: #007bff;
+        }
+        input:focus {
+            outline: none;
+        }
+        label{
+            color: #000000;
+            font-weight: bold;
+        }
+        button[type="submit"] {
+            width: 20rem;
+            background-color: #007bff;
+            color: white;
+            padding: 7px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            &:hover {
+                background-color: #0056b3;
+            }
+        }
+          #continue-google,
+  #continue-facebook{
+        width: 20rem;
+        height: 2.5rem;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        background-color: transparent;
+        color: rgb(0, 0, 0);
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;    
+        font-weight: bold;    
+      }
+#continue-google-image,
+#continue-facebook-image {
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.5rem;
+}
+    }
+    .signup-page{
+        form{
+            .details{
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                input{
+                    width: 12rem;
+
+                }
+            }
+
+
+        }
+
+    }
+}
+    @keyframes signup {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to{
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+    }
+        @keyframes login{
+        from {
+            transform: translateX(0%);
+            /* opacity: 0; */
+        }
+        to{
+            transform: translateX(80%);
+            /* opacity: 0; */
+        }
+        
+    }
+</style>
+<body>
+    <!-- -----------------------the account page---------------- -->
+    <div class="account-container">
+        <!-- ------------------login overlay---------------- -->
+       <div class="overlay-login">
+        <!-- <img src="/images/admin/adminacc/WhatsApp Image 2025-05-28 at 13.58.07_4d072d8d.jpg" alt=""> -->
+        <h1 id="heading1-message">Welcome to The movieNest</h1><br><br>
+        <h3 id="heading3-message">New Here Create account</h3><br><br>
+        <button id="open-ovelays">Sign up</button>
+
+       </div>
+       <!-- --------------------------login page---------------- -->
+       <div class="login-page">
+           <h1>Sign in </h1>
+               <form action="/login" method="POST">
+                  <p>Welcome back! Please log in with your credentials.</p><br>
+                  <label for="username">Username</label><br>
+               <input type="text" name="username" placeholder="Username or Email" required /><br><br>
+                  <label for="password">Password</label><br>
+               <input type="password" name="password" placeholder="Password" required /><br><br>
+                <p class="signup-text">Don't have an account? <a href="/signup">Sign up</a></p><br>
+               <button type="submit">Login</button><br><br>
+                <button id="continue-google">Continue with Google  <img id="continue-google-image" src="/images/admin/adminacc/download.png"></button><br>
+            
+            <button id="continue-facebook" >Continue with Facebook <img id="continue-facebook-image" src="/images/admin/adminacc/download (1).png"></button><br>
+
+               </form>
+       </div>
+       <!-- ---------------------------sign up page---------------- -->
+        <div class="signup-page" >
+            <h1>Sign up</h1>
+            <p>Welcome! Create your account and start your journey with us!</p><br>
+            <form action="/signup" method="POST">
+                <div class="details">
+                <div class="personal-info">
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" name="firstname" placeholder="Enter your name" required /><br><br>
+                    <label for="middlename">Middle Name</label><br>
+                    <input type="text" name="firstname" placeholder="Enter your name" required /><br><br>
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" name="firstname" placeholder="Enter your name" required /><br><br>
+                </div>
+                <div class="personal-detail">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" placeholder="Enter your email" required /><br><br>
+                    <label for="phone">Phone Number</label><br>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required /><br><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" placeholder="Create a password" required /><br><br>
+                </div>
+                </div>
+                <button type="submit">Sign Up</button><br><br>
+            </form>
+
+            <button id="continue-google">Continue with Google  <img id="continue-google-image" src="/images/admin/adminacc/download.png"></button><br>
+            <button id="continue-facebook" >Continue with Facebook <img id="continue-facebook-image" src="/images/admin/adminacc/download (1).png"></button><br>
+        </div>
+
+    </div>
+
+</body>
+</html>
