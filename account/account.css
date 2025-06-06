@@ -250,3 +250,17 @@ input[type="number"] {
     }
     
 }
+/* -------------------responsive------------- */
+@media screen and (max-width: 800px) {
+    .account-container{
+        .image-container{
+            display: none;
+        }
+        .form-wrapper{
+            /* background-color: #0056b3; */
+            width: 100%;
+            /* height: 70vh; */
+
+        }
+    }
+}

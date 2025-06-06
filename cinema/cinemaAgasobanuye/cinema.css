@@ -24,20 +24,19 @@
         grid-template-columns: 1fr 1fr;
         place-items: center; */
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
         gap: 7rem;
         position: absolute;
         top: 28%;
         /* background-color: blueviolet; */
-        
-        
-
     }
     .movie-left{
        
         /* background: yellow; */
         display: flex;
+        flex-wrap: wrap;
         gap: 0;
         margin: 0;
         padding: 0;
@@ -174,5 +173,57 @@
             }
         }
        }
+    }
+}
+/* -------------------responsivenes------------- */
+@media screen and (max-width: 800px) {
+    *{
+        padding: 0;
+        margin: 0;
+        border: 2px solid dashed;
+    }
+.hereo-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.movie-left{
+    align-self: flex-start;
+    width: 90%;
+    background-color: cadetblue;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0%;
+    gap: 0;
+}
+.movie-right{
+    padding: 0;
+    margin: 0;
+}
+.movie-left .movie-titles {
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+    .hereo-section .movie-left .movie-poster img{
+        width: 10rem;
+        height: 250px;
+    }
+    #movieName{
+        /* color: aqua; */
+        font-size: 25px;
+        font-weight: bold;
+        padding: 0;
+        margin: 0;
+    }
+    .movie-titles{
+        /* background-color: aqua; */
+        padding: 0;
+        margin: 0;
     }
 }
