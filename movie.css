@@ -40,6 +40,7 @@ body{
 }
 
 .nav-bar {
+    /* display: none; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -984,56 +985,7 @@ input:focus{
      border-radius: 50%;
     }
 
-/* --------------investors-------------- */
-.inverstors{
-   display: block;
-    background: #333333;
-    /* height: 38rem; */
-    width: 100%;
-    padding-top: 2rem;
-    b{
-        color: white;
-        display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-   .Watch{
-        color: white;
-        display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-    img{
-        width: 6rem;
-        height: 4rem;
-        /* gap: 3rem; */
-    }
-    .firstInverstors{
-        display: flex;
-        align-items: center;
-         justify-content: center;
-         gap: 3rem;
-         flex-wrap: wrap;
 
-    }
-    .secondInverstors{
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         gap: 2rem;
-         flex-wrap: wrap;
-    }
-    .last{
-        color: yellow;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-    .last:hover{
-        text-decoration: underline;
-    }
-}
 /* -------------download--------------- */
 .download{
     background: rgb(96, 96, 95);

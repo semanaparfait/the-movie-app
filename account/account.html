@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- <title>Document</title> -->
+</head>
+<body>
+    <a href="/movie.html" class="back-button">
+  <i class="fa-solid fa-left-long"></i>
+</a>
+<span class="Gohome">Home</span>
+
+
+            <!-- -----------------------the account page---------------- -->
+    <div class="account-container">
+        <div class="image-container">
+            <img src="/account/generated-image-37443dc5-e5b7-4d4e-9eea-1da0777f1e6eg.png" alt="">
+        </div>
+        <div class="form-wrapper" id="formWrapper">       <!-- --------------------------login page---------------- -->
+       <div class="login-page front">
+           <h1>Sign in </h1>
+               <form action="/login" method="POST">
+                  <p>Welcome back! Please log in with your credentials.</p><br>
+                  <label for="username">Username</label><br>
+               <input type="text" name="username" placeholder="Username or Email" required /><br><br>
+                  <label for="password">Password</label><br>
+               <input type="password" name="password" placeholder="Password" required /><br><br>
+                <p>Don't have an account? <a href="#" id="signup-text" onclick="flipCard()">Sign up</a></p><br>
+               <button type="submit">Login</button><br><br>
+                <button id="continue-google">Continue with Google  <img id="continue-google-image" src="/images/admin/adminacc/download.png"></button><br>
+            
+            <button id="continue-facebook" >Continue with Facebook <img id="continue-facebook-image" src="/images/admin/adminacc/download (1).png"></button><br>
+
+               </form>
+       </div>
+       <!-- ---------------------------sign up page---------------- -->
+        <div class="signup-page back"  >
+            <h1>Sign up</h1>
+            <p>Welcome! Create your account and start your journey with us!</p><br>
+            <form action="/signup" method="POST">
+                <div class="details">
+                <div class="personal-info">
+                    <label for="firstname">First Name</label><br>
+                    <input type="text" name="firstname" placeholder="Enter your name" required /><br><br>
+                    <label for="lastname">Last Name</label><br>
+                    <input type="text" name="firstname" placeholder="Enter your name" required /><br><br>
+                    <label for="photo">Profile</label><br>
+                    <input type="file" name="photo" accept="image/*" onchange="img.src = window.URL.createObjectURL(this.files[0])" required /><br><br>
+                </div>
+                <div class="personal-detail" style="display: none;">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" placeholder="Enter your email" required /><br><br>
+                    <label for="phone">Phone Number</label><br>
+                    <input type="number" name="phone" placeholder="Enter your phone number" required /><br><br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" placeholder="Create a password" required /><br><br>
+                </div>
+                </div>
+                  <p id="signin-text" onclick="flipCard()">have an account? <a href="#">Sign in</a></p><br>
+                <button type="submit">Sign Up</button><br><br>
+            </form>
+
+            <button id="continue-google">Continue with Google  <img id="continue-google-image" src="/images/admin/adminacc/download.png"></button><br>
+            <button id="continue-facebook" >Continue with Facebook <img id="continue-facebook-image" src="/images/admin/adminacc/download (1).png"></button><br>
+        </div>
+        </div>
+    </div>
+    </div>
+    <script src="account.js"></script>
+</body>
+</html>
