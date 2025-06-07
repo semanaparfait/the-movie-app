@@ -42,24 +42,22 @@ body::before {
   position: absolute;
   left: 3%;
   top: 2%;
-  padding: 7px 30px;
-  background: white;
   color: #000000;
   font-weight: 600;
   text-decoration: none;
-  /* border: 1px solid rgba(255, 255, 255, 0.2); */
-  border-radius: 30px;
-  /* backdrop-filter: blur(10px); */
   transition: all 0.3s ease;
-  font-size: 15px;
-  /* box-shadow: 0 0 8px rgba(255, 255, 255, 0.2); */
   animation: backHome 2s infinite forwards;
 }
-.back-button:hover {
-  /* background: #e50914; */
-  color: #000000;
-  border-color: #e50914;
-  /* box-shadow: 0 0 15px #e50914, 0 0 30px #e50914; */
+
+.fa-xmark{
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    padding:14px;
+    font-size: 20px;
+    &:hover{
+        color: #dc3545;
+    }
 }
 .Gohome {
     background: #000000;
@@ -169,7 +167,8 @@ body::before {
         a{
             color: #dc3545;
         }
-        button[type="submit"] {
+        button[type="submit"],
+        #next {
             width: 100%;
             background-color: #007bff;
             color: white;

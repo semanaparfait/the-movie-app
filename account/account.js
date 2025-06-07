@@ -26,7 +26,39 @@
 // );
 
 // });
-
+// ---------------------display personal details---------
+var personalInfo =  document.querySelector(".personal-info");
+var personalDetail =  document.querySelector(".personal-detail");
+var submitBtn = document.getElementById("submitBtn");
+var nextBtn = document.getElementById("next");
+nextBtn.addEventListener('click', function (){
+  personalInfo.style.display = "none";
+  personalDetail.style.display = "block";
+  nextBtn.style.display = "none";
+  submitBtn.style.display = "block";
+});
     function flipCard() {
       document.getElementById('formWrapper').classList.toggle('flip');
     }
+    // ------------------getting values and putting them into an array---------
+    var signUpArray = []
+    submitBtn.addEventListener('click', function() {
+    const personalFirstname = document.getElementById("firstname").value;
+    const personallastname = document.getElementById("lastname").value;
+    const personalProfile = document.getElementById("profilePic").value;
+    const personalEmail = document.getElementById("email").value;
+    const personalPhoneNumber = document.getElementById("phoneNumber").value;
+    const personalPassword = document.getElementById("password").value;
+
+const userData = {
+    firstname: personalFirstname,
+    lastname: personallastname,
+    profile: personalProfile,
+    email: personalEmail,
+    phone: personalPhoneNumber,
+    password: personalPassword
+  };
+
+  signUpArray.push(userData);
+  console.log(userData);
+  });

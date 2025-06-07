@@ -24,13 +24,15 @@
         grid-template-columns: 1fr 1fr;
         place-items: center; */
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         align-items: center;
         justify-content: space-evenly;
         gap: 7rem;
         position: absolute;
-        top: 28%;
+        top: 0;
         /* background-color: blueviolet; */
+        width: 100%;
+        height: 100%;
     }
     .movie-left{
        
@@ -176,31 +178,12 @@
     }
 }
 /* -------------------responsivenes------------- */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     *{
         padding: 0;
         margin: 0;
         border: 2px solid dashed;
     }
-.hereo-section{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-.movie-left{
-    align-self: flex-start;
-    width: 90%;
-    background-color: cadetblue;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 0%;
-    gap: 0;
-}
 .movie-right{
     padding: 0;
     margin: 0;
@@ -211,7 +194,7 @@
     padding: 0;
 }
     .hereo-section .movie-left .movie-poster img{
-        width: 10rem;
+        width: 12rem;
         height: 250px;
     }
     #movieName{
@@ -226,4 +209,60 @@
         padding: 0;
         margin: 0;
     }
+    .hereo-section{
+        /* background-color: rgb(218, 221, 27); */
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        gap: 0;
+        /* display: flex; */
+    }
+.hereo-section .movie-left .movie-poster{
+    display: flex;
+    flex-direction: column;
+}
+.hereo-section .movie-left {
+/* background-color: aqua; */
+margin: 0;
+padding: 0;
+position: absolute;
+top: 0;
+right: 0;
+width: 100%;
+}
+.hereo-section .movie-right {
+/* background-color: rgb(27, 143, 23); */
+margin: 0;
+padding: 0;
+gap: 0;
+width: 100%;
+height: 55vh;
+text-align: center;
+position: absolute;
+bottom: 0;
+}
+.hereo-section .movie-left .movie-poster .download-play-btn{
+    display: flex;
+    gap: 2rem;
+}
+.caster-names {
+    display: none !important;
+}
+.role-title{
+    display: none;
+}
+.description-content{
+    /* background-color: aqua; */
+    /* width: 100%; */
+    /* text-align: center; */
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 20%;
+}
+.movie-discription{
+    font-size: 20px;
+}
 }

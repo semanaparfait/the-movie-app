@@ -8,8 +8,8 @@
     <!-- <title>Document</title> -->
 </head>
 <body>
-    <a href="/movie.html" class="back-button">
-  <i class="fa-solid fa-left-long"></i>
+    <a href="/index.html" class="back-button">
+  <i class="fa-solid fa-xmark"></i>
 </a>
 <span class="Gohome">Home</span>
 
@@ -40,27 +40,28 @@
         <div class="signup-page back"  >
             <h1>Sign up</h1>
             <p>Welcome! Create your account and start your journey with us!</p><br>
-            <form action="/signup" method="POST">
+            <form >
                 <div class="details">
                 <div class="personal-info">
                     <label for="firstname">First Name</label><br>
-                    <input type="text" name="firstname" placeholder="Enter your name" required /><br><br>
+                    <input type="text" name="firstname" id="firstname" placeholder="Enter your name" required /><br><br>
                     <label for="lastname">Last Name</label><br>
-                    <input type="text" name="firstname" placeholder="Enter your name" required /><br><br>
+                    <input type="text" name="lastname" id="lastname" placeholder="Enter your name" required /><br><br>
                     <label for="photo">Profile</label><br>
-                    <input type="file" name="photo" accept="image/*" onchange="img.src = window.URL.createObjectURL(this.files[0])" required /><br><br>
+                    <input type="file" name="photo" accept="image/*" id="profilePic" required /><br><br>
                 </div>
                 <div class="personal-detail" style="display: none;">
                     <label for="email">Email</label><br>
-                    <input type="email" name="email" placeholder="Enter your email" required /><br><br>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required /><br><br>
                     <label for="phone">Phone Number</label><br>
-                    <input type="number" name="phone" placeholder="Enter your phone number" required /><br><br>
+                    <input type="number" name="phone" id="phoneNumber" placeholder="Enter your phone number" required /><br><br>
                     <label for="password">Password</label><br>
-                    <input type="password" name="password" placeholder="Create a password" required /><br><br>
+                    <input type="password" name="password" id="password" placeholder="Create a password" required /><br><br>
                 </div>
                 </div>
                   <p id="signin-text" onclick="flipCard()">have an account? <a href="#">Sign in</a></p><br>
-                <button type="submit">Sign Up</button><br><br>
+                  <button id="next">Next</button>
+                <button type="submit" style="display: none;" id="submitBtn">Sign Up</button><br><br>
             </form>
 
             <button id="continue-google">Continue with Google  <img id="continue-google-image" src="/images/admin/adminacc/download.png"></button><br>
