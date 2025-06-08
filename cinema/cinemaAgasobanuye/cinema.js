@@ -1,10 +1,12 @@
 function description(){
-    document.querySelector(".description-content").style.display = "block";
-    document.querySelector(".details").style.display = "none";
+    document.getElementById("description").style.display = "block";
+    document.getElementById("details").style.display = "none";
+    document.querySelector(".content-panel").classList.add = "active";
 }
 function movieDetails(){
-    document.querySelector(".details").style.display = "block";
-    document.querySelector(".description-content").style.display = "none";
+    document.getElementById("details").style.display = "block";
+    document.getElementById("description").style.display = "none";
+    document.querySelector(".content-panel").classList.add = "active";
 }
 
 // -----------------------click and opens into card---------

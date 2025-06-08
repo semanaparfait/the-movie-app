@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,14 @@
     <link rel="stylesheet" href="cinema.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
     <div class="hero">
         <div id="backgroundImage" class="backgroundImage">
-          
+
         </div>
-        <video autoplay loop muted playsinline style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
+        <video autoplay loop muted playsinline
+            style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; z-index: -1;">
             <source src="/images/The Studio — Official Trailer Apple TV.mp4" type="video/mp4">
         </video>
         <div class="hereo-section">
@@ -21,37 +24,200 @@
 
                     <img src="/bgimg.jpeg" id="movieImage">
                     <div class="buttons"><br>
-                    <div class="download-play-btn">
-
-                        <button class="play-btn">Play Now</button>
-                        <button class="download-btn">Download</button>
-                    </div>
-                        <!-- Watch Button (opens MediaFire page in a new tab) -->
-<!-- <a href="https://www.mediafire.com/file/67rc48guhe8huq7/24_Indian_B_Hd.mp4/file" target="_blank" class="watch-btn">
-    🎬 Watch Movie -->
-  </a>
-  
-  <!-- Download Button (opens same MediaFire page) -->
-  <!-- <a href="https://www.mediafire.com/file/67rc48guhe8huq7/24_Indian_B_Hd.mp4/file" target="_blank" class="download-btn">
-    ⬇️ Download Movie
-  </a> -->
-  
-                    </div>
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button class="btn btn-play" id="playBtn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <span>Play Now</span>
+                    </button>
+                    <button class="btn btn-download" id="downloadBtn">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="7,10 12,15 17,10"/>
+                            <line x1="12" y1="15" x2="12" y2="3"/>
+                        </svg>
+                        <span>Download</span>
+                    </button>
                 </div>
-                <div class="movie-titles">   
-                    <h1 id="movieName"></h1>
-                    <h5>10k Watchers</h5>
+
+                    </div>
                 </div>
             </div>
-            <div class="movie-right">
-                <div class="description">
+            <div class="movie-right" >
+                <div class="movie-titles">
+                    <h1 id="movieName" style="font-size: 40px; font-weight: bold;"></h1><br>
+                    <div class="stats-container">
+                        <div class="watchers">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <span>2.4M watchers</span>
+                        </div>
+                        
+                        <div class="rating-buttons">
+                            <button class="rating-btn like-btn" id="likeBtn">
+                                <span class="count">❤ 8.6k</span>
+                            </button>
+                            
+                            <button class="rating-btn dislike-btn" id="dislikeBtn">
+                                <span class="count">👎 324</span>
+                            </button>
+                        </div>
+                    </div><br>
+                </div>
+                <div class="nav-tabs">
+                    <button class="tab-btn active" data-tab="description" onclick="description()">Description</button>
+                    <button class="tab-btn" data-tab="details" onclick="movieDetails()">Details</button>
+                </div>
+                <div class="content-sections">
+                    <!-- Description Section -->
+                    <div class="content-panel active " id="description" >
+                        <div class="info-card">
+                            <h2 class="section-title">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                    <line x1="8" y1="21" x2="16" y2="21" />
+                                    <line x1="12" y1="17" x2="12" y2="21" />
+                                </svg>
+                                Description
+                            </h2>
+
+
+                            <p class="movie-discription description" id="movieDescriptions">
+                            </p>
+
+                            <div class="movie-details">
+                                <div class="detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                        <line x1="16" y1="2" x2="16" y2="6" />
+                                        <line x1="8" y1="2" x2="8" y2="6" />
+                                        <line x1="3" y1="10" x2="21" y2="10" />
+                                    </svg>
+                                    <span class="label">Released:</span>
+                                    <span class="value">
+                                        <p id="movieDate"></p>
+                                    </span>
+                                </div>
+
+                                <div class="detail-item" style="display: flex;">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                                        <line x1="8" y1="21" x2="16" y2="21" />
+                                        <line x1="12" y1="17" x2="12" y2="21" />
+                                    </svg>
+                                    <span class="label">Genre:</span>
+                                    <span class="value" style="display: flex; gap: 10px
+                                    ; flex-wrap: nowrap;">
+                                        <p id="movieGenre1"></p>
+                                        <p id="movieGenre2"></p> Adventure
+                                    </span>
+                                </div>
+
+                                <div class="detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="2" y1="12" x2="22" y2="12" />
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    </svg>
+                                    <span class="label">Country:</span>
+                                    <span class="value">
+                                        <p id="movieCountry"></p>
+                                    </span>
+                                </div>
+
+                                <div class="detail-item">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="2" y1="12" x2="22" y2="12" />
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                    </svg>
+                                    <span class="label">Umusobanuzi: </span>
+                                    <span class="value">
+                                        <p id="movieUmusobanuzi"></p>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Details Section -->
+                    <div class="content-panel" id="details" style="display: none;">
+                        <div class="info-card">
+                            <h2 class="section-title">
+                                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                                </svg>
+                                Cast & Crew
+                            </h2>
+
+                            <div class="cast-grid" id="castGrid">
+                                  <div class="casters-images">
+                            <!-- <div class="first-casters"> -->
+
+                                <div class="cast-role">
+    
+                                    <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                    <div class="role">
+                                        <h2>SEMANA</h2><br>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                </div>
+                                <div class="cast-role">
+    
+                                    <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                    <div class="role">
+                                        <h2>SEMANA</h2><br>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+
+                            <!-- <div class="second-casters"> -->
+
+                                <div class="cast-role">
+    
+                                    <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                    <div class="role">
+                                        <h2>SEMANA</h2><br>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                </div>
+                                <div class="cast-role">
+    
+                                    <img src="/images/what people say/WhatsApp Image 2024-12-08 at 09.50.57_d443e393.jpg" ><br><br>
+                                    <div class="role">
+                                        <h2>SEMANA</h2><br>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+                           
+                            
+                        </div>
+                        <!-- Cast members will be populated by JavaScript -->
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <!-- <div class="description">
                     <div class="titles" style="display: flex; gap: 2rem;">
                         <div class="likebuttons">
-
                         </div>
 
-                        <div class="sharebutton">
-                            
+                        <div class="sharebutton">    
                         </div>
 
                         <h1 id="description" onclick="description()">Description</h1>
@@ -79,10 +245,10 @@
                         </div>
                     </div>
                     </div>
-                </div>
+                </div> -->
 
 
-                <div class="details" style="display: none;"> 
+                <!-- <div class="details" style="display: none;"> 
                    
                     <div class="details-content">
                         <div class="casters-images">
@@ -143,10 +309,10 @@
                             </div>
                         </div>
                     </div>
-                </div> 
-            </div>
+                </div>  -->
         </div>
     </div>
     <script src="cinema.js"></script>
 </body>
+
 </html>
