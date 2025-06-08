@@ -214,35 +214,27 @@ input:focus{
     padding-left: 1.5rem;
 }
 .abasobanuzi{
-    display: flex;
-    color: white;
-    gap: 1rem;
-    width: 100%;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-    scrollbar-color: #1c1e25  #1c1e25; 
-        
-    
     img{
         border-radius: 50%;
         object-fit: cover;
         clip-path: circle();
         border: white ;
         width: 10rem;
-        gap: 1rem;
+        height: 10rem;
+        /* gap: 1rem; */
     }
     h2{
         font-size: 1.1rem;
         font-weight: 700;
         font-family: 'poppins' sans-serif;
        padding-left: 1rem;
+       text-align: center;
     }
     .Yanga,.rocky,.Junior,.Sankara,.Gaheza,.Pique,.Yakuza,.Savimbi,.BTheGreat,.Sinior,.Fred,.lee{
         transition: .7s;
         border-radius: 7px;
         height: 14rem;
+        cursor: pointer;
         /* display: flex; */
     }
     .Yanga:hover,.rocky:hover,.Junior:hover,.Sankara:hover,.Gaheza:hover,.Pique:hover,.Yakuza:hover,.Savimbi:hover,.BTheGreat:hover,.Sinior:hover,.Fred:hover,.lee:hover{
@@ -250,57 +242,11 @@ input:focus{
         cursor: pointer;
 
     }
-    button{
-        color: black;
-        backdrop-filter: blur(.7rem);
-        display: flex;
-    }
-    .right{
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        font-weight: 900;
-        font-size: 1.8rem;
-         display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center; 
-        color: white;
-        border: 1px solid whitesmoke;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
+
     
 }
-.left:hover,
-.right:hover{
-    cursor: pointer;
-}
-.left:focus,
-.right:focus{
-    border: 1px solid green;
-}
+
+
 /* ----------------sites--------------- */
  .title2{
     color: white;
@@ -308,21 +254,7 @@ input:focus{
     font-size: 3rem;
  }
  .movieSites{
-    /* margin-left: 2rem; */
-    display: flex;
-    gap: 3rem;
-    width: 100%;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-     scrollbar-color: #1c1e25  #1c1e25; 
-    /* justify-content: space-between; */
-    img{
-        width: 6rem;
-        height: 6rem;
-        transition: .5s;
-        border-radius: 5px;
-    }
+
     img:hover{
         /* width: 7rem;
         height: 7rem; */
@@ -331,59 +263,11 @@ input:focus{
     h3{
         color: white;
     }
-    button{
-        color: black;
-        backdrop-filter: blur(.7rem);
-        display: flex;
-    }
-    .right{
-        /* float: right; */
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        border: none;
-        font-weight: 900;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid whitesmoke;
-        border-radius: 50%;
 
-
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     border: none;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
    
  }
 
  /* --------------second drop down------------- */
- .seconDropDown{}
- /* .second{ */
-    /* Container styles */
 .second {
     padding: 20px;
     /* background-color: #f9f9f9; */
@@ -487,64 +371,68 @@ input:focus{
     opacity: 0;
 
 }
-.image1:hover .fa-play,
-.image2:hover .fa-play,
-.image3:hover .fa-play,
-.image4:hover .fa-play,
-.image5:hover .fa-play,
-.image6:hover .fa-play
-{
+/* --------------------------add to watch list btn-------- */
+  .fa-plus{
+    position: absolute;
+    bottom: 17%;
+    left: 15%;
+    transform: translate(-50%, -50%); /* Centers icon */
+    font-size: 2rem; /* Adjust icon size */
+    color: white; /* Icon color */
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     opacity: 1;
-}
 
- /* --------------pupular------------- */
- .popularTitle{
-    color: white;
-    font-weight: 900;
-    font-size: 2.2rem;
- }
-.popular{
+  }  
+/* ---------drama------------------------- */
+.genretitle-leftRightbtns,
+.abasobanuzititle-leftRightbtns,
+.movie-sites-leftRightBtns{
     display: flex;
-    gap: 1.5rem;
-    width: 100%;
-    /* overflow-y: hidden; */
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-     scrollbar-color: #1c1e25  #1c1e25; 
-     padding-top: 2rem;
-    img{
-        width: 15rem;
-        height: 20rem;
-        z-index: 999;
-        border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    .left-right-buttons{
+        display: flex;
+        gap: 1rem;
+        margin-right: 1rem;
+        button{
+     border: none;
+     background: transparent;
+     font-weight: 900;
+     font-size: 1.8rem;
+     transition: .4s;
+     color: white;
+     width: 50px;
+     height: 50px;
+     border: 1px solid whitesmoke;
+     border-radius: 50%;
+     align-items: center;
+     justify-content: center;
+        }
     }
-    .image1{
-        background: rgb(64, 64, 64);
-       height: 25rem;
-       border-radius: 5px;
-       gap: 1rem;
-       transition: transform 0.5s;
-       position: relative;
-       /* z-index: 999; */
-       /* overflow: hidden; */
-    
-       
-    }
-    /* .time{
-        font-size: 1.2rem;
-        position: absolute;
-        top: 24px;
-        left: 10px;
-        color: rgb(255, 255, 255);
-        padding: 3px;
-        background: #333333;
-        border-radius: 0 0 8px 8px;
-        
-    } */
-}
 
-.ribbon{
+}
+.drama-contents,
+.war-contents,
+.anime-contents,
+.action-contents,
+.recent-contents,
+.popular-contents,
+.all-abasobanuzi-container,
+.movie-sites-container{
+     overflow-y: hidden;
+     overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */ 
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    position: relative;
+    .ribbon{
  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
  /* font-size: 16px; */
  position: absolute;
@@ -552,9 +440,8 @@ input:focus{
  /* top: -10px; */
  /* background:rgb(185, 28, 28); */
  color:  rgb(249, 250, 251);
- width: 150px; height: 150px;
- /* border-radius: 5px; */
- /* border: 2px solid black; */
+ width: 150px;
+ height: 150px;
  overflow: hidden;
 
 }
@@ -582,438 +469,111 @@ input:focus{
  font-weight: 400;
  font-size: 12px;
 }
-.image1:hover{
-   /* transform: scale(1.1); */
-   /* overflow-y: hidden; */
-}
-    button{
-        color: black;
-        backdrop-filter: blur(.7rem);
-        display: flex;
-    }
-    .right{
-        /* float: right; */
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        border: none;
-        font-weight: 900;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid whitesmoke;
-        border-radius: 50%;
 
-
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     border: none;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
-    
-/* ----------------recent---------- */
-.recentTitle{
+ }
+.dramtitle,
+.wartitle,
+.animetitle,
+.actionTitle,
+.recentTitle,
+.popularTitle
+{
     color: white;
     font-weight: 900;
     font-size: 2.2rem;
+    margin-left: 1rem;
 }
-.recent{
+.abasobanuzi{
+    /* background-color: #007bff; */
     display: flex;
+    flex-direction: column;
     width: 100%;
     gap: 2rem;
-    /* overflow-y: hidden; */
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-     scrollbar-color: #1c1e25  #1c1e25; 
-    
+    color: white;
+    .abasobanuzi-title{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    font-size: 2.2rem;
+    margin-left: 1rem;
+
+    }
+}
+.movieSites{
+    /* background-color: #007bff; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2rem;
     img{
-        width: 15rem;
-        height: 20rem;
-        border-radius: 5px;
+        width: 7rem;
+        height: 7rem;
     }
-    .image2{
-        height: 25rem;
-        background: rgb(64, 64, 64);
-        border-radius: 5px;
-        transition: transform 0.5s;
-        position: relative;
 
-    }
 
 }
-.image2:hover{
-   transform: scale(1.1);
-}
-    button{
-        color: black;
-        backdrop-filter: blur(.7rem);
-        display: flex;
-    }
-    .right{
-        /* float: right; */
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        border: none;
-        font-weight: 900;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid whitesmoke;
-        border-radius: 50%;
-
-
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     border: none;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
-    
-/* -----------action------------------- */
-.actionTitle{
-    color: white;
-    font-weight: 900;
-    font-size: 2.2rem;
-}
-.action{
+.drama,
+.war,
+.anime,
+.action,
+.recent,
+.popular{
     display: flex;
+    flex-direction: column;
     width: 100%;
     gap: 2rem;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-     scrollbar-color: #1c1e25  #1c1e25; 
-     img{
-        width: 15rem;
-        height: 20rem;
-        border-radius: 5px;
-     }
-     .image3{
-        height: 25rem;
-        background: rgb(64, 64, 64);
-        border-radius: 5px;
-        transition: transform 0.5s;
-     }
-
-    }
-    .image3:hover{
-       transform: scale(1.1);
-     button{
-        color: black;
-        backdrop-filter: blur(.7rem);
-        display: flex;
-    }
-    .right{
-        /* float: right; */
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        border: none;
-        font-weight: 900;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid whitesmoke;
-        border-radius: 50%;
-
-
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     border: none;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
-}
-/* --------------anime--------------- */
-.animetitle{
-    color: white;
-    font-weight: 900;
-    font-size: 2.2rem;
-}
-.anime{
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-     scrollbar-color: #1c1e25  #1c1e25; 
-     img{
-        width: 15rem;
-        height: 20rem;
-        border-radius: 5px;
-     }
-     .image4{
-        height: 25rem;
-        background: rgb(64, 64, 64);
-        border-radius: 5px;
-        transition: transform 0.5s;
-
-     }
-     .image4:hover{
-        transform: scale(1.1);
-
-     }
-     button{
-        color: black;
-        backdrop-filter: blur(.7rem);
-        display: flex;
-    }
-    .right{
-        /* float: right; */
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        border: none;
-        font-weight: 900;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid whitesmoke;
-        border-radius: 50%;
-
-
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     border: none;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
-
-}
-/* ----------------war--------------------- */
-.wartitle{
-    color: white;
-    font-weight: 900;
-    font-size: 2.2rem;
-}
-.war{
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-     scrollbar-color: #1c1e25  #1c1e25; 
-     img{
-        width: 15rem;
-        height: 20rem;
-        border-radius: 5px;
-     }
-     .image5{
-        height: 25rem;
-        background: rgb(64, 64, 64);
-        border-radius: 5px;
-
-        transition: transform 0.5s;
-     }
-
-    }
-    .image5:hover{
-       transform: scale(1.1);
-    }
-    
-     button{
-        color: black;
-        backdrop-filter: blur(.7rem);
-        display: flex;
-    }
-    .right{
-        /* float: right; */
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        border: none;
-        font-weight: 900;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid whitesmoke;
-        border-radius: 50%;
-
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     border: none;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
-    
-/* ---------drama------------------------- */
-.dramtitle{
-    color: white;
-    font-weight: 900;
-    font-size: 2.2rem;
-}
-.drama{
-    display: flex;
-    width: 100%;
-    gap: 2rem;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    scrollbar-width: thin;
-    scroll-behavior: smooth;
-     scrollbar-color: #1c1e25  #1c1e25; 
    
      img{
         width: 15rem;
         height: 20rem;
         border-radius: 5px;
      }
-     .image6{
-        background: chocolate;
+     .drama-movie-container,
+     .war-movie-container,
+     .anime-movie-container,
+     .action-movie-container,
+     .recent-movie-container,
+     .popular-movie-container
+    {
+        background:  rgb(64, 64, 64);
         height: 25rem;
         border-radius: 5px;
+        position: relative;
 
-        transition: transform 0.5s;
+        /* transition: transform 0.5s; */
 
      }   
     }
-    .image6:hover{
-       transform: scale(1.1);
+    .drama-movie-container:hover,
+    .war-movie-container:hover,
+    .anime-movie-container:hover,
+    .action-movie-container:hover,
+    .recent-movie-container:hover,
+    .popular-movie-container:hover{
+       cursor: progress;
     }
      button{
+        background-color: #007bff;
         color: black;
         backdrop-filter: blur(.7rem);
         display: flex;
     }
-    .right{
-        /* float: right; */
-        backdrop-filter: blur(.7rem);
-        background: transparent;
-        position:absolute;
-        right: 3rem;
-        margin-top: -4rem;
-        border: none;
-        font-weight: 900;
-        font-size: 1.8rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid whitesmoke;
-        border-radius: 50%;
+        .drama-movie-container:hover .fa-play,
+    .war-movie-container:hover .fa-play,
+    .anime-movie-container:hover .fa-play,
+    .action-movie-container:hover .fa-play,
+    .recent-movie-container:hover .fa-play,
+    .popular-movie-container:hover .fa-play{
 
-
-    }
-    
-    .left{
-     position: absolute;
-     right: 7rem;
-     margin-top: -4rem;
-     border: none;
-     background: transparent;
-     font-weight: 900;
-     font-size: 1.8rem;
-     transition: .4s;
-     color: white;
-     width: 50px;
-     height: 50px;
-     border: 1px solid whitesmoke;
-     border-radius: 50%;
-    }
-
+    opacity: 1;
+}
+.popular-contents::-webkit-scrollbar,
+.recent-contents::-webkit-scrollbar,
+.action-contents::-webkit-scrollbar,
+.anime-contents::-webkit-scrollbar,
+.war-contents::-webkit-scrollbar,
+.drama-contents::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
 
 /* -------------download--------------- */
 .download{
@@ -1091,9 +651,9 @@ input:focus{
         box-shadow:4px 4px 4px 4px #022810;
     }
     .sites{
-        i{
-            
-        }
+        display: flex;
+        gap: 2rem;
+
         .fa-facebook{
             color: blue;
             
@@ -1155,6 +715,7 @@ input:focus{
 /* --------------container4-------------- */
 .container4{
     color: white;
+    /* background-color: #007bff; */
     h1:hover{
         text-decoration: underline;
         text-decoration-color: #1DA1F2;
@@ -1227,11 +788,21 @@ footer{
   .nav-for-phones{
     display: flex;
   }
+  select{
+    /* background-color: #007bff; */
+    width: 18rem;
+  }
   .abasobanuzi{
     img{
         width: 7rem;
+        height: 7rem;
     }
   }
+  .sites .fa-brands{
+    font-size: 3rem;
+
+
+  } 
   .popular,
   .recent,
   .action,
@@ -1244,19 +815,42 @@ footer{
         z-index: 999;
         border-radius: 5px;
     }
-    .image1,
-    .image2,
-    .image3,
-    .image4,
-    .image5,
-    .image6{
+     .drama-movie-container,
+     .war-movie-container,
+     .anime-movie-container,
+     .action-movie-container,
+     .recent-movie-container,
+     .popular-movie-container{
         background: rgb(64, 64, 64);
-       height: 19rem;
+       height: 20rem;
        border-radius: 5px;
        gap: 1rem;
        transition: transform 0.5s;
        position: relative; 
     }
-  }
+}
+.title1,
+.title2,
+.popularTitle,
+.recentTitle,
+.actionTitle,
+.animetitle,
+.wartitle,
+.dramtitle{
+ font-size: 22px;
+}
+.left-right-buttons{
+display: flex;
+gap: 1rem;
+margin-right: 1rem;
+/* background-color: #4F5BD5; */
+}
+.left-right-buttons button {
+font-size: 1rem !important;
+width: 35px !important;
+height: 35px !important;
+
+}
+    
 
 }
