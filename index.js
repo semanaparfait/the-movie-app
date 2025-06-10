@@ -98,3 +98,75 @@
 //     document.getElementById('dashboard').style.display = 'none';
 //     document.getElementById('login').style.display = 'block';
 // }
+// -------------------didsplaying movie attributes into cinema---------------------
+
+
+const movieItems = document.querySelectorAll(".popular-movie-container")
+
+movieItems.forEach(movie => {
+    movie.addEventListener('click', function() {
+        // Get the attributes from the clicked movie div
+        const image = movie.dataset.image;
+        const trailerVideo = movie.dataset.videoTrailer;
+        const movieVideo = movie.dataset.movieVideo;
+        const movieDownloadlink = movie.dataset.movie
+        const name = movie.dataset.movieName;
+        const genre = movie.dataset.movieGenre;
+        const director = movie.dataset.movieDirector;
+        const year = movie.dataset.movieYear;
+        const rating = movie.dataset.movieRating;
+        const description = movie.dataset.movieDescription;
+        const country = movie.dataset.movieRegion;
+        const interpreter= movie.dataset.movieUmusobanuzi;
+        const caster1Image = movie.dataset.caster1Image;
+        const caster2Image = movie.dataset.caster2Image;
+        const caster3Image = movie.dataset.caster3Image;
+        const caster4Image = movie.dataset.caster4Image;
+        const caster1Name = movie.dataset.caster1Name;
+        const caster2Name = movie.dataset.caster2Name;
+        const caster3Name = movie.dataset.caster3Name;
+        const caster4Name = movie.dataset.caster4Name;
+        const caster1Role = movie.dataset.caster1Roledescription;
+        const caster2Role = movie.dataset.caster2Roledescription;
+        const caster3Role = movie.dataset.caster3Roledescription;
+        const caster4Role = movie.dataset.caster4Roledescription;
+        // console.log( caster1Image, caster2Image, caster3Image, caster4Image, caster1Name, caster2Name, caster3Name, caster4Name, caster1Role, caster2Role, caster3Role, caster4Role);
+
+
+        // console.log(name,image,genre,director,year,rating,description,caster1Name)
+
+        const url = `/cinema/cinemaAgasobanuye/cinema.html?` +
+        `image=${encodeURIComponent(image)}&` +
+        `trailerVideo=${encodeURIComponent(trailerVideo)}&` +
+        `movieVideo=${encodeURIComponent(movieVideo)}&` +
+        `country=${encodeURIComponent(country)}&` +
+        `name=${encodeURIComponent(name)}&` +
+        `genre=${encodeURIComponent(genre)}&` +
+        `director=${encodeURIComponent(director)}&` +
+        `year=${encodeURIComponent(year)}&` +
+        `rating=${encodeURIComponent(rating)}&` +
+        `interpreter=${encodeURIComponent(interpreter)}&` +
+        `description=${encodeURIComponent(description)}&` +
+        `caster1Image=${encodeURIComponent(caster1Image)}&` +
+        `caster2Image=${encodeURIComponent(caster2Image)}&` +
+        `caster3Image=${encodeURIComponent(caster3Image)}&` +
+        `caster4Image=${encodeURIComponent(caster4Image)}&` +
+        `caster1Name=${encodeURIComponent(caster1Name)}&` +
+        `caster2Name=${encodeURIComponent(caster2Name)}&` +
+        `caster3Name=${encodeURIComponent(caster3Name)}&` +
+        `caster4Name=${encodeURIComponent(caster4Name)}&` +
+        `caster1Role=${encodeURIComponent(caster1Role)}&` +
+        `caster2Role=${encodeURIComponent(caster2Role)}&` +
+        `caster3Role=${encodeURIComponent(caster3Role)}&` +
+        `caster4Role=${encodeURIComponent(caster4Role)}`;
+
+ 
+      
+      window.location.href = url;
+
+
+       
+    });
+
+
+});
