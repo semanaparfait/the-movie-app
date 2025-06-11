@@ -252,6 +252,7 @@ h1{
 
 /* ----------------------CONTACTFORM---------------- */
 .contactForm{
+    /* background-color: #25D366; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

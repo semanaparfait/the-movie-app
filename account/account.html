@@ -22,19 +22,19 @@
         <div class="form-wrapper" id="formWrapper">       <!-- --------------------------login page---------------- -->
        <div class="login-page front">
            <h1>Sign in </h1>
-               <form action="/login" method="POST">
+               <!-- <form > -->
                   <p>Welcome back! Please log in with your credentials.</p><br>
                   <label for="username">Username</label><br>
-               <input type="text" name="username" placeholder="Username or Email" required /><br><br>
+               <input type="text" name="username" id="loginUsername" placeholder="Username or Email"  /><br><br>
                   <label for="password">Password</label><br>
-               <input type="password" name="password" placeholder="Password" required /><br><br>
+               <input type="password" name="password" id="loginPassword" placeholder="Password"  /><br><br>
                 <p>Don't have an account? <a href="#" id="signup-text" onclick="flipCard()">Sign up</a></p><br>
-               <button type="submit">Login</button><br><br>
+               <button  id="loginBtn">Login</button><br><br>
                 <button id="continue-google">Continue with Google  <img id="continue-google-image" src="/images/admin/adminacc/download.png"></button><br>
             
-            <button id="continue-facebook" >Continue with Facebook <img id="continue-facebook-image" src="/images/admin/adminacc/download (1).png"></button><br>
+                <button id="continue-facebook" >Continue with Facebook <img id="continue-facebook-image" src="/images/admin/adminacc/download (1).png"></button><br>
 
-               </form>
+               <!-- </form> -->
        </div>
        <!-- ---------------------------sign up page---------------- -->
         <div class="signup-page back"  >

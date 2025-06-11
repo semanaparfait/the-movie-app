@@ -1,3 +1,6 @@
+export function greet(name) {
+  return `Hello, ${name}!`;
+}
 // // Subscription Selection
 // function subscribe(plan) {
 //     alert(`You selected the ${plan} plan! Please proceed to payment.`);
@@ -131,10 +134,6 @@ movieItems.forEach(movie => {
         const caster3Role = movie.dataset.caster3Roledescription;
         const caster4Role = movie.dataset.caster4Roledescription;
         // console.log( caster1Image, caster2Image, caster3Image, caster4Image, caster1Name, caster2Name, caster3Name, caster4Name, caster1Role, caster2Role, caster3Role, caster4Role);
-
-
-        // console.log(name,image,genre,director,year,rating,description,caster1Name)
-
         const url = `/cinema/cinemaAgasobanuye/cinema.html?` +
         `image=${encodeURIComponent(image)}&` +
         `trailerVideo=${encodeURIComponent(trailerVideo)}&` +

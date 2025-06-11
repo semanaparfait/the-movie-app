@@ -62,3 +62,21 @@ const userData = {
   signUpArray.push(userData);
   console.log(userData);
   });
+// ------------------------sign in to open userprofile----------------
+const loginBtn = document.getElementById("loginBtn");
+loginBtn.addEventListener('click', function() {
+  const LogInuUsername = document.getElementById("loginUsername").value;
+  const LogInuPassword = document.getElementById("loginPassword").value;
+  console.log("Login button clicked");
+  if (LogInuUsername === "" || LogInuPassword === "") {
+    alert("Please fill in both username and password");
+  }else if (LogInuUsername === "SHEMA" && LogInuPassword === "SHEMA") {
+window.location.href = "/profile/user_profile.html";
+  } else if (LogInuUsername === "SEMANA" && LogInuPassword === "SEMANA") {
+    window.location.href = "/admin/adminacc.html";
+  }
+  else {
+    alert("Invalid username or password");
+  }
+
+});

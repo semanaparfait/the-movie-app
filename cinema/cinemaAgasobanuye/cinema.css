@@ -279,14 +279,12 @@
 }
 
 .content-panel {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    /* width: 90%; */
-    /* opacity: 0; */
     transform: translateY(20px);
     transition: all 0.4s ease;
     pointer-events: none;
+    /* background-color: #4ade80; */
+    /* width: 60vw; */
+    overflow: hidden;
 }
 
 .content-panel.active {
@@ -363,8 +361,7 @@
     gap: 1rem;
     width: 55vw;
         .casters-images{
-            /* background-color: #3b82f6; */
-            /* width: 100%; */
+
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -446,8 +443,6 @@
     font-size: 0.9rem;
 
 }
-
-
 }
 /* -------------------responsivenes------------- */
 @media screen and (max-width: 1024px) {
@@ -526,11 +521,29 @@ width: 100%;
     font-size: 20px;
 
 }
-    .rating-buttons {
-        flex-direction: column;
-        /* width: 100%; */
-    }
-    .action-buttons {
-        flex-direction: column;
-    }
+.rating-buttons {
+    flex-direction: column;
+    /* width: 100%; */
+}
+.action-buttons {
+    flex-direction: column;
+}
+.casters-images{
+
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+.cast-role{
+    display: flex;
+    width: 100vw;
+    gap: 10px;
+
+}
+.cast-role img{
+border-radius: 50%;
+width: 80px !important;
+height: 80px !important;
+}
 }

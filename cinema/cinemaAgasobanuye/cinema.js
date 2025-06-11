@@ -1,3 +1,4 @@
+
 function description(){
     document.getElementById("description").style.display = "block";
     document.getElementById("details").style.display = "none";
@@ -42,6 +43,9 @@ const caster4Role = params.get("caster4Role");
 
 
 
+const backgroundtrailer = document.getElementById("movieTrailerBackground");
+backgroundtrailer.src = trailerVideo.replace("watch?v=", "embed/") + "?autoplay=1&mute=1";
+
 
 document.getElementById("movieName").textContent = name;
 document.getElementById("movieDate").textContent =  year;
@@ -49,7 +53,7 @@ document.getElementById("movieImage").src = image;
 document.getElementById("movieGenre1").textContent = params.get("genre");
 document.getElementById("movieDescriptions").textContent = desc;
 document.getElementById("movieCountry").textContent =  params.get("country");
-document.getElementById("movieTrailerbg").src = trailerVideo;
+// document.getElementById("movieTrailerbg").src = trailerVideo;
 // document.getElementById("movieVideo").src = movieVideo;
 // document.getElementById("movieDirector").textContent = "Directed by: " + director;
 // document.getElementById("movieRating").textContent = "Rating: " + rating;
@@ -73,4 +77,3 @@ downloadbtn.addEventListener('click', function() {
 
 document.getElementById("playBtn"); 
 // Function to close the movie card
-
