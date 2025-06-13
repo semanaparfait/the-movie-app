@@ -54,8 +54,8 @@
                 <div class="profile-image">
                     <img src="/images/mv logo/WhatsApp Image 2024-12-08 at 09.38.11_7237b087.jpg" alt="Profile Image" style="width: 50px; height: 50px; border-radius: 50%;">
                     <div class="profile-info">
-                        <h3>John Doe</h3>
-                        <p>ID: 12SD5F57</p>
+                        <h3 id="userName">John Doe</h3>
+                        <p id="UserId">ID: 12SD5F57</p>
                     </div>
                 </div>
             </ul><br><br>
@@ -64,25 +64,32 @@
     </aside>
     <!-- ---------------------profile--------------------- -->
     <div class="profile-container">
+        <div class="profiles" >
         <h2>My profile</h2><br>
         <div class="header">
             <div class="profile-image">
                 <img src="/images/mv logo/WhatsApp Image 2024-12-08 at 09.38.11_7237b087.jpg" alt="Profile Image">
-                <div class="profile-info">
-                    <h3 > John Doe</h3>  
-                    <p>ID: 12dfg5F57</p>
+                <div class="profile-info" style="line-height: 1.7;">
+                    <h2 id="userName" > John Doe</h2>  
+                     <p id="UserStatus" style="color: green;">Active</p>
+                    <p id="UserId">ID: 12dfg5F57</p>
                 </div>
             </div>
-            <div class="edit-profile">
+            <!-- <div class="edit-profile">
                 <button style="padding: 5px 10px; border-radius: 20px; border: 1px solid #ccc;">Edit <i class="fa-solid fa-pen-to-square"></i></button>
-            </div>
-        </div>
+            </div> -->
+        </div><br> 
         <!-- ----------------personal info---------- -->
          <div class="personal-info-all"><br>
+            <div class="personal-Info-headings">
+                <h3>Personal Information</h3>
+                <div class="edit-profile">
+                <button style="padding: 5px 10px; border-radius: 20px; border: 1px solid #ccc;">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
 
-             <h3>Personal Information</h3><br>
+            </div><br>
              <div class="personal-info">
-                 <div class="name-container">
+                 <div class="name-container" style="flex-wrap: wrap;">
                      
                      <div class="info-item">
                          <label for="name"> First Name:</label><br>
@@ -104,14 +111,26 @@
                     <span id="phone">+1234567890</span>
                 </div>
             </div>
-            <div class="edit-profile">
-                <button style="padding: 5px 10px; border-radius: 20px; border: 1px solid #ccc;">Edit <i class="fa-solid fa-pen-to-square"></i></button>
-            </div>
+
         </div>  
-         </div>
-    </div><br>
+         </div><br>
+         <!-- ----------------------personal status--------------- -->
+          <div class="personal-status"><br>
+                <h3>Account status</h3><br>
+                 <div class="dates-container" style="flex-wrap: wrap;"> 
+                     <div class="info-item">
+                         <label for="name"> Activated</label><br>
+                    <span id="name">01 / 01 2004</span><br>
+                </div><br>
+                <div class="info-name-second">
+                    <label for="lastname">Ended</label><br>
+                    <span id="lastname">01 / 01 / 2004</span>
+                </div>
+          </div>
+    </div>
+        </div>
     <!-- ---------------billings and invoices---------------- -->
-     <main class="invoices-container" >
+     <main class="invoices-container"  >
         <div class="invoice-headings">
             <h2>Billings & Invoices</h2>
             <p>Effortlessly handle Your Billing and invoices right here.</p>
@@ -183,8 +202,6 @@
                         <th>Invoice ID</th>
                         <th>Billing Date</th>
                         <th>Expire Date</th>
-                        <th>Time Gained</th>
-                        <th>Time Expired</th>
                         <th>Days</th>
                         <th>Amount</th>
                         <th>Status</th>
@@ -195,10 +212,19 @@
                 <tbody>
                                         <tr>
                         <td>INV-001</td>
-                        <td>December 1, 2024</td>
-                        <td>January 3, 2023</td>
-                        <td>12:39 AM</td>
-                        <td>12:54 PM</td>
+                        <td>December 1, 2024 <br>
+                        12: 40 PM</td>
+                        <td>January 3, 2023 <BR>10: 60AM</BR></td>
+                        <td>30 Days</td>
+                        <td>$9.99</td>
+                         <td><span class="status paid">Paid</span></td>
+                        <td><button class="view-invoice"><i class="fa-solid fa-eye"></i></button></td>
+                        <td><button class="download-invoice"><i class="fa-solid fa-download"></i></button></td>
+                    </tr>
+                                        <tr>
+                        <td>INV-001</td>
+                        <td>December 1, 2024 <br>18:00 AM</td>
+                        <td>January 3, 2023 <br>23:59 PM</td>
                         <td>30 Days</td>
                         <td>$9.99</td>
                          <td><span class="status paid">Paid</span></td>
@@ -209,20 +235,6 @@
                         <td>INV-001</td>
                         <td>December 1, 2024</td>
                         <td>January 3, 2023</td>
-                        <td>12:39 AM</td>
-                        <td>12:54 PM</td>
-                        <td>30 Days</td>
-                        <td>$9.99</td>
-                         <td><span class="status paid">Paid</span></td>
-                        <td><button class="view-invoice"><i class="fa-solid fa-eye"></i></button></td>
-                        <td><button class="download-invoice"><i class="fa-solid fa-download"></i></button></td>
-                    </tr>
-                                        <tr>
-                        <td>INV-001</td>
-                        <td>December 1, 2024</td>
-                        <td>January 3, 2023</td>
-                        <td>12:39 AM</td>
-                        <td>12:54 PM</td>
                         <td>30 Days</td>
                         <td>$9.99</td>
                          <td><span class="status paid">Paid</span></td>
@@ -231,10 +243,8 @@
                     </tr>
                     <tr>
                         <td>INV-001</td>
-                        <td>December 1, 2024</td>
-                        <td>January 3, 2023</td>
-                        <td>12:39 AM</td>
-                        <td>12:54 PM</td>
+                        <td>December 1, 2024 <BR>22:00 AM</BR></td>
+                        <td>January 3, 2023 <BR>10:00 PM</BR></td>
                         <td>30 Days</td>
                         <td>$9.99</td>
                          <td><span class="status paid">Paid</span></td>
@@ -243,10 +253,8 @@
                     </tr>
                     <tr>
                         <td>INV-002</td>
-                        <td>November 1, 2024</td>
-                        <td>February 3, 2000</td>
-                        <td>23:23 PM</td>
-                        <td>12:00 PM</td>
+                        <td>November 1, 2024 <BR>10:00 PM</BR></td>
+                        <td>February 3, 2000 <BR>10:00 PM</BR></td>
                         <td>30 Days</td>
                         <td>$9.99</td>
                         <td><span class="status overdue">Expired</span></td>

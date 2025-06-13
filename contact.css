@@ -327,8 +327,14 @@ h1{
     .fa-barsk{
         color: #25D366;
     }
-
- 
-
 }
-
+/* --------------------responsive----------------- */
+@media screen and (max-width: 600px) {
+.chatbotpage{
+    display: none !important;
+}
+.iframe{
+    width: 100%;
+    height: 100vh;
+}
+}

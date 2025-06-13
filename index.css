@@ -252,6 +252,7 @@ input:focus{
     color: white;
     font-weight: 900;
     font-size: 3rem;
+    padding-left: 10px;
  }
  .movieSites{
 

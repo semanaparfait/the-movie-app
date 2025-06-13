@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricings</title>
+    <link rel="stylesheet" href="payment.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <center>
+        <h1>Your subscription summary</h1><br>
+        <p><i class="fa-solid fa-check" style="color: green;"></i> Watch all content without ads</p>
+        <p><i class="fa-solid fa-check" style="color: green;"></i> Download for offline</p>
+    </center><br><br>
+    <div class="summary-payment">
+        <div class="subscription-summary">
+            <div class="summary-headings" style="animation: fromTopH3 1s ease-in;">
+                <h1><i class="fa-solid fa-rectangle-list"></i> Subscription Summary</h2> <br>
+            </div>
+            <div class="summary-all">
+            <div class="summary-details">
+                <div class="summary-titles">
+                    <p>👩‍💻 Plan</p>
+                    <p> 💸 Price</p>
+                    <p>📆 Start</p>
+                    <p>📆 End</p>
+                </div>
+                <div class="summary-values" style="text-align: right; line-height: 2;">
+                    <p>Premium</p>
+                    <p id="plan-Amaounts"></p>
+                    <p>October 1, 2023</p>
+                    <p>October 31, 2023</p>
+                </div>
+            </div><br>
+            <div class="total" style="display: flex;  align-items: center;text-align: right; border-top: 1px solid #ccc; width: 78%; justify-content: space-between;">
+                <p>Total</p>
+                <p id="TotalplanAmount"></p>
+
+            </div>
+            </div><br>
+            <p style="animation: fromleft 1s ease-in-out;"><i class="fa-solid fa-shield"></i> 100% securice payments</p><br>
+            <p style="animation: fromBottomP 1s ease-in;"><i class="fa-solid fa-lock"></i> 100% Secure Payments via SSL Encryption</p>
+     
+        </div>
+
+        <div class="payments">
+            <div class="payment-heading">
+                <h2>Payment</h2><br>
+            </div>
+                <!-- 
+            --------------------mastercard------------------ -->
+            <div class="masterCard-method method" style="line-height: 2.6; display: none;">
+                <img src="https://i.pinimg.com/736x/22/d1/38/22d138549c3a3fbd95698c4be15c7b71.jpg" alt="master-card" style="width: 5rem;">
+                <p>Pay with MasterCard</p>
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                <button id="continue-masterCard">Continue with MasterCard</button>
+            </div>
+                <!-- 
+            -----------------------visa----------------- -->
+            
+             <div class="visa-method method" style="line-height: 2.6; display: none;">
+
+                <img src="https://i.pinimg.com/736x/3d/d3/de/3dd3de3c0ea439adcd71d4531e0e181c.jpg" alt="visa" style="width: 5rem;">
+                <p>Pay with Visa</p>
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                <button id="continue-visa">Continue with Visa</button>
+             </div>
+            <!-- -------------------------rwanda methods------------------- -->
+            <div class="rwanda-methods method" style="line-height: 2.6;">
+                <div class="methods" >
+                    <img src="https://i.pinimg.com/736x/7b/9f/ce/7b9fce7a65a393b17d61f4061f7e7375.jpg" alt="mtn-rwanda" id="mtn-rwanda-uganda">
+                    <img src="https://i.pinimg.com/736x/43/c7/aa/43c7aa891a73a997e3d014b88d06077a.jpg" alt="airtel-rwanda" style="height: 3rem;" id="airtel-rwanda-uganda">
+                    <img src="https://lumitel.bi/themes/lumitel/images/logo3.png" alt="lumitel" style="height: 3rem; display: none;" id="lumitel-burundi">
+                    <img src="data:image/png;base64,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" alt="ecocash-burundi" id="ecocash-burndi" style="display: none;">
+                    <img src="data:image/png;base64,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" alt="mpesa-kenya" id="mpesa-kenya-tanzania" style="display: none;">
+
+                </div>
+                <input type="number" id="Number" placeholder="078X XXX XXX"><br>
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                 <button id="pay-money">Pay Now 5000 RWF</button><br><br>
+            </div>
+                  <!-- ------------------uganda------------ -->
+                 <div class="Uganda-methods method" style="line-height: 2.6; display: none;">
+                <div class="methods" >
+                    <img src="https://i.pinimg.com/736x/7b/9f/ce/7b9fce7a65a393b17d61f4061f7e7375.jpg" alt="mtn-rwanda" id="mtn-uganda" style="width: 5rem;">
+                    <img src="https://i.pinimg.com/736x/43/c7/aa/43c7aa891a73a997e3d014b88d06077a.jpg" alt="airtel-rwanda" style="height: 3rem;" id="airtel-uganda">
+                    
+
+                </div>
+                <input type="number" id="Number" placeholder="078X XXX XXX"><br>
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                 <button id="pay-money">Pay Now 5000 RWF</button><br><br>
+            </div>
+                <!-- -----------------kenya--------------- -->
+            <div class="Kenya-methods method" style="line-height: 2.6; display: none;">
+                <div class="methods" >
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQYAAADACAMAAADRLT0TAAAA8FBMVEX///85tUrY49LtHCQ0tEYnsTwuskGW1J3u8+v5+/nr9+3B5sag16Zhwm3f6NpmxHGv3rXM6tDsAADZ79udTUTU7dchsDh5yYKo3K72/Pfq9+tYv2V9yobe8eC54r50yH6HzpDn7uNDuVPuJCztEBr+7e795ebN6tFJuliX1Z+ZRDlZv2bxXWGP0pf6xsf4tLbvMzr1k5b3rK7wUFXijoXY28rigXfv5+LzgoX38fDYu7nwR0z3oqUArCSsamTp2de2f3nya2/FJyXFtqexQjzayLjbKCvfo5jMnZmXT0afS0Pw0c/QlYnQZmDWPDvdGyFnwoyeAAAIkElEQVR4nO2ca3vbthmGKQugrZN1smidJSuyLdtR4nTrFrdJurVpuzRr+///TUmIOBIAoV1a3Kt67k+xSIEvbr44klEUAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADA/41a7bkj+DNwdXJycvbcQTw7ZycZR58QV0zD0acDNDCggQENjKPScHZ17uJ4NNROyjgGDWelFo5BQ3kuHIWGK2jICLBwBBpC2gQ0QMMX0TCq3zbm88agPjpkqd3tKadhPaEvTxiyD4SGq7OawdmVrmF4anLXnA/qrvItbPXK9putSpLQlCQhD8uGXpSkLgrdDoI0NJOYU7FuErQpP04fVA3n9i2FK1VDS3xXQilpDZXwG0nxHEmiVrSRlkcqAhLTuD23JsWpKJS2wzTEoljasRzvJ/KyLUXDuatAdU3RVoJWIDQ+lXWj1nN4TFJDvU2LxRFKtkURtVgpYbanhsrKcoOVmmga3NtL56UasuBW/T01zFax/ZQ4bprBdJQy4+2+GizpMJDJoGnwdIFnIRrS29jdS8O44i4rMbuIiXZuSF+qaqisCofViqgafHuNQRrSGo730TBxFxUvjQDUe+do614NdGgc7asFqhp8RZ6HaSCTPTR0PGcVkuFSu2x+nT00FHqHhVpgmYZXr90aYsqI1Z5+d5ukBkKL8CoqyUCTmKSDpog7nhpx1LVkSDUFjJm6BiOBZlqBZRpe9B5fOzTE2w5juN3I27q7TUIDeegUGe4a9lgZr9j0ZtxYrpJd6Ik5FJwafSlZ7KuB6L3DQs8uv4Y3veq69+IrqwZ6K07rrkShbCyTGi7dUc6FPCpv7WAZU0slaxWTvBcK16Cng54MJRpuetWMXvWdTUNXnliXF5uHahiKKBP141EnbSJmyktlIheb+2rQBgs9GUo0/G1dreYi/v5136NBxskmUUEaZJRmf9gszBIfCK98S8Rf+hDN1KCkg5EMfg1velXBuvqPf3o0jPinZBqqQWZDaUMfCMl1MbxQ+3LJo4FshLlL85BHwyvFQiZi/ebaqSHaEKVKQRqU8TJ+8M+O+WhJ2lE91iPfQ8OuwWaYyeDTcFM1Wa/f3rg0TOwazIFPQY2FJK2Ou88b8/pkGSBadWE0cWmItzy2TX7kUrSx2KHhO17I0+O64CEdNm5c2aDef6mhfds1aIjM3GgTGEpbTUfFxGhJakrZhbmFU8N8mf8r2aXDjPLK81thani6/ya38K3FQrX3zpENIlfZqsc3fXov+sOhMYskcbK560cFRiu17Br/qxKXLCy4Btrhk688Hab8QNel4cP9/XceC29dfcOdyNtO5J9MK8NCq7C+JDGddMzaiU4kYe1G5EZhmeDUICue9atjngyTyKHhX/cXF7+kHq5tLaLa+3fk0NAVFaL9cA2jjWWdTWhlHmnw0TKPVcw+RVMv1zCTNY8i3kTSHrNv1ZBZuLi4/+bVC1cuqBrEHKeu9MlsjhKoIRq1rScmU3VOINaWvKMXESS3kQ9Fg+hYk4ZIhixUm4anD8zCxcX3NgnrtF/QgiDtKWPxQKSF3RZUqIY04VeW7aeKtssmhgaSt5a57ICDNQxk77BUPrZo+OGCWfj08XeLhGrv2x/ruoYK4agVqO+nIa2UvhmZF7MUx8VoKUaGkSzLu7BQNYiw4yb/cpa3hobo5AeWCp8uPv5kzYTHn8O2XXa9lqKBaMRx/L6w8zwetmNq9BJyVSF6xEQMIkttWArTIJqWaNNDQ8PT5/98SDPh06dfPv72wuag9/JV2LYLzWfFUsPmcnG5Y5pzaRvm6nKNncfF59fi1is7LX1p2bew0DQU4mZNzMiGz//99bffe73eeq12C+lf6Ucv310H7j5xC2GzSJP+VuljxKRAdgSLzpAjrzj3FKhr6OoNNb7LPrQMmF9/fv3m7cvHao+zfnz59qvPT+yEAA0kueMBBK0porrZPEZTGSqfKsstKiKfdMhr+jbjdA1i3M0/HDk08DXF0/VNxvWTWmSZhnQG2JZT4TANp6QweZbbAPkCcmAuggwSy6zToUHrt/OHKh4NVjx7kdlDt3hyp1YpSMOIEGrundzKHam54cWOb2FhaNDWMPm28AE0xHeNnO7M6PaCNGRDAN3ouwYDQ8PYM/LmUbjHTFNDQ2YW3/8/gAbqnsOFaBixIEkyUUUoO1Is2+8ss21Dg3szztSgpAPfyTyEhq7z7BANfD6QriG23TybOsp0NPuouBNbxPZ00qFBrNFiHtYX0lAx509sDrVMT6krDTWdPE2m2+2iosy6WFxyJzY21+tmXxqiQazRxezTpmHPh3eBGoowDcaDh2yCqfaGCaucGC3pfNbXmLXk0iZYA9/hkDlq0+B5lFs7uIaF9xTCXru49Syplaccrs24ooYaYa+TvBffsGlwvt6Qv+BwUA3RaeJ5NL7r/8VoaekH5fqq8NTXrSGaDRjyb4sGdzqohw+lIRpMbGvsnQU2CMnR0vaIailblWMzzqLBxKrB5UE7ejANaWJvrBlBJ7uklTuxtucYyhTDUc3/WYP15acafwfs4BrSE9MltvEYjRLeAsSBxHolMQtwLSz4K2CJT4PtFTBmwvZ/CBQN4hUwe3C72nlfAVP2VNLM7yxW2csBcTZW0KTSFjuyHVFI8U0V/bhjM240rjPG7h3sWn5Kvsrb471I/r362D3AytKtGGGNZo3O6fRyumzO+8oh5QslF/HUcz/wliwDGhjQwIAGBjQwoIEBDQxoYEADAxoY0MCABgY0MKCBAQ0MaGBAAwMaGNDAgAYGNDCggQENDGhgQAMDGnaEaDjoL478OTkvt+B9N+ovQsBvoV09d4xfgvKfAXvuCL8MJR48L0b9tTjz9Q9HMEpIzN98Ejx3YAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEMgf23Ks6iX/21oAAAAASUVORK5CYII=" alt="mpesa-kenya" id="mpesa-kenya" style="width: 8rem;">
+
+                </div>
+                <input type="number" id="Number" placeholder="078X XXX XXX"><br>
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                 <button id="pay-money">Pay Now 5000 RWF</button><br><br>
+            </div>
+                 <!-- ------------------tanzania-------------------- -->
+            <div class="Tanzania-methods method" style="line-height: 2.6; display: none;">
+                <div class="methods" >
+                    
+                    <img src="data:image/png;base64,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" alt="mpesa-kenya" id="mpesa-tanzania" style="width: 7rem;">
+
+                </div>
+                <input type="number" id="Number" placeholder="078X XXX XXX"><br>
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                 <button id="pay-money">Pay Now 5000 RWF</button><br><br>
+            </div>
+                <!-- ---------------burundi---------------- -->
+            <div class="cash-methods method" style="line-height: 2.6; display: none;">
+                <div class="methods" >
+
+                    <img src="https://lumitel.bi/themes/lumitel/images/logo3.png" alt="lumitel"  id="lumitel-burundi">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUIAAACcCAMAAAA9MFJFAAAAwFBMVEX///+6KzE1Uo65KS///v+8MzkoSYnowMIyT4z7/P64ISi6LDKdqcT09vktS4o2U49XbqF5irD36enGV1tEX5jAyNq3wNU7V5G3HybHUFT9+fnpu721Fx65JSzz3d61ERq/PkPsycr35+jdoKLksrS/QUbt7/Xw1dbUhYjRen0aQIW0BhPhq6z78vKwutHNcHPcl5rg5O6PnsDO1ePTf4LKY2eSoMBOZ5xrfqnOc3aBkrayAABjd6XajpGlscvLYGUSMvTFAAANUElEQVR4nO2bCXeiSBeGRRQJKEbRpFRKRDS4gEtcY6v5///qq1XBYNpMm+6c79xnZjInWBTm9dbdqsxkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD4fyD3bx7bbBfC2WFw8Hte9XueUA0PB+97pk4wf90/XmN/fPmmp0bBoGG647Hrkh9O/t1vN+/+jKDzyx27h+juEyfJPT1rn1H5Fg2j1lRxEFZMhf9rICc/C+78kObQURQFq607z3vJ/FHLfoJu1e/8QOo1gpWKVJXJpyiqwn5i1J817+pUggYm86po8M1m+KR/pmA2qxXv7imbfh6pismkM6WEBMOxu/d8jpfHdFq0+iZPKzl+aoTECp/u/cTqwMHCAE1TiUmoKE7Hu+MHVsizqZH9vRI+FLWTWClo2vbevpB4KNUUkmGEkIOQIdayqqDGHQMokdAkH9X3SpiLSfhcS2Gznt/7mTOXOkFqf4arrg5+6C8bBlGVy4rs+zkuaoXkYzH+khXq5fpDCtdvvGHBfRhCL/SwyuxNUVHDl64veFMx94ym8/afn3eJWMh/UcKb78n9gb8K+pivYdUZxGNHr2+wy6Y6vttSTpPwG6qI/yLhb8kl/henOXCE30OHZCpd6GAeWZzhvd7GD7bCPyBQsLDBZdznUbFbY5YomrjRvtPDfqiED6V5/bh+fS1OFvMrnpIMWUyOxePTYl66NMQ3R4Ri+6NOS/6ami/ErzajgFfSs7AVdFOKwFzU9nr+jL+ceF5SwmbbC8koL22OP+JrEpbm6/3zaDTSNPKjVnlKCdcvi91jdsR53hcXJXZV/GmRXMZq7+Od3YbBi5Xe2Qd0CyRck0LacRxSSzudadjOJDxEM5jZpNTmlXZn5QfN8/PiEpKKMk+HjcedYeG+In5Jwvma1NOimilnLc16nJQupqtXynxImU6qabXXRezlnivqkNS1FRo0YYxZYbP1jlklLfJIlfzWCOMCdA8dXmrTIfTlzuBcaXMJTZoXBm/YETHfcMz7VnxfkfBpo+mJcpBk45V53ChKu7KlM/XkCF2rTc4jhnytmuND2vzVlUPs03mXf2B1qRqx0oUVM6qBZmcNgwbCwq5FvU0q7VNX4WSFUaFPS3JTFELYfbunhl+QsDiyLsu/clarxaxsvh+Jy3GdtVdpql3bEMEkLXHJZdorjHCjexrtcGFUFVNUmQ358hMJOg7TjuhKShzMFFINIxQvywLvPcSGKT8ElQezO67ls4SL3ww8yiVM1+dpPWe155NDnO+18wiLDiknNfQ6PB5j5UqCFvX83slApjL0ICXf6XfyhqEySXBHrNWIj1AN0x4OlqsO4orjvHidSUiu5E2aL1GZZW2OlTs2wM4Srp8+EpO1XtOlPJvKbretSRG1fYnr8VDRTiN2xWOxUpO/W0c+R0vhIhiNG96Z53IBUOfQ8oIg8PwG4kYpzbDFF6bxXmhHzajrDTE3RGcZk5DX3ipyGtO3dxMJU0bT+y3lWJshhdpajnvZinFaefJSIsyLmsXXrDXhQyZCVMsqzkukOCzNK5rO7dDilhryxaiiK0VcgqXLUm23IdvZucDm6xHZ7Eq0RMn8KDq47CNCfX6HlJDM49qFahRFwZSlBKaJzfu1M84SpqGPhP3wnhjVa3tat4sa940Wb+a80F/JCD3mHY9cw7JWYRrMWHQwFWf2+zcWcb+JpjGv1WIfgYrzbWr33QZvB/rnAUvWBPogoYplCIqWoo50Y3f9IZ9LmNUq3I2VNha3p0cagUWRvNjop2tErpFYxSwuCVf3KtzEM5W1OUOihgt/X6xGJEtUyZKXJkbHV2nmaMpo1GYdVRPN+Kt0QPTmGBjJT+gkoTM4Tet1+DV3+cfSST6TsHyWsC5GJRqwuQm/xiQsbblNatv49C8bYanUIzQPwhU5KYn1B5ZjkWazR/H/RIQZs2AgJMR2bM+leujk+zPh56SEuHPOQqMVN0O0+qJQ17lxIe9GzAi1x0RR97Ab6WTMjv6BCx5u9GwiOcqJpjhb7F+TsGr/Gv8aJpOPg2uytJKlLaKaUXAjPI9odoOqvEdG5ITfODgsJiH7JnluIR5OrItgYp3CyQNfstmTaxTkKrqV3TFDnQhz28e73LnMXCx26iCJhDypcMLMLQSt+J4eKZZDLpo5Zo6seRBZj+Eqy0I3+pDqCStU1XjoCHmBdFNScBufJjV1GRjmZaHyZfJYqk/qD8wTFYWEr8mS72VvnYyzycIJNYuv+nLaSRjY2OVJi5CQppksVTYV7Lid6awQJDMVUeDhTryl0ftGCT+rThYiXamVUl/O0dJOSHhMxgl5XaOZT8icF1lFg9RpKB+rhmbQ85d2ntS/qtiqkhI2fYRl1UG3Ycz+MGzLN5Q5F3j9eG+39Y8kFDul1ubqTsBLRUh4MU3pVUhYJLe2VK7BVV/uTe1pwk8G/pvdUZBhkHSGWBzPzM8ZyWwsc2UWqTEy+sOzyUkJGwkJnduz+9u4TcKJkPDx4Voy8iICsn4xzYNY4Nr6ga889v7z6ZMUkGM4v07OPwob4zGSxTHGBjYTVkjw3lWDZYenJNpxTxsKPJyYhv2TJNxft8JtuhUmJOzy8sLEqJv2UVRXyKQlrsdfDKYI8e1Sk9RnSGkMQ57USAlZqtibmoitZ76kSeHhrOI1Mu3U/AQJb1jIVyQsrWMLWTa7lHEvTcICNzLRaQn6rNSgXm6MG0Pfa0dk4V5YIaHq+SuVGKvYnKaZt+hGpjb+/5WE9evh5EGUL7eEE5JR0J1d1UzdYmrymldFIdW3anOLUx3zrRdEvKV/cJVzXshgOXez3Zt2kCNPmahjXnr8KAkXInXMXnb659vRiJ39kkmNtkuqPBdJDZ8+kucW8ilVPtuaIhKbLKDMHNbWwWq8xbyMp9aXt89WpiEcosJiyo+SsPQsUuvJxfX9iFQnTEO51h+TB0hk0bLhGaVcycbwY7OJOjqat/SpK2uzLoOq4llySFxCku702jGjr7ZsxKfHbMCPkjAjWl3JAjiTYTfzmk5qpacVeGXRzcl4WDRdzQ+G1BNbU8aK5oaeyQIx3RE9ixTJ6oTd3Aw76HwGh43iZTPJmpjwP0vC40jUJ4nyRMjG/N+nbYayPGLXlGaIzYu+cUH89VQfMrbFW9TGtBpr6niJpCYwyRjUkObMRg24OzV+oITzskxrYt5QNPrF+bknPlE5vthlI5v3ENnhzL7YSMNjP7aWq6Ei/BjqR3Rgj3tNI342MHoTY3hb2mdiuIlKJ0TMFxj/ZiEXF/WPLMQ+cGYnm9aV81aJWN3Cz9GWYpmF7bpMfUpF2simPbOdvCnnY3G6FaMVibQ5tpfeWiFhgyri1UmBnV5iSaI0w6ZPfCNPzVmbpYd4A5aas2xhkqBO2/y8sXBFQuWbJMxmn1PZ7LgTW8itE2vP945fnqgNllkQ5pI9jXRhcuJE3WKXFbarnW03moq9ZJK94MbbYTY7vDX4ngZr4gx4lUx3qkyi6NkMqwMTi/xZNakBB1jsRp1LwpbJPgmjH/0TCdP2TnTdGm25QBO5A2rpm+1ut93oFt+gs2pUnxztHp62m2rb1/Vu/yx/T/TIor5wh2zXlyH3NxXTWXWl0mK/lAQMsrKjYNYnpYoqciKDqha98fiL1alHO13N9szE9EymOeZh/C8t5Mwk1nItJxHKcgt6WItFSSXSNEtuglrnHutLRZ5jSGyT6vr6VNTQ5dZdnXoD9BQqP4zEfz0pSFsSYpDhdmy747iY1tY8nohWj9c3+JYeGuft1XvDcEVHV4SYvyVhPXlA4QO6JYJw6VVLGanVYlsBXMNyNrEZb1nri5qmO0RyazyB4Uy7J6Wbw7FY23QHmAYX7DQK4mwdP4Ge66kiDySO1ZHHjUlAEomOl2cHTJLH1QtI7M/fT8LffGkiqz3LXLlULF8O1Uf7RJZDZL4YomvW5bkb2oKh3VNhhqdV7eb9+N8a2WIjmZ2XMRXkLNuZrk33kmXzJVfIu1ge9BDnalS3IY+8i+if/NJEW2FO1r3esvw69dqVL+3w8+p6LEeZV7Lkqk7tlrpJzdocL+VZbMkQXQwht5d3qYe124eOgQysCjAmdnlInJfLZaIBCTgqC7DEELHNbMvrIPKrK8/kdAd5hPg0fBgyD8xA6YvNoUvnVhKH7TLv9KKh3PV7ZS/FXeUq62Srf7Hebp7pcaRsubbfPaU1sRev+1pZt8g/5c22mCZgjneplu/9vEq7gFjJ20M/5Ssn3rJv0gFq3h5IHTybqB07EtP2p408ayZi83Ka9ju53vGTnfC2Tcb2w3ufMixd5cPQl/niaTKZPNUXc7EzKTkdwZ4v6pPj8UiGfP6Fi27g9ULf98OWd+ULeLmgEPLXz9faoZ88IBgFXis+TewoeLflh97l1PRicP8v/H2R3x5Yzz083HYwPJdr/mbgxwEpN1ydJvWd/nP9AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAfgT/A1M7TQ5B6r/FAAAAAElFTkSuQmCC" alt="ecocash-burundi" id="ecocash-burndi" style="width: 7rem;">
+                    
+                </div>
+                <input type="number" id="Number" placeholder="078X XXX XXX"><br>
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                 <button id="pay-money">Pay Now 5000 RWF</button><br><br>
+            </div>
+            <!-- ----------------------paypal---------------------- -->
+             <div class="paypal-method method" style="line-height: 2.6; display: none;">
+                <img src="https://i.pinimg.com/736x/f4/22/30/f42230e621c19fea5815dde7a09ed83c.jpg" alt="" style="width: 5rem;">
+                <p>Pay with PayPal</p>
+                <input type="email" id="paypal-email" placeholder="Enter your PayPal email">
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                <button id="continue-paypal">Continue with Paypal</button>
+
+             </div>
+            <!-- --------------------bank---------------------- -->
+            <div class="bank-method method" style="line-height: 2.6; display: none;">
+                <img src="https://i.pinimg.com/736x/95/26/70/952670f2f4ed6c17d04470b236d98503.jpg" alt="bank" style="width: 5rem;">
+                <h3 style="color: #0070ba ;">Pay via Bank Transfer</h3>
+                <div class="bank-info-bar">
+
+                <div class="bank-item">
+                    <strong>Equity:</strong>
+                        <p>MovieNest Ltd</p>
+                    <span>0111 1111 1111</span>
+                </div>
+                <div class="bank-item">
+                    <strong>KCB:</strong>
+                    <p>MovieNest Ltd</p>
+                    <span>0222 2222 2222</span>
+                </div>
+                <div class="bank-item">
+                    <strong>BK:</strong>
+                    <p>MovieNest Ltd</p>
+                    <span>0333 3333 3333</span>
+                </div>
+                </div>
+
+                <div class="file-upload-wrapper">
+                <label for="fileInput" class="file-upload-label">
+                    <i class="fas fa-upload"></i> Choose a file or drag it here
+                    <input type="file" id="fileInput" class="file-input" onchange="updateFileName(this)">
+                </label>
+                <p id="file-name" class="file-name">No file selected</p>
+                </div>
+
+                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                <button id="continue-bank">Continue with Bank</button>
+
+            </div>
+
+            <!-- --------------------------bitcoins---------- -->
+             <div class="crypto-method method" style="line-height: 2.6; display: none;">
+                 <h2 style="color: #0070ba ;">Pay via Cryptos</h2>
+                <div class="crypto-payment-bar">
+            <div class="crypto-item">
+                <strong>Bitcoin (BTC)</strong>
+                <span>bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</span><br>
+               <img src="https://i.pinimg.com/736x/9a/9a/16/9a9a16b12880f1f14dbf3fb2ad64bf95.jpg" alt="" style="width: 5rem;">
+            </div>
+            <div class="crypto-item">
+                <strong>Ethereum (ETH)</strong>
+                <span>0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe</span><br>
+                 <img src="https://i.pinimg.com/736x/9a/9a/16/9a9a16b12880f1f14dbf3fb2ad64bf95.jpg" alt="" style="width: 5rem;">
+            </div>
+            <div class="crypto-item">
+                <strong>USDT (TRC20)</strong>
+                <span>TJjBtKCYG7N6U7URuZRR39cfHta4r7cvXK</span><br>
+                <img src="https://i.pinimg.com/736x/9a/9a/16/9a9a16b12880f1f14dbf3fb2ad64bf95.jpg" alt="" style="width: 5rem;">
+            </div>
+            </div>
+                <div class="file-upload-wrapper">
+                <label for="fileInput" class="file-upload-label">
+                    <i class="fas fa-upload"></i> Choose a file or drag it here
+                    <input type="file" id="fileInput" class="file-input" onchange="updateFileName(this)">
+                </label>
+                <p id="file-name" class="file-name">No file selected</p>
+                </div>
+                                <div class="promo-code">
+                    <input type="text" id="promo-code" placeholder="promo code">
+                    <button id="apply-promo-code">Apply</button>
+                </div>
+                <p style="color: green;">Promo Applied 20% discount</p>
+                <button id="continue-bank">Continue with crypto</button>
+
+
+
+             </div>
+            <!-- ------------------------cash------------------- -->
+             <div class="paycash-method method" style="line-height: 2.6; display: none;">
+                 <h3 style="color: #0070ba ;">Pay In cash</h3>
+                 <p>Come to office</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12398.413834370529!2d30.07057322591339!3d-1.9827487229729963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca6108d6db08d%3A0xbfc486d1fb045285!2sKK%20567%20St%2C%20Kigali!5e1!3m2!1sen!2srw!4v1749753653706!5m2!1sen!2srw" width="480" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             </div>
+       
+          
+          
+            
+           
+            <input type="checkbox" id="email-receipt" checked>
+            <label for="email-receipt">Email me a receipt</label><br><br>
+            <div class="payment-methods" >
+                <div class="master-card card">
+                    <img src="https://i.pinimg.com/736x/22/d1/38/22d138549c3a3fbd95698c4be15c7b71.jpg" alt="master-card">
+                </div>
+                <div class="visa card" >
+                    <img src="https://i.pinimg.com/736x/3d/d3/de/3dd3de3c0ea439adcd71d4531e0e181c.jpg" alt="visa">
+                </div>
+                <div class="mtn-airtel-rwanda card">
+                    <img src="https://i.pinimg.com/736x/24/ea/68/24ea68b1b65d8d3fd4117fb9d8c4e20a.jpg" alt="mtn-airtel-rwanda">
+                </div>
+                <div class="mtn-airtel-uganda card">
+                    <img src="https://i.pinimg.com/736x/97/84/58/978458808f7a86d25af434f08607e64a.jpg" alt="mtn-airtel-uganda">
+                </div>
+                <div class="mpesa-kenya card">
+                    <img src="https://i.pinimg.com/736x/93/eb/67/93eb67bd0be5d0c5964643b4f047b74c.jpg" alt="">
+                </div>
+                <div class="mpesa-tanzania card">
+                    <img src="https://i.pinimg.com/736x/83/1a/c4/831ac43e7050bf6dbf044e13556aa7c1.jpg" alt="">
+                </div>
+                <div class="ecocash-burundi card">
+                    <img src="https://i.pinimg.com/736x/8b/8b/4f/8b8b4ffc47fbbb90aa5e6057d1393676.jpg" alt="">
+                </div>
+                <div class="paypal card">
+                    <img src="https://i.pinimg.com/736x/f4/22/30/f42230e621c19fea5815dde7a09ed83c.jpg" alt="" style="width: 4rem;">
+                </div>
+                <div class="bank card">
+                    <img src="https://i.pinimg.com/736x/95/26/70/952670f2f4ed6c17d04470b236d98503.jpg" alt="" style="width: 4rem;">
+                </div>
+                <div class="bitcoin card">
+                    <img src="https://i.pinimg.com/736x/81/78/4e/81784e304f80f3f9801d17335717ea13.jpg" alt="">
+                </div>
+                <div class="in-cash card">
+                    <img src="https://i.pinimg.com/736x/b0/28/fd/b028fd5a6468770f37e286a68655119a.jpg" alt="">
+                </div>
+
+            </div><br>
+            <p><i class="fa-solid fa-shield"></i> 100% securice payments</p><br>
+            <p><i class="fa-solid fa-lock"></i> 100% Secure Payments via SSL Encryption</p>
+        </div>
+    </div>
+    <script type="module" src="payments.js"></script>
+</body>
+</html>

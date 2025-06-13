@@ -78,9 +78,9 @@ aside{
   }
 }
 .all-container{
-    overflow-y: auto;
+    /* overflow-y: auto; */
     display: flex; 
-    flex-wrap: wrap-reverse;
+    /* flex-wrap: wrap-reverse; */
     /* align-items: flex-start;  */
     /* justify-content: space-between;  */
     /* margin-left: 2rem; */
@@ -138,7 +138,7 @@ li:hover span {
 .profile-container{
     /* background: #0aad5c; */
     /* display: none; */
-    /* width: 75%; */
+    width: 80%;
     height: 100%;
     position: relative;
     /* left: 18%; */
@@ -147,37 +147,81 @@ li:hover span {
     .header{
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         gap: 10rem;
         justify-content: space-between;
         padding: 1rem;
-        border-top: 1px solid #ccc;
+        /* border-top: 1px solid #ccc; */
         /* background-color: #007bff; */
+        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
         .profile-image{
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
             gap: 1rem;
             img{
-                width: 10rem;
-                /* height: 10rem; */
-                border-radius: 7%;
+                width: 8rem;
+                height: 8rem;
+                border-radius: 50%;
             }
         }
     }
 }
 /* -------------------personal-info-------------- */
+.personal-Info-headings{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .personal-info-all{
-    border-top: 1px solid #ccc;
+    /* border-top: 1px solid #ccc; */
+    /* background-color: #007bff; */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 30px;
+    text-align: left;
     .personal-info{
+        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         flex-wrap: wrap;
         gap: 4rem;
         label{
             /* font-size: .8rem; */
             color: #333;
+        }
+        span{
+            color: #000000;
+            font-weight: 600;
+        }
+    }
+
+}
+/* ------------------------status------------------ */
+.personal-status{
+    /* border-top: 1px solid #ccc; */
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 30px;
+    h3{
+        /* color: #007bff; */
+        text-align: left;
+    }
+    .dates-container{
+        display: flex;
+        align-items: center;
+        /* justify-content: space-between; */
+        flex-wrap: wrap;
+        gap: 3rem;
+        text-align: left;
+        line-height: 1.4;
+        span{
+            font-weight: 600;
+            color: #000000;
         }
     }
 
@@ -187,7 +231,7 @@ li:hover span {
 .invoices-container{
     /* overflow-x: hidden; */
     display: none;
-    margin-left: var(--sidebar-width);
+    /* margin-left: var(--sidebar-width); */
     .paid { background: green; }
     .unpaid { background: orange; }
     .overdue { background: red; }
@@ -202,7 +246,7 @@ li:hover span {
     .invoice-summary-container{
         /* background-color: var(--info-color); */
         display: flex;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         flex-shrink: 0;
         align-items: center;
         /* justify-content: space-evenly; */
@@ -274,7 +318,7 @@ li:hover span {
     /* --------------------payments-method------------------- */
     .current-payment-method{
         /* background-color: #007bff; */
-        width: 25rem;
+        width: 30rem;
         border: 2px solid #ccc;
         border-radius: 7px;
         padding: 12px;
@@ -324,16 +368,20 @@ li:hover span {
             table{
                 /* width: 90%; */
                 /* background-color: #007bff; */
+                border: none;
                     th, td {
                     padding: 12px 15px;
                     border-bottom: 1px solid #ddd;
                     text-align: left;
+                    /* border: none; */
                 
                     }
 
                 tbody{
+                    border: none;
                     tr:nth-child(even){
                         background-color: #852121;
+                        color: white;
 
                     }
                 }
@@ -368,11 +416,6 @@ aside{
     padding: 0;
 }
 .profile-container .header{
-    /* background: darkblue; */
-    /* align-items: center; */
-    /* display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; */
     margin: 0;
     padding: 0;
     /* height: 50%; */
@@ -380,5 +423,8 @@ aside{
 }
 .profile-container .personal-info-all{
     line-height: 2;
+}
+.invoice-table{
+    display: none;
 }
 }

@@ -1,13 +1,13 @@
 const profilePage = document.getElementById("profilePage");
 profilePage.addEventListener('click', function() {
     console.log("Profile page clicked");
-    document.querySelector(".profile-container").style.display = "block";
+    document.querySelector(".profiles").style.display = "block";
     document.querySelector(".invoices-container").style.display = "none";
 });
 const invoicePage = document.getElementById("invoicePage");
  invoicePage.addEventListener('click', function() {
     console.log("Invoice page clicked");
-     document.querySelector(".profile-container").style.display = "none";
+     document.querySelector(".profiles").style.display = "none";
     document.querySelector(".invoices-container").style.display = "block";
 }
 );
