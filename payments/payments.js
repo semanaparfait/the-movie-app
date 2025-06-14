@@ -87,6 +87,7 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 });
 // --------------------------------------------setting the promo code-----------------
+var succesAlert = document.querySelector(".success-alerts");
 const promocodesBtn = document.querySelectorAll(".apply-promo-code")
 promocodesBtn.forEach(button => {
   button.addEventListener('click', function() {
@@ -105,6 +106,16 @@ promocodesBtn.forEach(button => {
     let amount = totalElem ? parseFloat(totalElem.textContent.replace(/[^\d.]/g, '')) : NaN;
     if (promoCode === "YEZU2004" && !isNaN(amount)) {
       const discounted = (amount * 0.8).toFixed(2);
+      // Show success alert
+      if (succesAlert) {
+        succesAlert.style.display = "flex";
+        setTimeout(() => {
+          succesAlert.classList.add0("active");
+        }, 4000); // Hide after 3 seconds
+
+      } else {
+        console.warn('Success alert element not found.');
+      }
       if (totalElem) totalElem.textContent = discounted;
       console.log("Promo code applied. Amount to pay after discount: " + discounted);
     }

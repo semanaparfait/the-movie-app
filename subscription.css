@@ -75,8 +75,6 @@ body{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
-
     .text{
         text-align: left;
         padding-left: 3rem;
