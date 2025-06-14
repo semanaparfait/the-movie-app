@@ -86,4 +86,27 @@ window.addEventListener('DOMContentLoaded', function () {
     console.warn('Element with id "TotalplanAmount" not found.');
   }
 });
-
+// --------------------------------------------setting the promo code-----------------
+const promocodesBtn = document.querySelectorAll(".apply-promo-code")
+promocodesBtn.forEach(button => {
+  button.addEventListener('click', function() {
+    // Find the closest .method section for this promo code button
+    const methodSection = this.closest('.method');
+    if (!methodSection) {
+      console.warn('No .method section found for this promo code button.');
+      return;
+    }
+    // Get the promo code input within this method section
+    const promoInput = methodSection.querySelector("#promo-code");
+    let promoCode = promoInput ? promoInput.value : '';
+    console.log('Promo code entered:', promoCode);
+    // Get the total element within this method section
+    const totalElem = methodSection.querySelector('#TotalplanAmount') || document.getElementById('TotalplanAmount');
+    let amount = totalElem ? parseFloat(totalElem.textContent.replace(/[^\d.]/g, '')) : NaN;
+    if (promoCode === "YEZU2004" && !isNaN(amount)) {
+      const discounted = (amount * 0.8).toFixed(2);
+      if (totalElem) totalElem.textContent = discounted;
+      console.log("Promo code applied. Amount to pay after discount: " + discounted);
+    }
+  });
+});
